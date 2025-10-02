@@ -18,7 +18,10 @@ class Warp_Sidebar extends \WP_Widget
     {
         global $warp, $wp_query;
 
-        extract($args);
+        $before_widget = $args['before_widget'] ?? '';
+        $after_widget = $args['after_widget'] ?? '';
+        $before_title = $args['before_title'] ?? '';
+        $after_title = $args['after_title'] ?? '';
 
         $title = $instance['title'];
 

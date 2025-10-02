@@ -207,8 +207,7 @@ class SystemHelper extends AbstractHelper
         }
 
         // disable woocommerce general style
-        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-        if ( is_plugin_active('woocommerce/woocommerce.php') ) {
+        if ( class_exists('WooCommerce') ) {
             add_filter( 'woocommerce_enqueue_styles', function($enqueue_styles) {
                 unset( $enqueue_styles['woocommerce-general'] );
                 return $enqueue_styles;
@@ -248,10 +247,13 @@ class SystemHelper extends AbstractHelper
         add_action('wp_ajax_warp_get_styles', array($this, 'ajaxGetStyles'));
 
         // add notices
-        if (isset($_GET['page']) && $_GET['page'] == 'warp') {
+        if (isset($_GET['page']) && sanitize_text_field($_GET['page']) == 'warp') {
 
             // get warp xml
             $xml = $this['dom']->create($this['path']->path('warp:warp.xml'), 'xml');
+
+            // Initialize messages array
+            $messages = array();
 
             // cache writable ?
             if (!file_exists($this->cache_path) || !is_writable($this->cache_path)) {
@@ -262,6 +264,7 @@ class SystemHelper extends AbstractHelper
             if ($url = $xml->first('updateUrl')->text()) {
 
                 // create check urls
+                $urls = array();
                 $urls['tmpl'] = sprintf('%s?application=%s&version=%s&format=raw', $url, get_template(), $this->xml->first('version')->text());
                 $urls['warp'] = sprintf('%s?application=%s&version=%s&format=raw', $url, 'warp', $xml->first('version')->text());
 
@@ -350,7 +353,7 @@ class SystemHelper extends AbstractHelper
             }
 
             // WooCommerce
-            if (is_plugin_active('woocommerce/woocommerce.php')) {
+            if (class_exists('WooCommerce')) {
 
                 if (is_shop() && !is_search()) {
                     $query[] = 'page';
@@ -422,7 +425,7 @@ class SystemHelper extends AbstractHelper
      */
     public function isBlog()
     {
-        if (is_plugin_active('woocommerce/woocommerce.php') && is_woocommerce()) {
+        if (class_exists('WooCommerce') && is_woocommerce()) {
             return false;
         }
 
@@ -451,7 +454,7 @@ class SystemHelper extends AbstractHelper
         global $wp_query;
 
         $result = array('results' => array());
-        $query  = isset($_REQUEST['s']) ? $_REQUEST['s'] : '';
+        $query  = isset($_REQUEST['s']) ? sanitize_text_field($_REQUEST['s']) : '';
 
         if (strlen($query) >= 3) {
 
@@ -504,7 +507,7 @@ class SystemHelper extends AbstractHelper
         // set config
         $this['config']->set('language', get_bloginfo("language"));
         $this['config']->set('direction', $GLOBALS['wp_locale']->is_rtl() ? 'rtl' : 'ltr');
-        $this['config']->set('site_url', rtrim(get_bloginfo('url'), '/'));
+        $this['config']->set('site_url', rtrim(home_url(), '/'));
         $this['config']->set('site_name', get_option('blogname'));
         $this['config']->set('datetime', date('Y-m-d'));
         $this['config']->set('actual_date', date_i18n($this['config']->get('date_format', 'l, j F Y')));
@@ -535,14 +538,14 @@ class SystemHelper extends AbstractHelper
         // add dynamic style
         if ($this['config']['dynamic_style']) {
 
-            if (!session_id()) session_start();
-
             if (isset($_GET[$this->style])) {
-                $_SESSION['_style'] = preg_replace('/[^A-Z0-9-]/i', '', $_GET[$this->style]);
+                $style = preg_replace('/[^A-Z0-9-]/i', '', sanitize_text_field($_GET[$this->style]));
+                set_transient('warp_dynamic_style_' . get_current_user_id(), $style, DAY_IN_SECONDS);
             }
 
-            if (isset($_SESSION['_style']) && $this['path']->path(sprintf('theme:styles/%s', $_SESSION['_style']))) {
-                $this['config']['style'] = $_SESSION['_style'];
+            $saved_style = get_transient('warp_dynamic_style_' . get_current_user_id());
+            if ($saved_style && $this['path']->path(sprintf('theme:styles/%s', $saved_style))) {
+                $this['config']['style'] = $saved_style;
             }
         }
 
@@ -703,7 +706,7 @@ class SystemHelper extends AbstractHelper
         // add css/js
         $siteurl = sprintf('/%s/i', preg_quote(parse_url(site_url(), PHP_URL_PATH), '/'));
 
-        if (isset($_GET['page']) && $_GET['page'] == 'warp') {
+        if (isset($_GET['page']) && sanitize_text_field($_GET['page']) == 'warp') {
             wp_enqueue_script('warp-js-jquery-mustache', preg_replace($siteurl, '', $this['path']->url('warp:vendor/jquery/jquery-mustache.js'), 1));
             wp_enqueue_script('warp-js-jquery-cookie', preg_replace($siteurl, '', $this['path']->url('warp:vendor/jquery/jquery-cookie.js'), 1));
             wp_enqueue_script('warp-js-jquery-less', preg_replace($siteurl, '', $this['path']->url('warp:vendor/jquery/jquery-less.js'), 1));

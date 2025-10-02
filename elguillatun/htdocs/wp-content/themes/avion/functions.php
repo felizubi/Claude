@@ -13,6 +13,9 @@ if (version_compare(PHP_VERSION, '5.3', '>=')) {
     require(__DIR__.'/warp.php');
 }
 
+// Add theme support for title-tag (WordPress 4.1+)
+add_theme_support('title-tag');
+
 // Google fonts
 function fz_enqueue_google_fonts() {
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat|Lato' );

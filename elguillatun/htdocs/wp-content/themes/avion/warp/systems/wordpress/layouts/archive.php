@@ -12,7 +12,7 @@
         <h1 class="uk-h3"><?php printf(__('Archive for %s', 'warp'), get_the_date('Y')); ?></h1>
     <?php elseif (is_author()) : ?>
         <h1 class="uk-h3"><?php _e('Author Archive', 'warp'); ?></h1>
-    <?php elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : ?>
+    <?php elseif (get_query_var('paged')) : ?>
         <h1 class="uk-h3"><?php _e('Blog Archives', 'warp'); ?></h1>
     <?php endif; ?>
 

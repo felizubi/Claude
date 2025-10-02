@@ -5,8 +5,6 @@
 <?php endif; ?>
 <?php if (isset($error)): ?>
 <title><?php echo $error; ?> - <?php echo $title; ?></title>
-<?php else: ?>
-<title><?php wp_title('&raquo;', true, 'right'); ?></title>
 <?php endif; ?>
 <link rel="shortcut icon" href="<?php echo $this['path']->url('theme:favicon.ico');?>">
 <link rel="apple-touch-icon-precomposed" href="<?php echo $this['path']->url('theme:apple_touch_icon.png'); ?>">
@@ -25,8 +23,7 @@ $styles  = $this['asset']->get('css');
 $scripts = $this['asset']->get('js');
 
 // load woocommerce style overrides
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-if ( is_plugin_active('woocommerce/woocommerce.php') && $file = $this['path']->url('css:woocommerce.css')) {
+if ( class_exists('WooCommerce') && $file = $this['path']->url('css:woocommerce.css')) {
     $styles->prepend($this['asset']->createFile($file));
 }
 

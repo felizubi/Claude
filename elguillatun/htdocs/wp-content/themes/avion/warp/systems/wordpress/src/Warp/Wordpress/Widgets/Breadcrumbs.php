@@ -18,7 +18,10 @@ class Warp_Breadcrumbs extends \WP_Widget
     {
         global $wp_query;
 
-        extract($args);
+        $before_widget = $args['before_widget'] ?? '';
+        $after_widget = $args['after_widget'] ?? '';
+        $before_title = $args['before_title'] ?? '';
+        $after_title = $args['after_title'] ?? '';
 
         $title = $instance['title'];
         $home_title = trim($instance['home_title']);
@@ -90,7 +93,7 @@ class Warp_Breadcrumbs extends \WP_Widget
                 $output .= '<li class="uk-active"><span>'.$taxonomy->label .': '.$term.'</span></li>';
             } elseif (is_archive()) {
                 // woocommerce shop page
-                if (is_plugin_active("woocommerce/woocommerce.php") && is_shop()) {
+                if (class_exists('WooCommerce') && is_shop()) {
                     $title = wc_get_page_id( 'shop' ) ? get_the_title( wc_get_page_id( 'shop' ) ) : '';
                     $output .= '<li class="uk-active"><span>'.$title.'</span></li>';
                 }

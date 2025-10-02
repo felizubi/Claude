@@ -28,9 +28,8 @@ foreach ($sidebars as $name => $sidebar) {
         continue;
     }
 
-    $columns['main']['width'] -= @$sidebar['width'];
-    $sidebar_classes .= " tm-{$name}-".@$sidebar['alignment'];
-}
+    $columns['main']['width'] -= isset($sidebar['width']) ? $sidebar['width'] : 0;
+    $sidebar_classes .= " tm-{$name}-" . (isset($sidebar['alignment']) ? $sidebar['alignment'] : '');
 
 if ($count = count($sidebars)) {
     $sidebar_classes .= ' tm-sidebars-'.$count;
@@ -45,8 +44,8 @@ foreach ($columns as $name => &$column) {
     $shift = 0;
     foreach (($column['alignment'] == 'left' ? $columns : array_reverse($columns, true)) as $n => $col) {
         if ($name == $n) break;
-        if (@$col['alignment'] != $column['alignment']) {
-            $shift += @$col['width'];
+        if (isset($col['alignment']) && $col['alignment'] != $column['alignment']) {
+            $shift += isset($col['width']) ? $col['width'] : 0;
         }
     }
     $column['class'] = sprintf('tm-%s uk-width-medium-%s%s', $name, $fraction($column['width']), $shift ? ' uk-'.($column['alignment'] == 'left' ? 'pull' : 'push').'-'.$fraction($shift) : '');
