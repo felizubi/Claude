@@ -1,0 +1,49 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Block
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@block-default-background:                      #f5f5f5;
+@block-primary-background:                      @global-primary-background;
+@block-muted-background:                        #eee;
+@block-secondary-background:                    @global-secondary-background;
+
+// Component
+// ========================================================================
+
+.hook-block() {}
+
+
+// Color modifier
+// ========================================================================
+
+.hook-block-default() {}
+
+.hook-block-muted() {}
+
+.hook-block-secondary() {}
+
+.hook-block-primary() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-block-misc() {
+
+    //
+    // Adjust padding between equally colored blocks
+    //
+
+    .uk-block-default + .uk-block-default,
+    .uk-block-muted + .uk-block-muted,
+    .uk-block-primary + .uk-block-primary,
+    .uk-block-secondary + .uk-block-secondary { padding-top: 0; }
+
+}

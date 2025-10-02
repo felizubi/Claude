@@ -1,0 +1,1261 @@
+# Translation of Yoast - Yoast SEO Premium (for WordPress) in Chinese (China)
+# This file is distributed under the same license as the Yoast - Yoast SEO Premium (for WordPress) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-09-19 16:43:32+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Yoast - Yoast SEO Premium (for WordPress)\n"
+
+#. translators: 1: Yoast SEO Premium
+#: src/integrations/admin/update-premium-notification.php:125
+msgid "Update to the latest version of %1$s!"
+msgstr "Update to the latest version of %1$s!"
+
+#. translators: 1: Yoast SEO Premium, 2 and 3: opening and closing anchor tag.
+#: src/integrations/admin/update-premium-notification.php:117
+msgid "Please %2$supdate %1$s to the latest version%3$s to ensure you can fully use all Premium settings and features."
+msgstr "Please %2$supdate %1$s to the latest version%3$s to ensure you can fully use all Premium settings and features."
+
+#: src/integrations/admin/cornerstone-column-integration.php:135
+#: src/integrations/admin/cornerstone-taxonomy-column-integration.php:107
+msgid "Cornerstone content"
+msgstr "基石内容"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:312
+msgid "Disable"
+msgstr "禁用"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:310
+msgid "Allow Control"
+msgstr "允许控制"
+
+#. translators: 1: Zapier, 2: Link start tag, 3: Zapier, 4: Link closing tag.
+#: src/deprecated/integrations/third-party/zapier-classic-editor.php:98
+msgid "You’re successfully connected to %1$s. Publishing a post will trigger automated actions based on your Zap’s configuration. %2$sManage your Zap in %3$s%4$s."
+msgstr "You’re successfully connected to %1$s. Publishing a post will trigger automated actions based on your Zap’s configuration. %2$sManage your Zap in %3$s%4$s."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:198
+msgid "Redirect pretty URLs for search pages to raw format"
+msgstr "Redirect pretty URLs for search pages to raw format"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:219
+msgid "WordPress loads lots of resources, some of which your site might not need. If you’re not using these, removing them can speed up your pages and save resources."
+msgstr "WordPress loads lots of resources, some of which your site might not need. If you’re not using these, removing them can speed up your pages and save resources."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:219
+msgid "Remove unused resources"
+msgstr "Remove unused resources"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:365
+msgid "This feature is not available for multisites."
+msgstr "This feature is not available for multisites."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:203
+msgid "Prevent search engines from crawling /wp-json/"
+msgstr "Prevent search engines from crawling /wp-json/"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:197
+msgid "Prevent search engines from crawling site search URLs"
+msgstr "Prevent search engines from crawling site search URLs"
+
+#: src/integrations/frontend-inspector.php:72
+msgid "Beta"
+msgstr "Beta"
+
+#: src/integrations/frontend-inspector.php:71
+msgid "Front-end SEO inspector"
+msgstr "Front-end SEO inspector"
+
+#. Translators: %1$s expands to an opening anchor tag for a link leading to the
+#. Yoast SEO page of the Permalink Cleanup features, %2$s expands to a closing
+#. anchor tag.
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:247
+msgid "These are expert features, so make sure you know what you're doing before removing the parameters. %1$sRead more about how your site can be affected%2$s."
+msgstr "These are expert features, so make sure you know what you're doing before removing the parameters. %1$sRead more about how your site can be affected%2$s."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:359
+msgid "This feature is disabled when your site is not using pretty permalinks."
+msgstr "This feature is disabled when your site is not using pretty permalinks."
+
+#. translators: 1: Link start tag to the Permalinks settings page, 2: Link
+#. closing tag.
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:353
+msgid "This feature is disabled when your site is not using %1$spretty permalinks%2$s."
+msgstr "This feature is disabled when your site is not using %1$spretty permalinks%2$s."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:262
+msgid "Please use a comma to separate multiple URL parameters."
+msgstr "Please use a comma to separate multiple URL parameters."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:260
+msgid "Additional URL parameters to allow"
+msgstr "Additional URL parameters to allow"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:256
+msgid "Remove unwanted URL parameters from your URLs."
+msgstr "Remove unwanted URL parameters from your URLs."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:256
+msgid "Permalink cleanup settings"
+msgstr "Permalink cleanup settings"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:234
+msgid "Max number of characters to allow in searches"
+msgstr "Max number of characters to allow in searches"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:228
+msgid "Clean up and filter searches to prevent search spam."
+msgstr "Clean up and filter searches to prevent search spam."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:228
+msgid "Search cleanup settings"
+msgstr "Search cleanup settings"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:224
+msgid "Disabled"
+msgstr "已禁用"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:196
+msgid "Filter searches with common spam patterns"
+msgstr "Filter searches with common spam patterns"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:195
+msgid "Filter searches with emojis and other special characters"
+msgstr "Filter searches with emojis and other special characters"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:194
+msgid "Filter search terms"
+msgstr "Filter search terms"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:190
+msgid "Unregistered URL parameters"
+msgstr "Unregistered URL parameters"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:189
+msgid "Campaign tracking URL parameters"
+msgstr "Campaign tracking URL parameters"
+
+#. translators: %1$s: Yoast SEO Premium
+#: src/deprecated/initializers/crawl-cleanup-permalinks.php:307
+msgid "%1$s: unregistered URL parameter removed"
+msgstr "%1$s: unregistered URL parameter removed"
+
+#. translators: %1$s: Yoast SEO Premium
+#: src/deprecated/initializers/crawl-cleanup-permalinks.php:160
+msgid "%1$s: redirect utm variables to #"
+msgstr "%1$s: redirect utm variables to #"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:345
+msgid "By removing Global comments feed, Post comments feeds will be removed too."
+msgstr "By removing Global comments feed, Post comments feeds will be removed too."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:218
+msgid "Remove feed links added by WordPress that aren't needed for this site."
+msgstr "Remove feed links added by WordPress that aren't needed for this site."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:218
+msgid "Feed crawl settings"
+msgstr "Feed crawl settings"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:216
+msgid "Remove links added by WordPress to the header and &lt;head&gt;."
+msgstr "Remove links added by WordPress to the header and &lt;head&gt;."
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:216
+msgid "Basic crawl settings"
+msgstr "Basic crawl settings"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:185
+msgid "Powered by HTTP header"
+msgstr "Powered by HTTP header"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:184
+msgid "Pingback HTTP header"
+msgstr "Pingback HTTP header"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:202
+msgid "Emoji scripts"
+msgstr "Emoji scripts"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:183
+msgid "Generator tag"
+msgstr "Generator tag"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:182
+msgid "oEmbed links"
+msgstr "oEmbed links"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:181
+msgid "RSD / WLW links"
+msgstr "RSD / WLW links"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:180
+msgid "REST API links"
+msgstr "REST API links"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:179
+msgid "Shortlinks"
+msgstr "Shortlinks"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:175
+msgid "Atom/RDF feeds"
+msgstr "Atom/RDF feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:174
+msgid "Search results feeds"
+msgstr "Search results feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:173
+msgid "Custom taxonomy feeds"
+msgstr "Custom taxonomy feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:172
+msgid "Tag feeds"
+msgstr "Tag feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:171
+msgid "Category feeds"
+msgstr "Category feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:170
+msgid "Post type feeds"
+msgstr "Post type feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:169
+msgid "Post authors feeds"
+msgstr "Post authors feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:167
+msgid "Global comment feeds"
+msgstr "Global comment feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:166
+msgid "Global feed"
+msgstr "Global feed"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:168
+msgid "Post comments feeds"
+msgstr "Post comments feeds"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:300
+msgid "Keep"
+msgstr "保存"
+
+#: classes/redirect/views/redirects-tab-settings.php:84
+msgid "Read more about why web server redirect methods have been disabled on a multisite."
+msgstr "详细了解为什么在多站点上禁用了 Web 服务器重定向方法。"
+
+#: classes/redirect/views/redirects-tab-settings.php:82
+msgid "Since this site is a multisite, web server redirect methods have been disabled to prevent issues."
+msgstr "由于此站点是多站点，因此已禁用 Web 服务器重定向方法以防止出现问题。"
+
+#: src/integrations/admin/thank-you-page-integration.php:80
+msgid "Installation Successful"
+msgstr "安装成功"
+
+#: classes/views/thank-you.php:104
+msgid "Browse our courses"
+msgstr "浏览我们的课程"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: <strong>, %3$s: Yoast SEO, %4$s:
+#. </strong>
+#: classes/views/thank-you.php:91
+msgid "%1$s grants you direct access to %2$sall premium %3$s academy courses%4$s. Learn all the ins and outs of holistic SEO from industry experts."
+msgstr "%1$s 授予您直接访问%2$s所有高级%3$s学院课程%4$s的权限。从行业专家那里了解整体 SEO 的所有来龙去脉。"
+
+#: classes/views/thank-you.php:84
+msgid "Master vital SEO skills with our online courses"
+msgstr "通过我们的在线课程掌握重要的 SEO 技能"
+
+#: classes/views/thank-you.php:79
+msgid "Check out the Redirect Manager"
+msgstr "查看重定向管理器"
+
+#. translators: %1$s: Yoast SEO, %2$s: <strong>, %3$s: </strong>
+#: classes/views/thank-you.php:68
+msgid "The %1$s %2$sRedirect Manager%3$s automatically prevents visitors from reaching a dead end whenever you move or delete content. It also makes managing your existing redirects easy."
+msgstr "%1$s%2$s重定向管理器%3$s会在您移动或删除内容时自动防止访问者进入死胡同。它还可以轻松管理您现有的重定向。"
+
+#: classes/views/thank-you.php:61
+msgid "Keep your site well-organised so people won't get lost"
+msgstr "保持您的网站井井有条，以免人们迷路"
+
+#: classes/views/thank-you.php:56
+msgid "Score some more green bullets"
+msgstr "获得更多绿色子弹"
+
+#. translators: %1$s: <strong>, %2$s: </strong>
+#: classes/views/thank-you.php:46
+msgid "Different people search with different search terms. With our %1$spremium analysis%2$s, you are free to use variations and synonyms of your keywords in your content, which will make your writing style far more natural."
+msgstr "不同的人使用不同的搜索词进行搜索。通过我们的%1$s优质分析%2$s，您可以在内容中自由使用关键字的变体和同义词，这将使您的写作风格更加自然。"
+
+#: classes/views/thank-you.php:39
+msgid "Optimize your content further with our smart analysis"
+msgstr "通过我们的智能分析进一步优化您的内容"
+
+#: classes/views/thank-you.php:34
+msgid "Do the cornerstone workout!"
+msgstr "做基石锻炼！"
+
+#. translators: %1$s: <strong>, %2$s: </strong>
+#: classes/views/thank-you.php:24
+msgid "%1$sCornerstone content%2$s is the content on your site that’s most important. You want to rank highest in Google with these articles. Make sure your internal linking structure reflects what pages are most important. Want to know how?"
+msgstr "%1$s基础内容%2$s是您网站上最重要的内容。您想通过这些文章在 Google 中排名最高。确保您的内部链接结构反映了哪些页面最重要。想知道怎么做？"
+
+#: classes/views/thank-you.php:17
+msgid "Rank with articles you want to rank with"
+msgstr "与您想要排名的文章排名"
+
+#: classes/views/thank-you.php:12
+msgid "So, what's next?"
+msgstr "下一个是什么？"
+
+#: classes/views/thank-you.php:10
+msgid "Installation successful!"
+msgstr "安装成功！"
+
+#: src/integrations/admin/user-profile-integration.php:144
+msgid "The info you add below is added to the data Yoast SEO outputs in its schema.org output, for instance when you're the author of a page. Please only add the info you feel good sharing publicly."
+msgstr "下面添加的信息被添加到其 schema.org 输出中的数据Yoast SEO输出中，例如，当您是页面的作者时。请只添加您感觉良好的公开分享信息。"
+
+#: src/integrations/admin/user-profile-integration.php:143
+msgid "Yoast SEO Schema enhancements"
+msgstr "约斯特 SEO 图马增强功能"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:127
+#: tests/unit/integrations/admin/user-profile-integration-test.php:121
+msgid "E.g. %1$sAcme inc%2$s"
+msgstr "例如，%1$s公司%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:125
+#: tests/unit/integrations/admin/user-profile-integration-test.php:119
+msgid "Employer name"
+msgstr "雇主姓名"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:121
+#: tests/unit/integrations/admin/user-profile-integration-test.php:115
+msgid "E.g. %1$ssoftware engineer%2$s"
+msgstr "例如，%1$s软件工程师%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:115
+#: tests/unit/integrations/admin/user-profile-integration-test.php:109
+msgid "Employer information"
+msgstr "雇主信息"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:111
+#: tests/unit/integrations/admin/user-profile-integration-test.php:105
+msgid "Comma separated, e.g. %1$sEnglish, French, Dutch%2$s"
+msgstr "逗号分开了，例如%1$s英语，法语，荷兰语%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:109
+#: tests/unit/integrations/admin/user-profile-integration-test.php:103
+msgid "Language(s) spoken"
+msgstr "语言"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:105
+#: tests/unit/integrations/admin/user-profile-integration-test.php:99
+msgid "Comma separated, e.g. %1$sPHP, JavaScript, 90's rock music%2$s"
+msgstr "逗号分开了，如%1$sPHP，JavaScript，90年代的摇滚乐%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:103
+#: tests/unit/integrations/admin/user-profile-integration-test.php:97
+msgid "Expertise in"
+msgstr "使用此空间可以了解一下团队成员。提到他的专长、成就、兴趣、爱好等，让这很有趣"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:99
+#: tests/unit/integrations/admin/user-profile-integration-test.php:93
+msgid "Comma separated, e.g. %1$sMost likely to succeed - 1991, Smartest in class - 1990%2$s"
+msgstr "逗号分离，例如%1$s最有可能成功 - 1991年，班上最聪明的 - 1990年%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:97
+#: tests/unit/integrations/admin/user-profile-integration-test.php:91
+msgid "Awards"
+msgstr "奖励"
+
+#: src/integrations/admin/user-profile-integration.php:93
+#: tests/unit/integrations/admin/user-profile-integration-test.php:87
+msgid "Extra information"
+msgstr "扩展信息"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:89
+#: tests/unit/integrations/admin/user-profile-integration-test.php:83
+msgid "E.g. %1$sfemale%2$s, %1$smale%2$s, %1$snon-binary%2$s"
+msgstr "例如，%1$s母马%2$s、%1$s母马%2$s、非二进制%1$s%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:87
+#: tests/unit/integrations/admin/user-profile-integration-test.php:81
+msgid "Gender"
+msgstr "性别"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:83
+#: tests/unit/integrations/admin/user-profile-integration-test.php:77
+msgid "Use format: %1$sYYYY-MM-DD%2$s"
+msgstr "使用格式：%1$sY-MM-DD%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:81
+#: tests/unit/integrations/admin/user-profile-integration-test.php:75
+msgid "Birth date"
+msgstr "生日"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:77
+#: tests/unit/integrations/admin/user-profile-integration-test.php:71
+msgid "E.g. %1$sMD%2$s, %1$sPhD%2$s"
+msgstr "例如，%1$sMD%2$s、%1$sphD%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:75
+#: tests/unit/integrations/admin/user-profile-integration-test.php:69
+msgid "Honorific suffix"
+msgstr "荣誉后缀"
+
+#. translators: %1$s is replaced by `<code>`, %2$s by `</code>`.
+#: src/integrations/admin/user-profile-integration.php:71
+#: tests/unit/integrations/admin/user-profile-integration-test.php:65
+msgid "E.g. %1$sDr%2$s, %1$sMs%2$s, %1$sMr%2$s"
+msgstr "例如%1$s博士%2$s，%1$sms%2$s，%1$sMr%2$s"
+
+#: src/integrations/admin/user-profile-integration.php:69
+#: tests/unit/integrations/admin/user-profile-integration-test.php:63
+msgid "Honorific prefix"
+msgstr "荣誉前缀"
+
+#: src/integrations/admin/user-profile-integration.php:65
+#: tests/unit/integrations/admin/user-profile-integration-test.php:59
+msgid "Basic information"
+msgstr "基本信息"
+
+#: premium.php:310
+msgid "Custom fields to include in page analysis"
+msgstr "在页面分析中包括自定义字段"
+
+#: premium.php:303
+msgid "Learn more about including custom fields in the page analysis"
+msgstr "了解有关在页面分析中包括自定义字段的更多内容"
+
+#: src/integrations/admin/user-profile-integration.php:119
+#: tests/unit/integrations/admin/user-profile-integration-test.php:113
+msgid "Job title"
+msgstr "工作名称"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:163
+msgid "%2$sActivate %1$s now%3$s"
+msgstr "%2$s立即激活%1$s %3$s"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:170
+msgid "%2$sUpgrade %1$s now%3$s"
+msgstr "%2$s立即升级%1$s %3$s"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:175
+msgid "%2$sInstall %1$s now%3$s"
+msgstr "%2$s立即安装%1$s %3$s"
+
+#. translators: %1$s: Yoast SEO, %2$s: The minimum Yoast SEO version required,
+#. %3$s: Yoast SEO Premium.
+#: src/addon-installer.php:114
+msgid "%1$s %2$s must be installed and activated in order to use %3$s."
+msgstr "必须安装并激活%1$s %2$s才能使用%3$s。"
+
+#. translators: %1$s: Yoast SEO, %2$s: Link start tag, %3$s: Link end tag.
+#: src/addon-installer.php:158
+msgid "%2$sNetwork Activate %1$s now%3$s"
+msgstr "%2$s网络立即激活%1$s %3$s"
+
+#. translators: %1$s: Yoast SEO, %2$s: The minimum Yoast SEO version required.
+#: src/addon-installer.php:188
+msgid "Please contact a network administrator to install %1$s %2$s."
+msgstr "请与网络管理员联系以安装%1$s %2$s。"
+
+#. translators: %1$s: Yoast SEO, %2$s: The minimum Yoast SEO version required.
+#: src/addon-installer.php:192
+msgid "Please contact an administrator to install %1$s %2$s."
+msgstr "请与管理员联系以安装%1$s %2$s。"
+
+#: src/integrations/admin/plugin-links-integration.php:74
+msgid "Activate your subscription"
+msgstr "Activate your subscription"
+
+#: src/integrations/blocks/estimated-reading-time-block.php:57
+msgid "Estimated reading time:"
+msgstr "预计阅读时间："
+
+#: src/integrations/blocks/estimated-reading-time-block.php:84
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "分钟"
+
+#: classes/redirect/presenters/redirect-page-presenter.php:69
+msgid "Settings"
+msgstr "设置"
+
+#: classes/redirect/redirect-table.php:122
+msgid "Filter"
+msgstr "筛选"
+
+#: classes/premium-javascript-strings.php:61
+#: classes/redirect/redirect-table.php:424
+msgid "Edit"
+msgstr "编辑"
+
+#: classes/premium-javascript-strings.php:53
+msgid "OK"
+msgstr "好"
+
+#: classes/export/export-keywords-csv.php:67
+msgid "title"
+msgstr "标题"
+
+#: classes/export/export-keywords-csv.php:73
+msgid "meta description"
+msgstr "元描述"
+
+#: premium.php:270
+msgid "Create Redirect"
+msgstr "创建重定向规则"
+
+#: classes/redirect/redirect-formats.php:23 premium.php:334
+msgid "Redirects"
+msgstr "重定向规则"
+
+#: classes/redirect/views/redirects-form.php:59
+msgid "URL"
+msgstr "URL"
+
+#: classes/premium-import-manager.php:241
+msgid "Redirect import failed: the Redirection plugin is not installed or activated."
+msgstr "重定向规则导入失败：重定向插件未被安装或启用。"
+
+#: classes/premium-import-manager.php:317
+msgid "Redirect import failed: no redirects found."
+msgstr "重定向规则导入失败:未找到重定向规则。"
+
+#: classes/premium-javascript-strings.php:31
+msgid "You have unsaved redirects, are you sure you want to leave?"
+msgstr "您还没有保存重定向规则，真的要离开吗？"
+
+#: classes/redirect/redirect-table.php:137
+msgid "New URL"
+msgstr "新链接"
+
+#: classes/premium-javascript-strings.php:62
+#: classes/redirect/redirect-table.php:308
+#: classes/redirect/redirect-table.php:425
+msgid "Delete"
+msgstr "删除"
+
+#: classes/redirect/views/redirects-tab-plain.php:61
+#: classes/redirect/views/redirects-tab-regex.php:72
+msgid "Search"
+msgstr "搜索"
+
+#: classes/redirect/views/redirects-tab-settings.php:122
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: classes/redirect/redirect-formats.php:24
+msgid "Regex Redirects"
+msgstr "正则表达式重定向规则"
+
+#: classes/redirect/presenters/redirect-table-presenter.php:71
+msgid "Old URL"
+msgstr "旧的链接"
+
+#: classes/redirect/views/redirects-tab-plain.php:41
+#: classes/redirect/views/redirects-tab-regex.php:52
+msgid "Add Redirect"
+msgstr "添加重定向规则"
+
+#: classes/redirect/views/redirects-tab-settings.php:50
+msgid "As you're on Nginx, you should add the following include to the Nginx config file:"
+msgstr "由于您的网站运行在NGINX上，您应该将下面的代码添加到您网站的Nginx配置文件中:"
+
+#: classes/redirect/views/redirects-tab-settings.php:24
+msgid "As you're on Apache, you should add the following include to the website httpd config file:"
+msgstr "由于您的网站运行在Apache上，您应该将下面的代码添加到您网站的httpd 配置文件中:"
+
+#. Description of the plugin/theme
+msgid "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more."
+msgstr "第一个真正意义上的 WordPress 全能SEO解决方案！包含了页面内容分析、XML站点地图和更多功能。"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:76
+msgid "Type"
+msgstr "类型"
+
+#. translators: %s: '.htaccess' file name.
+#: classes/redirect/views/redirects-tab-settings.php:37
+msgid "We're unable to save the redirects to your %s file. Please make the file writable."
+msgstr "无法将重定向保存到您的%s文件。请使文件可写。"
+
+#: classes/redirect/views/redirects-tab-settings.php:111
+msgid "Generate a separate redirect file"
+msgstr "生成单独的重定向文件"
+
+#: classes/redirect/redirect-page.php:143
+msgid "Redirects per page"
+msgstr "每页的重定向"
+
+#: classes/views/import-redirects.php:74
+msgid "Import .htaccess"
+msgstr "导入.htaccess"
+
+#: classes/premium-javascript-strings.php:26
+msgid "The old URL field can't be empty."
+msgstr "旧的URL栏不能为空。"
+
+#: classes/premium-javascript-strings.php:28
+msgid "The new URL field can't be empty."
+msgstr "新的URL栏不能为空。"
+
+#: classes/premium-javascript-strings.php:29
+msgid "Error while saving this redirect"
+msgstr "保存重定向规则中出错"
+
+#: classes/premium-javascript-strings.php:30
+msgid "New type can't be empty."
+msgstr "新类型不能为空。"
+
+#. Author of the plugin/theme
+msgid "Team Yoast"
+msgstr "Yoast团队"
+
+#: classes/premium-javascript-strings.php:25
+msgid "You can't redirect a URL to itself."
+msgstr "你不能重定向url到它本身"
+
+#. translators: %s: '.htaccess' file name
+#: classes/redirect/views/redirects-tab-settings.php:114
+msgid "By default we write the redirects to your %s file, check this if you want the redirects written to a separate file. Only check this option if you know what you are doing!"
+msgstr "默认状态下我们写入重定向到你的 %s 文件，选中这里如果你想让重定向写入到一个单独的文件。只选中你知道的设置。"
+
+#: classes/redirect/presenters/redirect-table-presenter.php:68
+msgid "Regular Expression"
+msgstr "规则表达"
+
+#. translators: 1: '.htaccess' file name
+#: classes/redirect/views/redirects-tab-settings.php:109
+msgid "Write redirects to the %1$s file. Make sure the %1$s file is writable."
+msgstr "写入重定向到 %1$s 文件，确认 %1$s 文件是可写的"
+
+#. translators: %s: '.htaccess' file name
+#: classes/views/import-redirects.php:12
+msgid "Import redirects from %s"
+msgstr "从%s导入重定向"
+
+#: classes/premium-javascript-strings.php:27
+msgid "The Regular Expression field can't be empty."
+msgstr "规则表达区域可以留空"
+
+#. translators: %s is replaced with the URL that will be deleted.
+#: classes/premium-javascript-strings.php:34
+msgid "Please enter the new URL for %s"
+msgstr "行输入新的url给%s"
+
+#. translators: variables will be replaced with from and to URLs.
+#: classes/premium-javascript-strings.php:36
+msgid "Redirect created from %1$s to %2$s!"
+msgstr "重定向被建立从 %1$s 到 %2$s !"
+
+#: classes/redirect/redirect-table.php:135
+#: classes/redirect/views/redirects-form.php:22
+msgctxt "noun"
+msgid "Type"
+msgstr "类型"
+
+#. translators: %1$s: '.htaccess' file name, %2$s: plugin name
+#: classes/views/import-redirects.php:18
+msgid "You can copy the contents of any %1$s file in here, and it will import the redirects into %2$s."
+msgstr "你可以复制任何 %1$s 文件的内容到这里，并且它将会导入重定向到 %2$s"
+
+#: classes/premium-javascript-strings.php:41
+msgid "Redirect added."
+msgstr "重定向加入"
+
+#: classes/premium-javascript-strings.php:42
+msgid "The redirect was added successfully."
+msgstr "重定向加入成功"
+
+#: classes/premium-javascript-strings.php:45
+msgid "Redirect updated."
+msgstr "重定向已更新"
+
+#: classes/premium-javascript-strings.php:46
+msgid "The redirect was updated successfully."
+msgstr "重定向更新成功"
+
+#: classes/premium-javascript-strings.php:49
+#: classes/premium-redirect-service.php:51
+#: classes/redirect-undo-endpoint.php:94
+msgid "Redirect deleted."
+msgstr "重定向已删除"
+
+#: classes/premium-javascript-strings.php:50
+#: classes/premium-redirect-service.php:52
+#: classes/redirect-undo-endpoint.php:95
+msgid "The redirect was deleted successfully."
+msgstr "重定向删除成功"
+
+#: classes/premium-javascript-strings.php:54
+#: classes/redirect/views/redirects-quick-edit.php:43
+msgid "Cancel"
+msgstr "取消"
+
+#: classes/premium-javascript-strings.php:55
+msgid "Save"
+msgstr "保存"
+
+#: classes/premium-javascript-strings.php:56
+msgid "Save anyway"
+msgstr "仍然要保存"
+
+#: classes/premium-javascript-strings.php:58
+#: classes/redirect/views/redirects-quick-edit.php:22
+msgid "Edit redirect"
+msgstr "编辑重定向"
+
+#: classes/premium-javascript-strings.php:59
+msgid "You are already editing a redirect, please finish this one first"
+msgstr "你已经编辑了一个重定向，请完成这个先。"
+
+#: classes/redirect/validation/redirect-accessible-validation.php:29
+msgid "The URL you entered could not be resolved."
+msgstr "你输入的url不能被判断。"
+
+#. translators: %1$s expands to the returned http code
+#: classes/redirect/validation/redirect-accessible-validation.php:40
+msgid "The URL you are redirecting to seems to return a %1$s status. You might want to check if the target can be reached manually before saving."
+msgstr "你重定向的url似乎返回一个%1$s 状态。你可能要在保存前确认目标是否可以手动到达。"
+
+#: classes/redirect/validation/redirect-accessible-validation.php:49
+msgid "You're redirecting to a target that returns a 301 HTTP code (permanently moved). Make sure the target you specify is directly reachable."
+msgstr "你输入的重定向返回一个301http代码（永久转移），请确认你指定的目标是直接可到达的。"
+
+#. translators: %1$s expands to the returned http code
+#: classes/redirect/validation/redirect-accessible-validation.php:57
+msgid "The URL you entered returned a HTTP code different than 200(OK). The received HTTP code is %1$s."
+msgstr "你输入的url返回一个http 代码 与200（ok）不同。收到的http代码为%1$s。"
+
+#: classes/redirect/redirect-ajax.php:65
+msgid "Unknown error. Failed to create redirect."
+msgstr "未知错误。 建立重定向失败。"
+
+#: classes/redirect/redirect-ajax.php:99
+msgid "Unknown error. Failed to update redirect."
+msgstr "未知错误。更新重定向失败"
+
+#: classes/redirect/validation/redirect-endpoint-validation.php:40
+msgid "The redirect you are trying to save will create a redirect loop. This means there probably already exists a redirect that points to the origin of the redirect you are trying to save"
+msgstr "你保存的重定向将要建立一个重定向循环。这意味着这可能已经存在一个重定向，这个重定向指向一个你正在保存的原始重定向"
+
+#. translators: %1$s: will be the target, %2$s: will be the found endpoint.
+#: classes/redirect/validation/redirect-endpoint-validation.php:48
+msgid "%1$s will be redirected to %2$s. Maybe it's worth considering to create a direct redirect to %2$s."
+msgstr "%1$s 将要被重定向到 %2$s .或许可以考虑建立一个重定向到 %2$s。"
+
+#. translators: %s expands to the file path that we tried to write to
+#: classes/redirect/redirect-file-util.php:86
+msgid "We're unable to write data to the file %s"
+msgstr "我们不能写入数据到文件%s"
+
+#: classes/redirect/redirect-types.php:26
+msgid "301 Moved Permanently"
+msgstr "301 永久转移"
+
+#: classes/redirect/redirect-types.php:27
+msgid "302 Found"
+msgstr "302被发现"
+
+#: classes/redirect/redirect-types.php:28
+msgid "307 Temporary Redirect"
+msgstr "307临时重定向"
+
+#: classes/redirect/redirect-types.php:29
+msgid "410 Content Deleted"
+msgstr "410内容删除"
+
+#: classes/redirect/redirect-types.php:30
+msgid "451 Unavailable For Legal Reasons"
+msgstr "451  法规问题不可用"
+
+#: classes/redirect/validation/redirect-presence-validation.php:34
+msgid "Not all the required fields are filled."
+msgstr "必要区域为填写"
+
+#: classes/redirect/validation/redirect-uniqueness-validation.php:32
+msgid "The old URL already exists as a redirect."
+msgstr "旧url已经以重定向方式存在"
+
+#: classes/redirect/views/redirects-quick-edit.php:42
+msgid "Update Redirect"
+msgstr "更新重定向"
+
+#. translators: %s expands to the folder location where the redirects fill will
+#. be saved.
+#: classes/redirect/views/redirects-tab-settings.php:63
+msgid "We're unable to save the redirect file to %s"
+msgstr "我们不能保存重定向文件到 %s"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: List with actions, %3$s: <a
+#. href=''>, %4$s: </a>, %5$s: Slug to post
+#: classes/post-watcher.php:268
+msgid "%1$s detected that you moved a post (%5$s) to the trash. You can either: %2$s Don't know what to do? %3$sRead this post%4$s."
+msgstr "%1$s 发现你移动了一个帖子(%5$s)垃圾。您可以: %2$s 不知道该怎么办？%3$s读这篇文章%4$s."
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: List with actions, %3$s: <a
+#. href='{post_with_explaination.}'>, %4$s: </a>, %5%s: The removed url.
+#: classes/post-watcher.php:484
+msgid "%1$s detected that you deleted a post (%5$s). You can either: %2$s Don't know what to do? %3$sRead this post %4$s."
+msgstr "%1$s检测到您删除了一篇文章（%5$s）。您可以：%2$s不知道该怎么办？ %3$s阅读此文章%4$s。"
+
+#. translators: %1$s will be replaced with the from URL.
+#: classes/premium-javascript-strings.php:38
+msgid "410 Redirect created from %1$s!"
+msgstr "410重定向从 %1$s建立！"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: List with actions, %3$s: <a
+#. href='{post_with_explaination.}'>, %4$s: </a>, %5%s: The removed url.
+#: classes/term-watcher.php:299
+msgid "%1$s detected that you deleted a term (%5$s). You can either: %2$s Don't know what to do? %3$sRead this post %4$s."
+msgstr "%1$s检测到您删除了一个分类词（%5$s）。您可以：%2$s不知道该怎么办？ %3$s阅读此文章%4$s。"
+
+#: classes/watcher.php:265
+msgid "Redirect it to another URL"
+msgstr "重定向到另外一个url"
+
+#: classes/watcher.php:266
+msgid "Make it serve a 410 Content Deleted header"
+msgstr "使它服务于一个410内容删除头文件"
+
+#: classes/redirect/views/redirects-tab-settings.php:101
+msgid "Web server"
+msgstr "web服务器"
+
+#: classes/redirect/views/redirects-tab-settings.php:103
+msgid "Redirect method"
+msgstr "重定向方法"
+
+#. translators: %s: 'Yoast SEO Premium'
+#: classes/redirect/views/redirects-tab-settings.php:118
+msgid "%s can generate redirect files that can be included in your website web server configuration. If you choose this option the PHP redirects will be disabled. Only check this option if you know what you are doing!"
+msgstr "%s 可以产生一个重定向文件，这个文件被引入在你的网页服务器设置里。如果你选择这个选项，php 重定向将会被禁用，请之选中你的清楚的选项。"
+
+#. translators: %s expands to the file path that we tried to write to
+#: classes/redirect/redirect-file-util.php:44
+msgid "We're unable to create the directory %s"
+msgstr "我们无法建立目录 %s"
+
+#: classes/redirect/validation/redirect-self-redirect-validation.php:25
+msgid "You are attempting to redirect to the same URL as the origin. Please choose a different URL to redirect to."
+msgstr "你尝试重定向的URL与之前的相同。请选择一个不同的URL进行重定向。"
+
+#. translators: 1: opens a link to a related help center article. 2: closes the
+#. link.
+#: classes/redirect/views/redirects-form.php:42
+msgid "The redirect type is the HTTP response code sent to the browser telling the browser what type of redirect is served. %1$sLearn more about redirect types%2$s."
+msgstr "重定向类型的HTTP响应代码发送给浏览器，告诉浏览器什么类型的重定向送达。 %1$s了解更多关于重定向类型 %2$s."
+
+#. translators: 1: opens a link to a related help center article. 2: closes the
+#. link.
+#: classes/redirect/views/redirects-tab-regex.php:30
+msgid "Regular Expression (regex) Redirects are extremely powerful redirects. You should only use them if you know what you are doing. %1$sRead more about regex redirects on our help center%2$s."
+msgstr "正则表达式（regex）重定向是非常强大的重定向。你应该明确地知道你在做什么的时候再使用它们。%1$s在我们的知识库中查看更多有关regex重定向的信息%2$s。"
+
+#: premium.php:370
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:225
+msgid "Enabled"
+msgstr "激活"
+
+#: classes/views/import-redirects.php:72
+msgid "Enter redirects to import"
+msgstr "输入要导入的重定向"
+
+#. translators: %1$s expands to the subdirectory WordPress is installed.
+#: classes/redirect/validation/redirect-subdirectory-validation.php:37
+msgid "Your redirect is missing the subdirectory where WordPress is installed in. This will result in a redirect that won't work. Make sure the redirect starts with %1$s"
+msgstr "您的重定向缺少安装WordPress的子目录。这将导致重定向无法工作。确保重定向以。开头 %1$s"
+
+#: classes/redirect/redirect-table.php:244
+msgid "Select this redirect"
+msgstr "选择此重定向"
+
+#. translators: %s expands to Yoast
+#: classes/metabox-link-suggestions.php:101
+msgid "%s internal linking"
+msgstr "%s 内部链接"
+
+#. translators: %s: '.htaccess' file name
+#: classes/premium-import-manager.php:67 classes/views/import-redirects.php:45
+msgid "Import redirects"
+msgstr "导入重定向"
+
+#: classes/views/import-redirects.php:25
+msgid "Redirection"
+msgstr "重定向"
+
+#: classes/views/import-redirects.php:26
+msgid "Safe Redirect Manager"
+msgstr "安全重定向管理器"
+
+#: classes/views/import-redirects.php:27
+msgid "Simple 301 Redirects"
+msgstr "简单301重定向"
+
+#: classes/views/import-redirects.php:38
+msgid "Import from other redirect plugins"
+msgstr "从其他重定向插件导入"
+
+#: classes/views/import-redirects.php:42
+msgid "Import from:"
+msgstr "导入:"
+
+#: classes/watcher.php:236
+msgid "New URL:"
+msgstr "新URL地址："
+
+#: classes/watcher.php:234
+msgid "Old URL:"
+msgstr "旧链接地址："
+
+#: classes/premium-redirect-export-manager.php:31
+#: classes/views/export-redirects.php:15
+msgid "Export redirects"
+msgstr "导出重定向"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:74
+msgid "Origin"
+msgstr "源"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:75
+msgid "Target"
+msgstr "目标"
+
+#: classes/redirect/exporters/redirect-csv-exporter.php:77
+msgid "Format"
+msgstr "格式"
+
+#: classes/views/export-redirects.php:10
+msgid "Export redirects to a CSV file"
+msgstr "将重定向导出为一个CSV文件"
+
+#: classes/views/export-redirects.php:11
+msgid "If you need to have a list of all redirects, you can generate a CSV file using the button below."
+msgstr "假如你需要所有的重定向列表，你可以使用下面的按钮来生成一个CSV文件"
+
+#: classes/views/export-redirects.php:12
+msgid "Please note that the first row in this file is a header. This row should be ignored when parsing or importing the data from the export."
+msgstr "请注意该文件的第一行是一个头部信息，当从导出数据分析或导入数据时该行应被忽略。"
+
+#: classes/premium-import-manager.php:275
+msgid "CSV import failed: the provided file could not be parsed using a CSV parser."
+msgstr "CSV导入失败：提供的文件无法被CSV解析器解析"
+
+#: classes/views/import-redirects.php:52
+msgid "Import from a CSV file"
+msgstr "从一个CSV文件导入"
+
+#: classes/views/import-redirects.php:59
+msgid "Import CSV file"
+msgstr "导入CSV文件"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s: <a href='{undo_redirect_url}'>,
+#. %3$s: </a>, %4$s: Slug to post
+#: classes/post-watcher.php:295
+msgid "%1$s detected that you restored a post (%4$s) from the trash, for which a redirect was created. %2$sClick here to remove the redirect%3$s"
+msgstr "%1$s检测到你从回收站中恢复了一篇文章 (%4$s) ，一个重定向已经生成。%2$s点击这里来移除重定向%3$s"
+
+#. translators: %1$s expands to the link to an article to read more about
+#. orphaned content, %2$s expands to </a>
+#: classes/premium-orphaned-post-filter.php:54
+msgid "%1$sLearn more about orphaned content%2$s."
+msgstr "%1$s了解更多有关孤立内容%2$s。"
+
+#. translators: %1$s: plural form of the current post type, %2$s: a Learn more
+#. about link
+#: classes/premium-orphaned-post-filter.php:62
+msgid "Ask your SEO Manager or Site Administrator to count links in all texts, so we can identify orphaned %1$s. %2$s"
+msgstr "要求你的SEO管理员或网站管理员对所有文本中的链接计数，我们可以辨别出孤立内容%1$s. %2$s"
+
+#. translators: %1$s expands to link to the recalculation option, %2$s: anchor
+#. closing, %3$s: plural form of the current post type, %4$s: a Learn more
+#. about link
+#: classes/premium-orphaned-post-filter.php:71
+msgid "%1$sClick here%2$s to index your links, so we can identify orphaned %3$s. %4$s"
+msgstr "%1$s点击这里%2$s来索引你的链接，这样我们可以辨别出孤立内容%3$s. %4$s"
+
+#. translators: %1$s: plural form of the current post type, %2$s: a Learn more
+#. about link
+#: classes/premium-orphaned-post-filter.php:81
+msgid "'Orphaned content' refers to %1$s that have no inbound links, consider adding links towards these %1$s. %2$s"
+msgstr "'Orphaned content' refers to %1$s that have no inbound links, consider adding links towards these %1$s. %2$s"
+
+#: classes/premium-orphaned-post-filter.php:140
+msgid "Orphaned content"
+msgstr "孤立内容"
+
+#: classes/export/export-keywords-csv.php:68
+msgid "url"
+msgstr "url地址"
+
+#: classes/export/export-keywords-csv.php:69
+msgid "readability score"
+msgstr "可读性评分"
+
+#: classes/export/export-keywords-csv.php:76
+msgid "ID"
+msgstr "标识（ID）"
+
+#: classes/redirect/redirect-table.php:108
+msgid "Filter by redirect type"
+msgstr "以重定向类型筛选"
+
+#: classes/redirect/redirect-table.php:110
+msgid "All redirect types"
+msgstr "所有重定向类型"
+
+#. translators: %s resolves to the button label translation.
+#: classes/views/export-keywords.php:12
+msgid "If you need a list of all public posts, terms and related keyphrases, you can generate a CSV file using the %s button below."
+msgstr "如果你需要一个所有公开文章、分类和相关关键短语的列表，你可以使用下面的%s按钮生成一个CSV文件"
+
+#: classes/views/export-keywords.php:21
+msgid "Export keyphrases to a CSV file"
+msgstr "将关键短语导出为一个CSV文件"
+
+#: classes/views/export-keywords.php:23
+msgid "You can add or remove columns to be included in the export using the checkboxes below."
+msgstr "你可以使用下面的复选框来添加或删除导出中的列"
+
+#: classes/views/export-keywords.php:31
+msgid "Export URL"
+msgstr "导出URL地址"
+
+#: classes/views/export-keywords.php:32
+msgid "Export title"
+msgstr "导出标题"
+
+#: classes/views/export-keywords.php:35
+msgid "Export readability score"
+msgstr "导出可读性分数"
+
+#: classes/views/export-keywords.php:49
+msgid "Please note:"
+msgstr "请注意："
+
+#: classes/views/export-keywords.php:51
+msgid "The first row in this file is the header row. This row should be ignored when parsing or importing the data from the export."
+msgstr "该文件中的第一行是头部行。在从导出数据解析或导入时，应该忽略这一行。"
+
+#: classes/views/export-keywords.php:52
+msgid "Exporting data can take a long time when there are many posts, pages, public custom post types or terms."
+msgstr "当存在太多文章、页面、自定义文章类型或分类时，导出数据将花费很长时间"
+
+#: classes/redirect/views/redirects-tab-plain.php:25
+msgid "Plain redirects"
+msgstr "普通重定向"
+
+#: classes/redirect/views/redirects-tab-regex.php:25
+msgid "Regular Expression redirects"
+msgstr "正则表达式重定向"
+
+#: classes/redirect/views/redirects-tab-settings.php:76
+msgid "Redirects settings"
+msgstr "重定向设置"
+
+#: classes/export/export-keywords-csv.php:77
+msgctxt "post_type of a post or the taxonomy of a term"
+msgid "type"
+msgstr "类别"
+
+#: classes/export/export-keywords-csv.php:72
+msgid "seo title"
+msgstr "seo标题"
+
+#: classes/views/export-keywords.php:33
+msgid "Export SEO title"
+msgstr "导出SEO标题"
+
+#: classes/views/export-keywords.php:34
+msgid "Export meta description"
+msgstr "导出元信息描述"
+
+#: classes/export/export-keywords-csv.php:70
+msgid "keyphrase"
+msgstr "关键字段"
+
+#: classes/export/export-keywords-csv.php:71
+msgid "keyphrase score"
+msgstr "关键字段得分"
+
+#: classes/premium-keyword-export-manager.php:40
+#: classes/views/export-keywords.php:8
+msgid "Export keyphrases"
+msgstr "导出关键字段"
+
+#: classes/views/export-keywords.php:30
+msgid "Export keyphrase scores"
+msgstr "导出关键字段分数"
+
+#. Plugin URI of the plugin/theme
+msgid "https://yoa.st/2jc"
+msgstr "https://yoa.st/2jc"
+
+#. Plugin Name of the plugin/theme
+msgid "Yoast SEO Premium"
+msgstr "Yoast SEO 高级版"
+
+#. translators: 1: link to redirects overview, 2: closing link tag
+#: classes/premium-import-manager.php:192
+msgid "All redirects have been imported successfully. Go to the %1$sredirects overview%2$s to see the imported redirects."
+msgstr "所有的重定向已经成功导入。前往%1$s重定向 预览%2$s所有导入的重定向"
+
+#. translators: 1: link to redirects overview, 2: closing link tag
+#: classes/premium-import-manager.php:201
+msgid "No redirects have been imported. Probably they already exist as a redirect. Go to the %1$sredirects overview%2$s to see the existing redirects."
+msgstr "没有任何重定向导入。大概他们已经存在。前往%1$s重定向 预览%2$s已经存在的重定向"
+
+#. translators: 1: amount of imported redirects, 2: total amount of redirects,
+#. 3: link to redirects overview, 4: closing link tag
+#: classes/premium-import-manager.php:209
+msgid "Imported %1$s/%2$s redirects successfully. Go to the %3$sredirects overview%4$s to see the imported redirect."
+msgid_plural "Imported %1$s/%2$s redirects successfully. Go to the %3$sredirects overview%4$s to see the imported redirects."
+msgstr[0] "%1$s/%2$s 重定向导入成功。到%3$s”重定向预览“%4$s中查看已经导入的重定向。"
+
+#: classes/premium-import-manager.php:251
+msgid "Redirect import failed: the selected redirect plugin is not installed or activated."
+msgstr "重定向导入失败：选择的重定向插件没有安装或者激活"
+
+#: classes/premium-import-manager.php:269
+msgid "CSV import failed: No file selected."
+msgstr "CSV导入失败：没有选择文件"
+
+#. translators: 1: The maximum file size
+#: classes/premium-import-manager.php:283
+msgid "CSV import failed: the provided file is larger than %1$s."
+msgstr "CSV导入失败：导入的文件大于%1$s。"
+
+#: classes/premium-import-manager.php:290
+msgid "CSV import failed: the provided file is not a CSV file."
+msgstr "CSV导入失败：提供文件不是CSV文件格式"
+
+#: classes/premium-import-manager.php:309
+msgid "Redirect import failed: we can't recognize this type of import."
+msgstr "重定向导入失败：我们不能识别导入内容的种类"
+
+#: classes/premium-stale-cornerstone-content-filter.php:51
+msgid "Stale cornerstone content"
+msgstr "劣质内容"
+
+#. translators: %1$s expands to dynamic post type label, %2$s expands anchor to
+#. blog post about cornerstone content, %3$s expands to </a>
+#: classes/premium-stale-cornerstone-content-filter.php:68
+msgid "Stale cornerstone content refers to cornerstone content that hasn’t been updated in the last 6 months. Make sure to keep these %1$s up-to-date. %2$sLearn more about cornerstone content%3$s."
+msgstr "劣质内容筛选器中的劣质内容是指过去六个月内没有更新的内容。确保保持这些  %1$s 适时更新。%2$s学习更多关于劣质内容的信息%3$s。"
+
+#: classes/views/import-redirects.php:56
+msgid "Choose a CSV file from your computer:"
+msgstr "从您的计算机选择一个CSV文件"
+
+#: classes/watcher.php:247
+msgid "Undo"
+msgstr "撤销"
+
+#: classes/premium-redirect-service.php:60
+#: classes/redirect-undo-endpoint.php:83 classes/redirect-undo-endpoint.php:103
+msgid "Redirect not deleted."
+msgstr "重定向未删除"
+
+#: classes/premium-redirect-service.php:61
+#: classes/redirect-undo-endpoint.php:84 classes/redirect-undo-endpoint.php:104
+msgid "Something went wrong when deleting this redirect."
+msgstr "删除这个重定向时发生错误"
+
+#: classes/redirect/validation/redirect-relative-origin-validation.php:27
+msgid "The old URL for your redirect is not relative. Only the new URL is allowed to be absolute. Make sure to provide a relative old URL."
+msgstr "您需要重新定向的旧链接并不相关。只有新链接可以使用绝对URL。确定您提供的旧链接为相对URL。"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s and %3$s expand to a link to the
+#. admin page.
+#: classes/post-watcher.php:471
+msgid "%1$s created a %2$sredirect%3$s from the old post URL to the new post URL."
+msgstr "%1$s 生成一个 %2$s 重定向 %3$s 从旧文章链接指向新文章链接"
+
+#. translators: %1$s: Yoast SEO Premium, %2$s and %3$s expand to a link to the
+#. admin page.
+#: classes/term-watcher.php:286
+msgid "%1$s created a %2$sredirect%3$s from the old term URL to the new term URL."
+msgstr "%1$s 生成一个 %2$s 重定向 %3$s 从旧链接指向新链接"
+
+#: classes/watcher.php:241
+msgid "Ok"
+msgstr "好的"
+
+#: src/deprecated/integrations/admin/crawl-settings-integration.php:301
+msgid "Remove"
+msgstr "移除"
+
+#. translators: %s: Zapier.
+#: src/deprecated/integrations/third-party/zapier.php:156
+msgid "Go to your %s Dashboard"
+msgstr "转到你的%s仪表盘"
+
+#. translators: 1: Zapier, 2: The Zapier API Key.
+#: src/deprecated/integrations/third-party/zapier.php:161
+msgid "%1$s uses this API Key: %2$s"
+msgstr "%1$s使用这个API Key：%2$s"
+
+#: src/deprecated/integrations/third-party/zapier.php:165
+msgid "Reset API Key"
+msgstr "重置API Key"
+
+#. translators: %s: Zapier.
+#: src/deprecated/integrations/third-party/zapier.php:204
+msgid "%s will ask for an API key. Use this one:"
+msgstr "%s需要一个API key，使用这个："
+
+#: src/deprecated/integrations/third-party/zapier.php:210
+msgid "Copy to clipboard"
+msgstr "复制到剪贴板"
+
+#: classes/premium-metabox.php:180
+msgid "Table of contents"
+msgstr "内容"
+
+#. translators: 1: Link start tag, 2: Yoast SEO, 3: Zapier, 4: Link closing
+#. tag.
+#: src/deprecated/integrations/third-party/zapier-classic-editor.php:109
+msgid "%1$sConnect %2$s with %3$s%4$s to instantly share your published posts with 2000+ destinations such as Twitter, Facebook and more."
+msgstr "%1$s将%2$s与%3$s %4$s关联起来，即可与2000多个目的地（例如Twitter，Facebook等）即时共享您发布的帖子。"
+
+#. translators: 1: Yoast SEO, 2: Zapier.
+#: src/deprecated/integrations/third-party/zapier.php:145
+msgid "%1$s is successfully connected to %2$s!"
+msgstr "%1$s 成功连接到 %2$s!"
+
+#. translators: 1: Yoast SEO, 2: Zapier, 3: Emphasis open tag, 4: Emphasis
+#. close tag.
+#: src/deprecated/integrations/third-party/zapier.php:179
+msgid "%1$s is not connected to %2$s. To set up a connection, make sure you click %3$sSave changes%4$s first, then copy the given API key below and use it to %3$screate%4$s and %3$sturn on%4$s a Zap within your %2$s account."
+msgstr "%1$s未连接到%2$s。要建立连接，请确保首先单击%3$s保存更改%4$s，然后复制下面的给定API密钥并将其用于%3$s创建%4$s，并%3$s打开%4$s您的%2$s帐户。"
+
+#. translators: 1: Yoast SEO.
+#: src/deprecated/integrations/third-party/zapier.php:189
+msgid "Please note that you can only create 1 Zap with a trigger event from %1$s. Within this Zap you can choose one or more actions."
+msgstr "请注意，您只能使用%1$s中的触发事件来创建1个Zap。在此Zap中，您可以选择一个或多个动作。"
+
+#. translators: %s: Zapier.
+#: src/deprecated/integrations/third-party/zapier.php:215
+msgid "Create a Zap in %s"
+msgstr "在%s中创建一个Zap"

@@ -1,0 +1,98 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Base
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@base-body-background:                          @global-background;
+@base-body-font-family:                         @global-body-font-family;
+@base-body-font-size:                           @global-font-size;
+@base-body-line-height:                         @global-line-height;
+@base-body-font-weight:                         @global-font-weight;
+@base-body-color:                               @global-color;
+
+@base-link-color:                               @global-link-color;
+@base-link-hover-color:                         @global-link-hover-color;
+@base-ins-color:                                @global-color;
+@base-mark-color:                               @global-color;
+
+@base-margin-vertical:                          @global-margin;
+
+@base-heading-font-family:                      @global-heading-font-family;
+@base-heading-font-weight:                      @global-heading-font-weight;
+@base-heading-text-transform:                   @global-text-transform;
+
+@base-heading-color:                            @global-heading-color;
+@base-heading-margin-top:                       @global-margin-large;
+@base-h1-font-size:                             round((@global-font-size * 2.57)); // 36px
+@base-h1-line-height:                           round((@base-h1-font-size * 1.167)); // 42px
+@base-h2-font-size:                             round((@global-font-size * 1.57)); // 22px
+@base-h2-line-height:                           round((@base-h2-font-size * 1.36)); // 30px
+@base-h3-font-size:                             round((@global-font-size * 1.285)); // 18px
+@base-h3-line-height:                           round((@base-h3-font-size * 1.333)); // 24px
+@base-h4-font-size:                             round((@global-font-size * 1.14)); // 16px
+@base-h4-line-height:                           round((@base-h4-font-size * 1.375)); // 22px
+@base-h5-font-size:                             @global-font-size; // 14px
+@base-h5-line-height:                           round((@base-h5-font-size * 1.428)); // 20px
+@base-h6-font-size:                             round((@global-font-size * 0.857)); // 12px
+@base-h6-line-height:                           round((@base-h6-font-size * 1.5)); // 18px
+
+@base-hr-border:                                @global-border;
+
+@base-blockquote-border:                        @global-border;
+@base-blockquote-font-size:                     round((@global-font-size * 1.14)); // 16px
+@base-blockquote-line-height:                   round((@base-blockquote-font-size * 1.375)); // 22px
+
+@base-code-font-size:                           round((@global-font-size * 0.857)); // 12px
+
+@base-pre-color:                                @global-color;
+@base-pre-font-size:                            round((@global-font-size * 0.857)); // 12px
+@base-pre-line-height:                          round((@base-pre-font-size * 1.5)); // 18px
+
+@base-selection-background:                     fade(@global-primary-background, 80%);
+@base-selection-color:                          @global-contrast-color;
+
+
+// Body
+// ========================================================================
+
+.hook-base-body() {}
+
+
+// Text-level semantics
+// ========================================================================
+
+.hook-base-code() {}
+
+
+// Headings
+// ========================================================================
+
+.hook-base-h1() {}
+
+.hook-base-h2() {}
+
+.hook-base-h3() {}
+
+.hook-base-h4() {}
+
+.hook-base-h5() {}
+
+.hook-base-h6() {}
+
+
+// Preformatted text
+// ========================================================================
+
+.hook-base-pre() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {}

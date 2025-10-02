@@ -1,0 +1,517 @@
+# Translation of Plugins - WordPress Social Sharing Plugin &#8211; Social Warfare - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - WordPress Social Sharing Plugin &#8211; Social Warfare - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-11-22 11:26:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - WordPress Social Sharing Plugin &#8211; Social Warfare - Stable (latest release)\n"
+
+#: lib/url-management/SWP_Link_Manager.php:200
+msgid "Link Shortening Service"
+msgstr "Служба сокращения ссылок"
+
+#: lib/url-management/SWP_Link_Manager.php:140
+msgid "If you'd like to have all of your links automatically shortened, turn this on."
+msgstr "Если вы хотите, чтобы все ваши ссылки автоматически сокращались, включите это."
+
+#: lib/url-management/SWP_Link_Manager.php:138
+#: lib/url-management/SWP_Link_Manager.php:153
+msgid "Link Shortening"
+msgstr "Сокращение ссылок"
+
+#: lib/url-management/SWP_Link_Manager.php:169
+msgid "Minimum Publish Date (YYYY-MM-DD)"
+msgstr "Минимальная дата публикации (ГГГГ-ММ-ДД)"
+
+#: lib/utilities/SWP_Utility.php:138
+msgid "Security failed 1."
+msgstr "Безопасность нарушена 1."
+
+#: lib/utilities/SWP_Utility.php:180
+msgid "Security failed 2."
+msgstr "Безопасность нарушена 2."
+
+#: lib/options/SWP_Options_Page.php:129
+msgid "Social Network Connections"
+msgstr "Подключения к социальной сети"
+
+#: lib/options/SWP_Options_Page.php:425
+msgid "Enable Gutenberg Blocks"
+msgstr "Выключить блоки Gutenberg"
+
+#: lib/options/SWP_Registration_Tab_Template.php:104
+msgid "Enter your registration key for "
+msgstr "Введите регистрационный ключ для "
+
+#: lib/options/SWP_Options_Page.php:420
+msgid "Gutenberg Blocks<sup>beta</sup>"
+msgstr "Блоки Gutenberg<sup>beta</sup>"
+
+#: lib/options/SWP_Registration_Tab_Template.php:100
+#: lib/options/SWP_Registration_Tab_Template.php:137
+msgid "This copy of "
+msgstr "Эта копия "
+
+#: lib/social-networks/SWP_Mix.php:37
+msgid "Mix"
+msgstr "Смешивание"
+
+#: lib/options/SWP_Section_HTML.php:549
+msgid "Create Bitly Links?"
+msgstr "Создавать ссылки Bitly?"
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr "Проверить обновления"
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:77
+msgid "More information about %s"
+msgstr "Больше информации про %s"
+
+#: lib/update-checker/Puc/v4p9/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr "Журнал изменений отсутствует."
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:223
+msgid "Unknown update checker status \"%s\""
+msgstr "Неизвестный статус проверки обновлений \"%s\""
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:215
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "Доступна новая версия плагина%s."
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:217
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Не удалось определить, доступны ли обновления для%s."
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:213
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "Плагин %s обновлен."
+
+#: lib/update-checker/Puc/v4p9/Plugin/Ui.php:54
+msgid "View details"
+msgstr "Посмотреть детали"
+
+#: lib/options/SWP_Section_HTML.php:219
+msgid "Click here to visit TwitCount.com"
+msgstr "Нажмите здесь, чтобы посетить TwitCount.com"
+
+#: lib/options/SWP_Section_HTML.php:486
+msgid "Yummly Tags"
+msgstr "Метки Yummly"
+
+#: lib/options/SWP_Section_HTML.php:481
+msgid "Yummly Categories"
+msgstr "Рубрики Yummly"
+
+#: lib/options/SWP_Options_Page.php:778
+msgid "Float Before Content"
+msgstr "Плавающие кнопки перед содержимым"
+
+#: lib/options/SWP_Section_HTML.php:474
+msgid "Choose Category"
+msgstr "Выберите рубрику"
+
+#: lib/options/SWP_Options_Page.php:291
+msgid "Custom Color"
+msgstr "Пользовательский цвет"
+
+#: lib/social-networks/SWP_Facebook.php:58
+msgid "Facebook"
+msgstr "Facebook"
+
+#: lib/social-networks/SWP_Linkedin.php:23
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: lib/social-networks/SWP_Pinterest.php:34
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: lib/social-networks/SWP_Stumble_Upon.php:37
+msgid "StumbleUpon"
+msgstr "StumbleUpon"
+
+#: lib/social-networks/SWP_Twitter.php:39
+msgid "Twitter"
+msgstr "Twitter"
+
+#: lib/options/SWP_Options_Page.php:283
+msgid "Full Color"
+msgstr "Полноцветный"
+
+#: lib/options/SWP_Options_Page.php:574
+msgid "Addon Registrations"
+msgstr "Регистрация дополнений"
+
+#: lib/options/SWP_Section_HTML.php:478
+msgid "Choose Tag"
+msgstr "Выбрать метку"
+
+#: lib/options/SWP_Options_Page.php:286
+msgid "Dark Gray"
+msgstr "Темно-серый"
+
+#: lib/options/SWP_Options_Page.php:289
+msgid "Dark Gray Outlines"
+msgstr "Темно-серые контуры"
+
+#: lib/options/SWP_Options_Page.php:292
+msgid "Custom Color Outlines"
+msgstr "Пользовательские цветовые контуры"
+
+#: lib/options/SWP_Options_Page.php:290
+msgid "Color Outlines"
+msgstr "Цветовые контуры"
+
+#: lib/options/SWP_Options_Page.php:284
+msgid "Light Gray"
+msgstr "Светло-серый"
+
+#: lib/options/SWP_Options_Page.php:287
+msgid "Light Gray Outlines"
+msgstr "Светло-серые контуры"
+
+#: lib/options/SWP_Options_Page.php:285
+msgid "Medium Gray"
+msgstr "Средне-серый"
+
+#: lib/options/SWP_Options_Page.php:288
+msgid "Medium Gray Outlines"
+msgstr "Средние-серые контуры"
+
+#: lib/options/SWP_Options_Page.php:707 lib/options/SWP_Options_Page.php:712
+msgid "Buttons Preview"
+msgstr "Предпросмотр кнопок"
+
+#: lib/options/SWP_Options_Page.php:744
+msgid "On the right side of the page"
+msgstr "В правой части страницы"
+
+#: lib/options/SWP_Options_Page.php:545
+msgid "Position Table"
+msgstr "Таблица позиций"
+
+#: lib/options/SWP_Options_Page.php:848
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: lib/options/SWP_Section_HTML.php:493
+msgid "Yummly Terms"
+msgstr "Термины Yummly"
+
+#: lib/options/SWP_Options_Page.php:541
+msgid "These settings let you decide where the share buttons should go for each post type."
+msgstr "Эти настройки позволяют вам определить, где должны располагаться кнопки поделиться для каждого типа записи."
+
+#: lib/options/SWP_Section_HTML.php:288
+msgid "Bitly Link Shortening"
+msgstr "Сокращение ссылок в Bitly"
+
+#: lib/options/SWP_Options_Page.php:569
+msgid "Registration"
+msgstr "Регистрация"
+
+#: lib/utilities/SWP_Plugin_Updater.php:426
+msgid "Error"
+msgstr "Ошибка"
+
+#: lib/utilities/SWP_Plugin_Updater.php:426
+msgid "You do not have permission to install plugin updates"
+msgstr "У Вас нет прав на установку обновлений плагина"
+
+#: lib/options/SWP_Registration_Tab_Template.php:146
+msgid "Deactivate Registration"
+msgstr "Деактивировать регистрацию"
+
+#: lib/options/SWP_Registration_Tab_Template.php:72
+#: lib/Social_Warfare_Addon.php:431
+msgid "Plugin could not be registered."
+msgstr "Плагин не может быть зарегистрирован."
+
+#: lib/options/SWP_Registration_Tab_Template.php:83
+#: lib/Social_Warfare_Addon.php:442
+msgid "Plugin could not be unregistered."
+msgstr "Не удалось отменить регистрацию плагина."
+
+#: lib/options/SWP_Registration_Tab_Template.php:76
+#: lib/Social_Warfare_Addon.php:435
+msgid "Plugin successfully registered!"
+msgstr "Плагин успешно зарегистрирован!"
+
+#: lib/options/SWP_Registration_Tab_Template.php:87
+#: lib/Social_Warfare_Addon.php:446
+msgid "Plugin successfully unregistered!"
+msgstr "Плагин успешно снят с регистрации!"
+
+#: lib/options/SWP_Registration_Tab_Template.php:119
+msgid "Register Plugin"
+msgstr "Регистрация плагина"
+
+#: lib/options/SWP_Registration_Tab_Template.php:64
+#: lib/Social_Warfare_Addon.php:423
+msgid "Required fields missing."
+msgstr "Отсутствуют обязательные поля."
+
+#: lib/options/SWP_Registration_Tab_Template.php:141
+msgid "To unregister your license click the button below to free it up for use on another domain."
+msgstr "Для снятия лицензии с регистрации нажмите кнопку ниже, чтобы освободить ее для использования на другом домене."
+
+#: lib/options/SWP_Registration_Tab_Template.php:152
+msgid "Unregister Plugin"
+msgstr "Снять плагин с регистрации"
+
+#: lib/options/SWP_Options_Page.php:529
+msgid "Alignment"
+msgstr "Выравнивание"
+
+#: lib/options/SWP_Section_HTML.php:267
+#: lib/url-management/SWP_Link_Shortener.php:179
+msgid "Authenticate"
+msgstr "Аутентификация"
+
+#: lib/options/SWP_Options_Page.php:752
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: lib/options/SWP_Section_HTML.php:258
+#: lib/url-management/SWP_Link_Shortener.php:173
+msgid "Connected"
+msgstr "Подключено"
+
+#: lib/options/SWP_Options_Page.php:519
+msgid "Decimal Separator"
+msgstr "Десятичный разделитель"
+
+#: lib/options/SWP_Options_Page.php:473
+msgid "Display"
+msgstr "Отображение"
+
+#: lib/options/SWP_Options_Page.php:679
+msgid "Facebook App ID"
+msgstr "Facebook App ID"
+
+#: lib/options/SWP_Options_Page.php:673
+msgid "Facebook Page URL"
+msgstr "URL страницы Facebook"
+
+#: lib/options/SWP_Options_Page.php:485 lib/options/SWP_Option_Icons.php:178
+msgid "Inactive"
+msgstr "Неактивна"
+
+#: lib/social-networks/SWP_Pinterest.php:35
+msgid "Pin"
+msgstr "Закрепить"
+
+#: lib/social-networks/SWP_Facebook.php:59
+#: lib/social-networks/SWP_Linkedin.php:24 lib/social-networks/SWP_Mix.php:38
+msgid "Share"
+msgstr "Поделиться"
+
+#: lib/buttons-panel/SWP_Buttons_Panel_Trait.php:721
+msgid "Shares"
+msgstr "Поделились"
+
+#: lib/options/SWP_Options_Page.php:476
+msgid "Social Networks"
+msgstr "Социальные сети"
+
+#: lib/options/SWP_Options_Page.php:704
+msgid "Styles"
+msgstr "Стили"
+
+#: lib/options/SWP_Options_Page.php:766
+msgid "Transition"
+msgstr "Переход"
+
+#: lib/admin/SWP_User_Profile.php:64 lib/options/SWP_Options_Page.php:661
+msgid "Twitter Username"
+msgstr "Имя пользователя Twitter"
+
+#: lib/options/SWP_Option_Toggle.php:66 lib/options/SWP_Section_HTML.php:227
+msgid "OFF"
+msgstr "ВЫКЛ"
+
+#: lib/options/SWP_Section_HTML.php:351 lib/options/SWP_Section_HTML.php:517
+msgid "Off"
+msgstr "Выкл"
+
+#: lib/options/SWP_Option_Toggle.php:65 lib/options/SWP_Section_HTML.php:227
+msgid "ON"
+msgstr "ВКЛ"
+
+#: lib/options/SWP_Section_HTML.php:350 lib/options/SWP_Section_HTML.php:516
+msgid "On"
+msgstr "Вкл"
+
+#: lib/options/SWP_Section_HTML.php:360 lib/options/SWP_Section_HTML.php:545
+msgid "Post Type"
+msgstr "Тип записи"
+
+#: lib/admin/SWP_Settings_Link.php:44
+msgid "Settings"
+msgstr "Настройки"
+
+#: lib/admin/SWP_User_Profile.php:71
+msgid "Facebook Author URL"
+msgstr "URL автора в Facebook"
+
+#: lib/options/SWP_Options_Page.php:417
+msgid "Advanced"
+msgstr "Расширенные"
+
+#: lib/options/SWP_Options_Page.php:397 lib/options/SWP_Section_HTML.php:343
+msgid "Above the Content"
+msgstr "Над содержимым"
+
+#: lib/options/SWP_Options_Page.php:482 lib/options/SWP_Option_Icons.php:129
+msgid "Active"
+msgstr "Активна"
+
+#: lib/options/SWP_Options_Page.php:398 lib/options/SWP_Section_HTML.php:344
+msgid "Below the Content"
+msgstr "Под содержимым"
+
+#: lib/options/SWP_Options_Page.php:742
+msgid "Bottom of the Page"
+msgstr "В нижней части страницы"
+
+#: lib/options/SWP_Section_HTML.php:219
+msgid "Click here to visit OpenShareCount.com"
+msgstr "Нажмите здесь, чтобы посетить OpenShareCount.com"
+
+#: lib/frontend-output/SWP_Shortcode.php:173
+#: assets/js/post-editor/src/block/click-to-tweet.js:22
+msgid "Click To Tweet"
+msgstr "Нажмите, чтобы твитнуть"
+
+#: lib/options/SWP_Options_Page.php:508
+msgid "Decimal Places"
+msgstr "Десятичные разряды"
+
+#. Author of the plugin
+msgid "Warfare Plugins"
+msgstr "Warfare Plugins"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://warfareplugins.com"
+msgstr "https://warfareplugins.com"
+
+#: lib/options/SWP_Options_Page.php:759
+msgid "Minimum Screen Width"
+msgstr "Мин. ширина экрана"
+
+#: lib/options/SWP_Options_Page.php:728
+msgid "If you would like to activate floating share buttons, turn this on."
+msgstr "Если вы хотите активировать плавающие кнопки Поделиться, включите эту функцию."
+
+#: lib/utilities/SWP_Utility.php:145
+msgid "No settings to save."
+msgstr "Нет настроек для сохранения."
+
+#: lib/options/SWP_Options_Page.php:743
+msgid "On the left side of the page"
+msgstr "В левой части страницы"
+
+#: lib/options/SWP_Options_Page.php:667
+msgid "Pinterest Username"
+msgstr "Имя пользователя Pinterest"
+
+#: lib/admin/SWP_User_Profile.php:74
+msgid "Please enter the URL of your Facebok profile."
+msgstr "Введите URL вашего профиля Facebok."
+
+#: lib/admin/SWP_User_Profile.php:67
+msgid "Please enter your Twitter username."
+msgstr "Введите свое имя пользователя в Twitter."
+
+#: lib/options/SWP_Options_Page.php:540
+msgid "Position Share Buttons"
+msgstr "Позиция кнопки Поделиться"
+
+#: lib/options/SWP_Registration_Tab_Template.php:57
+#: lib/Social_Warfare_Addon.php:416
+msgid "Security failed."
+msgstr "Безопасность нарушена."
+
+#: lib/options/SWP_Options_Page.php:654
+msgid "Social Identity"
+msgstr "Социальная идентичность"
+
+#: lib/options/SWP_Section_HTML.php:363
+msgid "Static Buttons"
+msgstr "Статические кнопки"
+
+#. Plugin Name of the plugin
+#: assets/js/post-editor/blocks.php:59
+msgid "Social Warfare"
+msgstr "Social Warfare"
+
+#: lib/options/SWP_Options_Page.php:741
+msgid "Top of the Page"
+msgstr "Верхняя часть страницы"
+
+#: lib/options/SWP_Options_Page.php:502
+msgid "Total Counts"
+msgstr "Общее количество"
+
+#: lib/social-networks/SWP_Twitter.php:40
+msgid "Tweet"
+msgstr "Твитнуть"
+
+#: lib/options/SWP_Options_Page.php:478
+msgid "Drag & Drop to activate and order your share buttons."
+msgstr "Перетащите и отпустите, чтобы активировать кнопки Поделиться и упорядочить их."
+
+#: lib/options/SWP_Options_Page.php:433
+msgid "If you want to stop content pirates from framing your content, turn this on."
+msgstr "Если вы хотите, чтобы пираты контента не создавали фреймы для вашего контента, включите это."
+
+#: lib/options/SWP_Options_Page.php:658
+msgid "If you would like to set sitewide defaults for your social identity, add them below."
+msgstr "Если вы хотите установить настройки по умолчанию для вашей социальной идентичности, добавьте их ниже."
+
+#: lib/options/SWP_Section_HTML.php:86
+msgid "Press Ctrl+C to Copy this information."
+msgstr "Нажмите Ctrl + C, чтобы скопировать эту информацию."
+
+#: lib/options/SWP_Options_Page.php:399 lib/options/SWP_Section_HTML.php:345
+msgid "Both Above and Below the Content"
+msgstr "Над и под содержимым"
+
+#: lib/options/SWP_Section_HTML.php:366
+msgid "Floating Buttons (If Activated)"
+msgstr "Плавающие кнопки (если активированы)"
+
+#: lib/options/SWP_Options_Page.php:727 lib/options/SWP_Options_Page.php:733
+msgid "Floating Share Buttons"
+msgstr "Плавающие кнопки Поделиться"
+
+#: lib/options/SWP_Options_Page.php:445
+msgid "If your theme does not use excerpts, but instead displays the full post content on archive, category, and home pages, activate this toggle to allow the buttons to appear in those areas."
+msgstr "Если ваша тема не использует отрывки, а вместо этого отображает полный контент публикации в архиве, рубрики и домашних страницах, активируйте этот переключатель, чтобы кнопки отображались в этих областях."
+
+#: lib/options/SWP_Options_Page.php:431 lib/options/SWP_Options_Page.php:437
+msgid "Frame Buster"
+msgstr "Frame Buster"
+
+#: lib/options/SWP_Options_Page.php:739
+msgid "Float Position"
+msgstr "Положение плавающих кнопок"
+
+#. Description of the plugin
+msgid "A plugin to maximize social shares and drive more traffic using the fastest and most intelligent share buttons on the market, calls to action via in-post click-to-tweets, popular posts widgets based on share popularity, link-shortening, Google Analytics and much, much more!"
+msgstr "Плагин для максимального увеличения количества репостов в социальных сетях и увеличения трафика с помощью самых быстрых и интеллектуальных кнопок обмена на рынке, призывов к действию с помощью интерактивных твитов в сообщениях, виджетов популярных публикаций, основанных на общей популярности, сокращении ссылок, Google Analytics и намного, намного больше!"
+
+#: lib/options/SWP_Options_Page.php:448
+msgid "Full Content?"
+msgstr "Всё содержимое?"

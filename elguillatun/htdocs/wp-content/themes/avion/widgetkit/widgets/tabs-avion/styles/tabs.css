@@ -1,0 +1,83 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@media (min-width: 425px) {
+    .tm-switcher-avion .uk-tab {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+}
+@media (min-width: 768px) {
+    .tm-switcher-avion .uk-tab.uk-tab-left,
+    .tm-switcher-avion .uk-tab.uk-tab-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.tm-switcher-avion .uk-switcher > li.tm-media-left-top {
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-left-center {
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-left-bottom {
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-center-top {
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-center {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-center-bottom {
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-right-top {
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-right-center {
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.tm-switcher-avion .uk-switcher > li.tm-media-right-bottom {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.tm-switcher-avion .uk-switcher > li,
+.tm-switcher-avion .uk-switcher > li > .uk-panel { width: 100%; }
+
+.tm-switcher-avion .uk-tab > li > a {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex !important;
+
+    -ms-flex: 1 1 0%;
+    -webkit-flex: 1 1 0%;
+    flex: 1 1 0%;
+
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.tm-switcher-avion .tm-ripple { z-index: 1; }
+
+.tm-switcher-avion .uk-tab-responsive .uk-nav-dropdown > li > a { width: 100%; }

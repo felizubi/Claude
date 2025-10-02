@@ -1,0 +1,1048 @@
+<!DOCTYPE HTML>
+<html lang="es-CL" dir="ltr"  data-config='{}'>
+
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un encuentro chileno-alemán en Teatro del Puente</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat%7CLato&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%7CLato&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%7CLato&#038;display=swap" /></noscript>
+<link rel="shortcut icon" href="/wp-content/themes/avion/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/wp-content/themes/avion/apple_touch_icon.png">
+
+
+<meta name="wpsso-begin" content="wpsso meta tags and schema markup begin"/>
+<!-- generator:1 --><meta name="generator" content="WPSSO Core 18.3.0/L*"/>
+<!-- generator:2 --><meta name="generator" content="WPSSO UM 5.6.1/S"/>
+<link rel="shortlink" href="https://www.elguillatun.cl/?p=2121"/>
+<meta property="fb:app_id" content="1481366608747847"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente"/>
+<meta property="og:locale" content="es_LA"/>
+<meta property="og:site_name" content="El Guillat&uacute;n"/>
+<meta property="og:title" content="Un encuentro chileno-alem&aacute;n en Teatro del Puente"/>
+<meta property="og:description" content="Del 21 de noviembre al 12 de diciembre el Goethe-Institut y Teatro del Puente se unen a trav&eacute;s de la dramaturgia contempor&aacute;nea, llevando a cabo, cada viernes a las 21 hrs. el ciclo Cruza el Puente. Tal ciclo se realizar&aacute; con dos obras escritas por dramaturgos alemanes cuyo estilo y forma de..."/>
+<meta property="og:updated_time" content="2015-10-18T01:46:16+00:00"/>
+<!-- og:image:1 --><meta property="og:image" content="https://www.elguillatun.cl/wp-content/uploads/2015/01/tarjeta-navidad-2012.jpg"/>
+<!-- og:image:1 --><meta property="og:image:width" content="640"/>
+<!-- og:image:1 --><meta property="og:image:height" content="336"/>
+<!-- og:image:1 --><meta property="og:image:alt" content="El Guillat&uacute;n - navidad 2012"/>
+<meta property="article:publisher" content="https://www.facebook.com/ElGuillatun"/>
+<!-- article:tag:1 --><meta property="article:tag" content="dramaturgia"/>
+<meta property="article:published_time" content="2014-11-20T06:00:00+00:00"/>
+<meta property="article:modified_time" content="2015-10-18T01:46:16+00:00"/>
+<meta name="twitter:domain" content="www.elguillatun.cl"/>
+<meta name="twitter:site" content="@elguillatun"/>
+<meta name="twitter:title" content="Un encuentro chileno-alem&aacute;n en Teatro del Puente"/>
+<meta name="twitter:description" content="Del 21 de noviembre al 12 de diciembre el Goethe-Institut y Teatro del Puente se unen a trav&eacute;s de la dramaturgia contempor&aacute;nea, llevando a cabo, cada viernes a las 21 hrs. el ciclo Cruza el..."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="https://www.elguillatun.cl/wp-content/uploads/2015/01/tarjeta-navidad-2012-300x300-cropped.jpg"/>
+<meta name="twitter:image:alt" content="El Guillat&uacute;n - navidad 2012"/>
+<meta name="twitter:label1" content="Written by"/>
+<meta name="twitter:data1" content="Webmaster"/>
+<meta name="twitter:label2" content="Est. reading time"/>
+<meta name="twitter:data2" content="2 minutes"/>
+<meta name="author" content="Webmaster"/>
+<meta name="thumbnail" content="https://www.elguillatun.cl/wp-content/uploads/2015/01/tarjeta-navidad-2012-600x315-cropped.jpg"/>
+<script type="application/ld+json" id="wpsso-schema-graph">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@id": "/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente#sso/article/2121",
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": "https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente",
+            "url": "https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente",
+            "sameAs": [
+                "https://www.elguillatun.cl/?p=2121"
+            ],
+            "name": "Un encuentro chileno-alem&aacute;n en Teatro del Puente",
+            "description": "Del 21 de noviembre al 12 de diciembre el Goethe-Institut y Teatro del Puente se unen a trav&eacute;s de la dramaturgia contempor&aacute;nea, llevando a cabo, cada viernes a las 21 hrs. el ciclo Cruza el Puente. Tal ciclo se realizar&aacute; con dos obras escritas por dramaturgos alemanes cuyo estilo y forma de...",
+            "publisher": [
+                {
+                    "@id": "/#sso/organization/site/org-banner-url"
+                }
+            ],
+            "headline": "Un encuentro chileno-alem&aacute;n en Teatro del Puente",
+            "keywords": "dramaturgia",
+            "inLanguage": "es_CL",
+            "dateCreated": "2014-11-20T06:00:00+00:00",
+            "datePublished": "2014-11-20T06:00:00+00:00",
+            "dateModified": "2015-10-18T01:46:16+00:00",
+            "author": {
+                "@id": "/32bc2448d9fb0754016126b67e71d2a2#sso/person"
+            },
+            "thumbnailUrl": "https://www.elguillatun.cl/wp-content/uploads/2015/01/tarjeta-navidad-2012-600x315-cropped.jpg",
+            "commentCount": 0,
+            "timeRequired": "PT2M",
+            "speakable": {
+                "@context": "https://schema.org",
+                "@type": "SpeakableSpecification",
+                "cssSelector": [
+                    ".wp-block-post-title",
+                    ".speakable"
+                ]
+            }
+        },
+        {
+            "@id": "/#sso/organization/site/org-banner-url",
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.elguillatun.cl/",
+            "name": "El Guillat\u00fan",
+            "description": "Sitio web de arte y cultura",
+            "image": [
+                {
+                    "@id": "/wp-content/uploads/branding/logo-retina.png#sso/image-object"
+                }
+            ],
+            "logo": {
+                "@id": "/wp-content/uploads/branding/elguillatun_google.jpg#sso/image-object"
+            },
+            "sameAs": [
+                "https://www.facebook.com/ElGuillatun",
+                "https://www.instagram.com/elguillatun",
+                "https://www.linkedin.com/company/9397086/",
+                "https://twitter.com/elguillatun",
+                "https://www.youtube.com/c/ElGuillatun"
+            ]
+        },
+        {
+            "@id": "/wp-content/uploads/branding/logo-retina.png#sso/image-object",
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "https://www.elguillatun.cl/wp-content/uploads/branding/logo-retina.png",
+            "width": [
+                {
+                    "@id": "#sso/qv-width-px-476"
+                }
+            ],
+            "height": [
+                {
+                    "@id": "#sso/qv-height-px-136"
+                }
+            ]
+        },
+        {
+            "@id": "#sso/qv-width-px-476",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Width",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "476"
+        },
+        {
+            "@id": "#sso/qv-height-px-136",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Height",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "136"
+        },
+        {
+            "@id": "/wp-content/uploads/branding/elguillatun_google.jpg#sso/image-object",
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "https://www.elguillatun.cl/wp-content/uploads/branding/elguillatun_google.jpg",
+            "width": [
+                {
+                    "@id": "#sso/qv-width-px-600"
+                }
+            ],
+            "height": [
+                {
+                    "@id": "#sso/qv-height-px-60"
+                }
+            ]
+        },
+        {
+            "@id": "#sso/qv-width-px-600",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Width",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "600"
+        },
+        {
+            "@id": "#sso/qv-height-px-60",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Height",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "60"
+        },
+        {
+            "@id": "/32bc2448d9fb0754016126b67e71d2a2#sso/person",
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Webmaster",
+            "givenName": "Webmaster",
+            "description": "Nadie ha visto nunca al Webmaster. Algunos dicen que es una inteligencia artificial o una combinaci&oacute;n de microprocesadores, y otros que es un organismo vivo, pero son s&oacute;lo teor&iacute;as.",
+            "image": [
+                {
+                    "@id": "https://secure.gravatar.com/avatar/153914730afa4206891fa741a6c8a2a7.jpg?d=mp&s=1200#sso/image-object"
+                }
+            ]
+        },
+        {
+            "@id": "https://secure.gravatar.com/avatar/153914730afa4206891fa741a6c8a2a7.jpg?d=mp&s=1200#sso/image-object",
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/153914730afa4206891fa741a6c8a2a7.jpg?d=mp&s=1200",
+            "width": [
+                {
+                    "@id": "#sso/qv-width-px-1200"
+                }
+            ],
+            "height": [
+                {
+                    "@id": "#sso/qv-height-px-1200"
+                }
+            ]
+        },
+        {
+            "@id": "#sso/qv-width-px-1200",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Width",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "1200"
+        },
+        {
+            "@id": "#sso/qv-height-px-1200",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Height",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "1200"
+        }
+    ]
+}</script>
+<meta name="wpsso-end" content="wpsso meta tags and schema markup end"/>
+<meta name="wpsso-cached" content="2025-09-19T08:53:47+00:00 for www.elguillatun.cl"/>
+<meta name="wpsso-added" content="2025-10-02T00:16:10+00:00 in 0.004376 secs"/>
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v21.3 (Yoast SEO v21.3) - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.elguillatun.cl/"},{"@type":"ListItem","position":2,"name":"Un encuentro chileno-alemán en Teatro del Puente"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="El Guillatún &raquo; Un encuentro chileno-alemán en Teatro del Puente Feed de comentarios" href="https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente/feed" />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.elguillatun.cl/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1730382414' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='tabs-avion-css' href='https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/themes/avion/widgetkit/widgets/tabs-avion/styles/tabs.css?ver=1730382414' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='ppress-frontend-css' href='https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=1730382414' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.13.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.8.3' type='text/css' media='all' />
+
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.elguillatun.cl/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/widgetkit/cache/uikit2-4522806e.js?ver=1730382414" id="uikit2-js"></script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/widgetkit/cache/wk-scripts-0cc4d361.js?ver=1730382414" id="wk-scripts-js"></script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.13.4" id="ppress-flatpickr-js"></script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.13.4" id="ppress-select2-js"></script>
+<link rel="https://api.w.org/" href="https://www.elguillatun.cl/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.elguillatun.cl/wp-json/wp/v2/posts/2121" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.elguillatun.cl/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.3" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.elguillatun.cl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.elguillatun.cl%2Fnoticias%2Fartes-escenicas%2Fun-encuentro-chileno-aleman-en-teatro-del-puente" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.elguillatun.cl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.elguillatun.cl%2Fnoticias%2Fartes-escenicas%2Fun-encuentro-chileno-aleman-en-teatro-del-puente&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="amphtml" href="https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente/amp"><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link rel="stylesheet" href="/wp-content/themes/avion/cache/gzip.php?theme-50335d46.css">
+<script src="/wp-content/themes/avion/cache/gzip.php?theme-da921b02.js"></script>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-2121 single-format-standard wp-theme-avion tm-sidebar-a-right tm-sidebars-1 tm-isblog wp-single tm-article-blog">
+
+    <div id="fb-root"></div>
+    <script type="rocketlazyloadscript" async defer crossorigin="anonymous" data-rocket-src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=1481366608747847"></script>
+
+
+    
+    
+        
+    
+    <div class="uk-container uk-container-center">
+
+        
+                        <div class="tm-header">
+
+        <div class="tm-toolbar uk-clearfix uk-hidden-small">
+
+                <div class="uk-float-left"><div class="uk-panel widget_nav_menu" ><ul class="uk-subnav uk-subnav-line"><li><a href="https://www.elguillatun.cl/seccion/editorial" class="">Editorial</a></li><li><a href="https://www.elguillatun.cl/contacto" class="">Contacto</a></li></ul></div></div>
+        
+                <div class="uk-float-right"><div class="uk-panel widget_custom_html" ><div class="textwidget custom-html-widget"><ul class="uk-subnav">
+	<li><a href="https://twitter.com/elguillatun" class="uk-icon-hover uk-icon-twitter uk-icon-small" target="_blank"></a></li>
+	<li><a href="https://www.facebook.com/ElGuillatun" class="uk-icon-hover uk-icon-facebook uk-icon-small" target="_blank"></a></li>
+	<li><a href="https://www.youtube.com/c/ElGuillatun" class="uk-icon-hover uk-icon-youtube-play uk-icon-small" target="_blank"></a></li>
+</ul></div></div></div>
+        
+    </div>
+    
+        <nav class="tm-navbar uk-navbar">
+
+                <a class="tm-logo uk-float-left uk-hidden-small" href="https://www.elguillatun.cl"><div class="textwidget custom-html-widget"><img src="/wp-content/uploads/branding/logo.svg" width="250" height="40" alt="El Guillatún"></div></a>
+        
+                <ul class="uk-navbar-nav uk-visible-large"><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Música</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 330px; max-width: 330px; width:330px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-oido-medio" class="">El Oído Medio</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/cronicas-de-musica-latinoamericana" class="">Crónicas de Música Latinoamericana</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/improvisaciones-premeditadas" class="">Improvisaciones Premeditadas</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/kapellmeister" class="">Kapellmeister</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/taner" class="">Tañer</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Literatura</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 280px; max-width: 280px; width:280px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/todas-las-hojas-son-del-viento" class="">Todas las hojas son del viento</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">A. Escénicas</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 260px; max-width: 260px; width:260px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/imaginario-teatral" class="">Imaginario Teatral</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/problematizando-la-danza" class="">Problematizando la Danza</a></li><li><a href="https://www.elguillatun.cl/seccion/asistente-de-regisseur" class="">Asistente de Regisseur</a></li><li><a href="https://www.elguillatun.cl/seccion/prima-ballerina" class="">Prima Ballerina</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">A. Visuales</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 230px; max-width: 230px; width:230px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-diletante-ilustrado" class="">El Diletante Ilustrado</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Cine</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 200px; max-width: 200px; width:200px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/cinema-guillatun" class="">Cinema Guillatún</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Cultura Pop</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 290px; max-width: 290px; width:290px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/antena" class="">Antena</a></li><li><a href="https://www.elguillatun.cl/seccion/ojos-de-videotape" class="">Ojos de Videotape</a></li><li><a href="https://www.elguillatun.cl/seccion/el-rincon-de-arriba-a-la-derecha" class="">El rincón de arriba a la derecha</a></li></ul></div></div></div></li></ul>        
+                <div class="uk-navbar-flip">
+                    <div class="uk-navbar-content uk-visible-large">
+<form class="uk-search" id="search-search-2-68ddc44a6aa3a" action="https://www.elguillatun.cl/" method="get" data-uk-search="{'source': 'https://www.elguillatun.cl/wp-admin/admin-ajax.php?action=warp_search', 'param': 's', 'msgResultsHeader': 'Resultados de la búsqueda', 'msgMoreResults': 'Más resultados', 'msgNoResults': 'No se encontraron resultados.', flipDropdown: 1}">
+    <input class="uk-search-field" type="text" value="" name="s" placeholder="buscar...">
+</form>
+</div>
+                        </div>
+        
+                <a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip uk-padding-remove uk-hidden-large" data-uk-offcanvas></a>
+        
+                <div class="uk-navbar-content uk-padding-remove uk-visible-small"><a class="tm-logo-small uk-float-left" href="https://www.elguillatun.cl"><div class="textwidget custom-html-widget"><img src="/wp-content/uploads/branding/logo.svg" width="210" height="40" alt="El Guillatún" class="uk-responsive-width" /></div></a></div>
+        
+    </nav>
+    
+</div>            
+        
+        
+        
+        
+        
+                <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match data-uk-grid-margin>
+
+                        <div class="tm-main uk-width-medium-7-10">
+
+                
+                                <main id="tm-content" class="tm-content">
+
+                    
+                         
+    <article class="uk-article tm-article" data-permalink="https://www.elguillatun.cl/noticias/artes-escenicas/un-encuentro-chileno-aleman-en-teatro-del-puente">
+
+        <div class="tm-article-content uk-position-relative fz-category"><a href="https://www.elguillatun.cl/seccion/noticias/artes-escenicas" rel="category tag">Artes Escénicas</a></div>
+
+        <div class="tm-article-content uk-position-relative  tm-article-date-true">
+
+            <div class="tm-article-date uk-text-center">
+                <span class="tm-article-date-day">20</span><span class="tm-article-date-month">Nov</span><span class="tm-article-date-year">2014</span>            </div>
+
+            <h1 class="uk-article-title">Un encuentro chileno-alemán en Teatro del Puente</h1>
+
+            
+            <p class="uk-article-meta">
+                Por <a href="https://www.elguillatun.cl/colaboradores/webmaster" title="Webmaster">Webmaster</a>            </p>
+
+
+            
+
+            
+            <div class="tm-article-featured-image">
+                <figure>                                    </figure>
+            </div>
+
+            
+<p>Del 21 de noviembre al 12 de diciembre el Goethe-Institut y Teatro del Puente se unen a través de la dramaturgia contemporánea, llevando a cabo, cada viernes a las 21 hrs. el ciclo Cruza el Puente.</p>
+<p><span id="more-2121"></span></p>
+<p>Tal ciclo se realizará con dos obras escritas por dramaturgos alemanes cuyo estilo y forma de abordar temas sociales contingentes resuenan en la actual escena internacional. La fórmula se completa con la intervención de dos jóvenes directores chilenos quienes asumen la dirección de cada lectura. El ciclo representa una excelente oportunidad para reencontrarse con la dramaturgia de ese país, tan apreciada y valorada por el espectador chileno en los desaparecidos Festivales de Dramaturgia Europea, así como ver la forma en que los directores plasman sus propias miradas en la conducción de las puestas.</p>
+<p><em>¡No somos bárbaros!</em> de Philipp Löhle será dirigida por Pablo Manzi y cuestiona al ciudadano acomodado, su ignorancia y particularmente su hostilidad hacia los inmigrantes, con lo que indaga en las conductas xenófobas de las sociedades de hoy. A través de la mirada de dos parejas vecinas que muestran sus prejuicios y rechazo al extranjero, cuando aparece un refugiado en sus vidas.</p>
+<p>En cuanto a Camila Le-Bert, se encuentra con el texto de Rebekka Kricheldorf <em>Cotidianidad y éxtasis</em> donde se analizan las relaciones impersonales de pareja del siglo XXI presentando a un hombre joven que intenta sacar lo mejor de sí mismo, mientras su ex, sobrecargada con la educación de su hija en común, busca consuelo en relaciones con príncipes azules. Por otro lado, la joven abuela, harta de la masculinidad hegemónica, lleva una vida sin hombres y el abuelo intenta reencontrar su juventud viviendo todo tipo de rituales exóticos.</p>
+<p>Con este proyecto, el Goethe-Institut continúa su labor de intercambio cultural y artístico al formar esta alianza con Teatro del Puente, lo que posibilita contar con una sala y público especializados en las propuestas emergentes y formatos contemporáneos. Finalmente, el Goethe-Institut recuerda que las lecturas dramatizadas representan una excelente posibilidad de apreciar la riqueza del texto más allá de los recursos externos propios de las obras acabadas, y ha cobrado gran interés por parte del espectador teatral.</p>
+<p class="info">Podrán ir a ver <em>¡No somos bárbaros!</em> los viernes 21 y 28 de noviembre a las 21 hrs. y <em>Cotidianidad y éxtasis</em>, los viernes 5 y 12 de diciembre a la misma hora, en el Teatro del Puente (Metro Baquedano). Las entradas son a $3.000 para público general y $2.000 para estudiantes y tercera edad.</p>
+
+            
+            <div class="fz-tags"><p>Temas: <a href="https://www.elguillatun.cl/etiqueta/dramaturgia" rel="tag">dramaturgia</a></p></div>
+
+            
+                    </div>
+        
+        <div class="clearfix"></div>
+
+                <div class="uk-panel">
+            <div class="fz-autor">
+
+                <div class="uk-align-medium-left">
+                    <img alt='' src='https://secure.gravatar.com/avatar/d9c246a7823a6268b14b84cb6bb903011410260c5fb19db9d4bb25a3f1e2f561?s=128&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/d9c246a7823a6268b14b84cb6bb903011410260c5fb19db9d4bb25a3f1e2f561?s=256&#038;d=mm&#038;r=g 2x' class='avatar avatar-128wp-user-avatar wp-user-avatar-128 photo' height='128' width='128' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h3 class="uk-h3 uk-margin-top-remove">Webmaster</h3>
+
+                <div class="uk-margin fz-autor-description">Nadie ha visto nunca al Webmaster. Algunos dicen que es una inteligencia artificial o una combinación de microprocesadores, y otros que es un organismo vivo, pero son sólo teorías.</div>
+
+            </div>
+        </div>
+        
+        
+    <div id="comments" class="uk-margin">
+
+
+        
+
+        <div id="respond">
+
+            <h4 class="uk-h3">Deja un comentario</h4>
+
+            
+                
+                    <form class="uk-form" action="https://www.elguillatun.cl/wp-comments-post.php" method="post">
+
+                        
+                            
+                            <div class="uk-form-row required">
+                                <input type="text" name="author" placeholder="Nombre *" value="" aria-required='true'>
+
+                                <input type="text" name="email" placeholder="E-mail *" value="" aria-required='true'>
+                            </div>
+
+                        
+                        <div class="uk-form-row">
+                            <textarea name="comment" id="comment" cols="80" rows="5" tabindex="4"></textarea>
+                        </div>
+
+                        <div class="uk-form-row actions">
+                            <button class="uk-button uk-button-primary" name="submit" type="submit" id="submit" tabindex="5">Enviar comentario</button>
+                            <input type='hidden' name='comment_post_ID' value='2121' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                        </div>
+                        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4c1a24b435" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="59"/><script type="rocketlazyloadscript">document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+                    </form>
+
+                
+            
+        </div>
+
+
+    </div>
+
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+
+        jQuery(function($) {
+
+            var respond = $("#respond");
+
+            $("p.js-reply > a").bind("click", function(){
+
+                var id = $(this).attr('rel');
+
+                respond.find(".comment-cancelReply:first").remove();
+
+                $('<a>Cancelar</a>').addClass('comment-cancelReply uk-margin-left').attr('href', "#respond").bind("click", function(){
+                    respond.find(".comment-cancelReply:first").remove();
+                    respond.appendTo($('#comments')).find("[name=comment_parent]").val(0);
+
+                    return false;
+                }).appendTo(respond.find(".actions:first"));
+
+                respond.find("[name=comment_parent]").val(id);
+                respond.appendTo($("#comment-"+id));
+
+                return false;
+
+            });
+        });
+
+    </script>
+
+
+    </article>
+
+     
+                </main>
+                
+                
+            </div>
+            
+                                                            <aside class="tm-sidebar-a uk-width-medium-3-10"><div class="uk-panel uk-panel-box uk-panel-box-secondary uk-hidden-medium fz-tweets widget_custom_html" ><h3 class="uk-panel-title">Tweets</h3><div class="textwidget custom-html-widget"><a class="twitter-timeline" data-theme="dark" href="https://twitter.com/elguillatun?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter noborders transparent" data-tweet-limit="1">Tuits por @elguillatun</a> <script data-minify="1" async src="https://www.elguillatun.cl/wp-content/cache/min/1/widgets.js?ver=1730382414" charset="utf-8"></script></div></div>
+<div class="uk-panel uk-panel-box uk-panel-box-primary uk-hidden-medium widget_nav_menu" ><h3 class="uk-panel-title">Otras secciones</h3><ul class="uk-nav uk-nav-parent-icon uk-nav-side" data-uk-nav="{}"><li><a href="https://www.elguillatun.cl/seccion/entrevistas" class="">Entrevistas</a></li><li><a href="https://www.elguillatun.cl/seccion/cartelera" class="">Cartelera</a></li><li><a href="https://www.elguillatun.cl/seccion/in-situ" class="">In Situ</a></li><li><a href="https://www.elguillatun.cl/seccion/playlist" class="">Playlist</a></li><li><a href="https://www.elguillatun.cl/seccion/reportajes" class="">Reportajes</a></li><li><a href="https://www.elguillatun.cl/seccion/noticias" class="">Noticias</a></li><li><a href="https://www.elguillatun.cl/seccion/convocatorias" class="">Convocatorias</a></li></ul></div>
+<div class="uk-panel uk-panel-box uk-hidden-medium widget_tag_cloud" ><h3 class="uk-panel-title">Temas</h3><a href="https://www.elguillatun.cl/etiqueta/animacion" class="tag-cloud-link tag-link-120 tag-link-position-1" style="font-size: 9.0909090909091pt;" aria-label="animación (3 ítems)">animación</a>
+<a href="https://www.elguillatun.cl/etiqueta/arte-contemporaneo" class="tag-cloud-link tag-link-32 tag-link-position-2" style="font-size: 11.818181818182pt;" aria-label="arte contemporáneo (7 ítems)">arte contemporáneo</a>
+<a href="https://www.elguillatun.cl/etiqueta/artesania" class="tag-cloud-link tag-link-38 tag-link-position-3" style="font-size: 10pt;" aria-label="artesanía (4 ítems)">artesanía</a>
+<a href="https://www.elguillatun.cl/etiqueta/ballet" class="tag-cloud-link tag-link-39 tag-link-position-4" style="font-size: 12.272727272727pt;" aria-label="ballet (8 ítems)">ballet</a>
+<a href="https://www.elguillatun.cl/etiqueta/cine" class="tag-cloud-link tag-link-43 tag-link-position-5" style="font-size: 22pt;" aria-label="cine (103 ítems)">cine</a>
+<a href="https://www.elguillatun.cl/etiqueta/composicion" class="tag-cloud-link tag-link-46 tag-link-position-6" style="font-size: 9.0909090909091pt;" aria-label="composición (3 ítems)">composición</a>
+<a href="https://www.elguillatun.cl/etiqueta/cortometraje" class="tag-cloud-link tag-link-47 tag-link-position-7" style="font-size: 11.818181818182pt;" aria-label="cortometraje (7 ítems)">cortometraje</a>
+<a href="https://www.elguillatun.cl/etiqueta/cuento" class="tag-cloud-link tag-link-48 tag-link-position-8" style="font-size: 13.727272727273pt;" aria-label="cuento (12 ítems)">cuento</a>
+<a href="https://www.elguillatun.cl/etiqueta/danza" class="tag-cloud-link tag-link-49 tag-link-position-9" style="font-size: 11.818181818182pt;" aria-label="danza (7 ítems)">danza</a>
+<a href="https://www.elguillatun.cl/etiqueta/danza-contemporanea" class="tag-cloud-link tag-link-50 tag-link-position-10" style="font-size: 20.272727272727pt;" aria-label="danza contemporánea (67 ítems)">danza contemporánea</a>
+<a href="https://www.elguillatun.cl/etiqueta/desvariacion" class="tag-cloud-link tag-link-56 tag-link-position-11" style="font-size: 14.363636363636pt;" aria-label="desvariación (14 ítems)">desvariación</a>
+<a href="https://www.elguillatun.cl/etiqueta/dibujo" class="tag-cloud-link tag-link-57 tag-link-position-12" style="font-size: 12.727272727273pt;" aria-label="dibujo (9 ítems)">dibujo</a>
+<a href="https://www.elguillatun.cl/etiqueta/diseno" class="tag-cloud-link tag-link-125 tag-link-position-13" style="font-size: 9.0909090909091pt;" aria-label="diseño (3 ítems)">diseño</a>
+<a href="https://www.elguillatun.cl/etiqueta/documental" class="tag-cloud-link tag-link-58 tag-link-position-14" style="font-size: 18.636363636364pt;" aria-label="documental (44 ítems)">documental</a>
+<a href="https://www.elguillatun.cl/etiqueta/dramaturgia" class="tag-cloud-link tag-link-59 tag-link-position-15" style="font-size: 13.090909090909pt;" aria-label="dramaturgia (10 ítems)">dramaturgia</a>
+<a href="https://www.elguillatun.cl/etiqueta/escultura" class="tag-cloud-link tag-link-60 tag-link-position-16" style="font-size: 11.363636363636pt;" aria-label="escultura (6 ítems)">escultura</a>
+<a href="https://www.elguillatun.cl/etiqueta/flamenco" class="tag-cloud-link tag-link-61 tag-link-position-17" style="font-size: 11.818181818182pt;" aria-label="flamenco (7 ítems)">flamenco</a>
+<a href="https://www.elguillatun.cl/etiqueta/folclor" class="tag-cloud-link tag-link-62 tag-link-position-18" style="font-size: 11.363636363636pt;" aria-label="folclor (6 ítems)">folclor</a>
+<a href="https://www.elguillatun.cl/etiqueta/folk" class="tag-cloud-link tag-link-114 tag-link-position-19" style="font-size: 10pt;" aria-label="folk (4 ítems)">folk</a>
+<a href="https://www.elguillatun.cl/etiqueta/fotografia" class="tag-cloud-link tag-link-63 tag-link-position-20" style="font-size: 14.818181818182pt;" aria-label="fotografía (16 ítems)">fotografía</a>
+<a href="https://www.elguillatun.cl/etiqueta/gestion-cultural" class="tag-cloud-link tag-link-65 tag-link-position-21" style="font-size: 13.727272727273pt;" aria-label="gestión cultural (12 ítems)">gestión cultural</a>
+<a href="https://www.elguillatun.cl/etiqueta/grabado" class="tag-cloud-link tag-link-66 tag-link-position-22" style="font-size: 11.363636363636pt;" aria-label="grabado (6 ítems)">grabado</a>
+<a href="https://www.elguillatun.cl/etiqueta/guitarra" class="tag-cloud-link tag-link-67 tag-link-position-23" style="font-size: 17.090909090909pt;" aria-label="guitarra (29 ítems)">guitarra</a>
+<a href="https://www.elguillatun.cl/etiqueta/hiperrealidad" class="tag-cloud-link tag-link-68 tag-link-position-24" style="font-size: 14.090909090909pt;" aria-label="hiperrealidad (13 ítems)">hiperrealidad</a>
+<a href="https://www.elguillatun.cl/etiqueta/ilustracion" class="tag-cloud-link tag-link-69 tag-link-position-25" style="font-size: 15.818181818182pt;" aria-label="ilustración (21 ítems)">ilustración</a>
+<a href="https://www.elguillatun.cl/etiqueta/instalacion" class="tag-cloud-link tag-link-70 tag-link-position-26" style="font-size: 14.090909090909pt;" aria-label="instalación (13 ítems)">instalación</a>
+<a href="https://www.elguillatun.cl/etiqueta/jazz" class="tag-cloud-link tag-link-71 tag-link-position-27" style="font-size: 17.363636363636pt;" aria-label="jazz (31 ítems)">jazz</a>
+<a href="https://www.elguillatun.cl/etiqueta/literatura" class="tag-cloud-link tag-link-73 tag-link-position-28" style="font-size: 16.454545454545pt;" aria-label="literatura (25 ítems)">literatura</a>
+<a href="https://www.elguillatun.cl/etiqueta/musica-clasica" class="tag-cloud-link tag-link-76 tag-link-position-29" style="font-size: 18.454545454545pt;" aria-label="música clásica (42 ítems)">música clásica</a>
+<a href="https://www.elguillatun.cl/etiqueta/musica-contemporanea" class="tag-cloud-link tag-link-77 tag-link-position-30" style="font-size: 10pt;" aria-label="música contemporánea (4 ítems)">música contemporánea</a>
+<a href="https://www.elguillatun.cl/etiqueta/musica-de-camara" class="tag-cloud-link tag-link-78 tag-link-position-31" style="font-size: 10.727272727273pt;" aria-label="música de cámara (5 ítems)">música de cámara</a>
+<a href="https://www.elguillatun.cl/etiqueta/novela" class="tag-cloud-link tag-link-79 tag-link-position-32" style="font-size: 16.909090909091pt;" aria-label="novela (28 ítems)">novela</a>
+<a href="https://www.elguillatun.cl/etiqueta/novela-grafica" class="tag-cloud-link tag-link-80 tag-link-position-33" style="font-size: 9.0909090909091pt;" aria-label="novela gráfica (3 ítems)">novela gráfica</a>
+<a href="https://www.elguillatun.cl/etiqueta/patrimonio" class="tag-cloud-link tag-link-82 tag-link-position-34" style="font-size: 8pt;" aria-label="patrimonio (2 ítems)">patrimonio</a>
+<a href="https://www.elguillatun.cl/etiqueta/pintura" class="tag-cloud-link tag-link-85 tag-link-position-35" style="font-size: 15.454545454545pt;" aria-label="pintura (19 ítems)">pintura</a>
+<a href="https://www.elguillatun.cl/etiqueta/poesia" class="tag-cloud-link tag-link-86 tag-link-position-36" style="font-size: 10.727272727273pt;" aria-label="poesía (5 ítems)">poesía</a>
+<a href="https://www.elguillatun.cl/etiqueta/pop" class="tag-cloud-link tag-link-87 tag-link-position-37" style="font-size: 16.909090909091pt;" aria-label="pop (28 ítems)">pop</a>
+<a href="https://www.elguillatun.cl/etiqueta/proceso-creativo" class="tag-cloud-link tag-link-88 tag-link-position-38" style="font-size: 14.363636363636pt;" aria-label="proceso creativo (14 ítems)">proceso creativo</a>
+<a href="https://www.elguillatun.cl/etiqueta/raiz-latinoamericana" class="tag-cloud-link tag-link-89 tag-link-position-39" style="font-size: 13.727272727273pt;" aria-label="raíz latinoamericana (12 ítems)">raíz latinoamericana</a>
+<a href="https://www.elguillatun.cl/etiqueta/rock" class="tag-cloud-link tag-link-91 tag-link-position-40" style="font-size: 14.545454545455pt;" aria-label="rock (15 ítems)">rock</a>
+<a href="https://www.elguillatun.cl/etiqueta/serie-de-television" class="tag-cloud-link tag-link-133 tag-link-position-41" style="font-size: 11.363636363636pt;" aria-label="serie de televisión (6 ítems)">serie de televisión</a>
+<a href="https://www.elguillatun.cl/etiqueta/stop-motion" class="tag-cloud-link tag-link-94 tag-link-position-42" style="font-size: 10pt;" aria-label="stop motion (4 ítems)">stop motion</a>
+<a href="https://www.elguillatun.cl/etiqueta/teatro" class="tag-cloud-link tag-link-95 tag-link-position-43" style="font-size: 21.909090909091pt;" aria-label="teatro (101 ítems)">teatro</a>
+<a href="https://www.elguillatun.cl/etiqueta/world-music" class="tag-cloud-link tag-link-98 tag-link-position-44" style="font-size: 11.363636363636pt;" aria-label="world music (6 ítems)">world music</a>
+<a href="https://www.elguillatun.cl/etiqueta/opera" class="tag-cloud-link tag-link-81 tag-link-position-45" style="font-size: 18.545454545455pt;" aria-label="ópera (43 ítems)">ópera</a></div>
+<div class="uk-panel uk-hidden-medium uk-text-center widget_custom_html" ><div class="textwidget custom-html-widget"><div class="fb-page" data-href="https://www.facebook.com/ElGuillatun" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ElGuillatun" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ElGuillatun">El Guillatún</a></blockquote></div></div></div>
+<div class="uk-panel uk-panel-box uk-panel-box-secondary uk-hidden-medium widget_recent_comments" ><h3 class="uk-panel-title">Comentarios</h3><ul class="uk-comment-list">
+
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/10b9dcc40aab8aa5a0a653ba7f2cd6babf04949587b00b8c0de4c77a9f7d6aaf?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/10b9dcc40aab8aa5a0a653ba7f2cd6babf04949587b00b8c0de4c77a9f7d6aaf?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Victoria                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-10-23">23-Oct-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/problematizando-la-danza/la-noche-que-me-gane-el-oscar#comment-15473">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Lo que expresa el señor Rodrigo Hidalgo falta a la verdad. Las interpretes usaban malla color carne pero no estaban&hellip;            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/e0599d8bb8eca82bef2e9c077587ab9d9f62a32b2e282f017a8aaf6b7988e3fe?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e0599d8bb8eca82bef2e9c077587ab9d9f62a32b2e282f017a8aaf6b7988e3fe?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Luciano Gonzalez                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-10-03">3-Oct-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/cronicas-de-musica-latinoamericana/entrama#comment-15375">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Nunca mencionastes que Entrama toco en Hamilton, Canada. Un grupo muy pequenio de amigos se lo puso como objetivo, y&hellip;            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/facc8936c8201d07c5ce1c95820cff21e3f9438c8bb150e64ebe153b351f94b9?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/facc8936c8201d07c5ce1c95820cff21e3f9438c8bb150e64ebe153b351f94b9?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Yomaira Isabel Herrera Echeverri                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-08-17">17-Ago-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/problematizando-la-danza/escena1-un-festival-que-crece-y-suma#comment-15081">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Me parece fascinante todo lo que se ha logrado            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/61c03eeaafc9b74c39c03906cedb3d9a243261863326a21f3cdc0c235129758a?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/61c03eeaafc9b74c39c03906cedb3d9a243261863326a21f3cdc0c235129758a?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    America                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-08-15">15-Ago-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/kapellmeister/estudiar-musica-satisfaccion-plenitud-costos-y-renuncias#comment-15052">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Mi hijo quiere estudiar musica , se encuentra molesto ya que no estamos de acuerdo , pienso que ha sido&hellip;            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/6abae272ee687acd634b00c678321e5b1a37dacb91f764d27ccad4f0e621480c?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6abae272ee687acd634b00c678321e5b1a37dacb91f764d27ccad4f0e621480c?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Teresa Alcaino                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2023-08-11">11-Ago-2023</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/problematizando-la-danza/danza-y-espacio-social/experimentacion-el-espacio-donde-el-error-no-es-error-y-el-conocer-se-enfrenta-con-todo-el-cuerpo#comment-12717">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Muy bueno el artículo, una invitación a revisar constantemente nuestro quehacer como pedagoga en Danza.Gracias            </div>
+
+        </article>
+
+    </li>
+    
+</ul>
+</div></aside>
+                        
+        </div>
+        
+        
+        
+                <section id="tm-bottom-c" class="tm-bottom-c uk-grid uk-grid-match" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+            
+<div class="uk-width-1-1"><div class="uk-panel widget_text" >
+
+<div id="wk-grida91" class="uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid uk-grid-match uk-text-left fz-latest" data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid-margin  data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'> div > .uk-panel', delay:300}">
+
+
+    <div>
+        <div class="uk-panel uk-panel-box uk-invisible">
+
+            
+                        <div class="uk-panel-badge uk-badge">Cinema Guillatún</div>
+            
+                        <div class="uk-text-center uk-margin uk-margin-top-remove"><div class="uk-overlay uk-overlay-hover "><img src="https://elguillatun.s3.amazonaws.com/wp-content/uploads/grid/isle-of-dogs.jpg" class=" uk-overlay-scale" alt="Los perros también sueñan"><a class="uk-position-cover" href="https://www.elguillatun.cl/columnas/cinema-guillatun/isla-de-perros" title="Los perros también sueñan"></a></div></div>
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    <a class="uk-link-reset" href="https://www.elguillatun.cl/columnas/cinema-guillatun/isla-de-perros">Los perros también sueñan</a>
+                
+                
+            </h3>
+            
+                        <p class="uk-article-meta">Publicado el <time datetime="2018-05-10">10-May-2018</time></p>
+            
+            
+            
+            
+                        <p><a class="uk-button" href="https://www.elguillatun.cl/columnas/cinema-guillatun/isla-de-perros">Leer</a></p>
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel uk-panel-box uk-invisible">
+
+            
+                        <div class="uk-panel-badge uk-badge">Cinema Guillatún</div>
+            
+                        <div class="uk-text-center uk-margin uk-margin-top-remove"><div class="uk-overlay uk-overlay-hover "><img src="https://elguillatun.s3.amazonaws.com/wp-content/uploads/grid/ready-player-one.jpg" class=" uk-overlay-scale" alt="La realidad no es suficiente"><a class="uk-position-cover" href="https://www.elguillatun.cl/columnas/cinema-guillatun/ready-player-one" title="La realidad no es suficiente"></a></div></div>
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    <a class="uk-link-reset" href="https://www.elguillatun.cl/columnas/cinema-guillatun/ready-player-one">La realidad no es suficiente</a>
+                
+                
+            </h3>
+            
+                        <p class="uk-article-meta">Publicado el <time datetime="2018-04-03">3-Abr-2018</time></p>
+            
+            
+            
+            
+                        <p><a class="uk-button" href="https://www.elguillatun.cl/columnas/cinema-guillatun/ready-player-one">Leer</a></p>
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel uk-panel-box uk-invisible">
+
+            
+                        <div class="uk-panel-badge uk-badge">Cinema Guillatún</div>
+            
+                        <div class="uk-text-center uk-margin uk-margin-top-remove"><div class="uk-overlay uk-overlay-hover "><img src="https://elguillatun.s3.amazonaws.com/wp-content/uploads/grid/lady-bird.jpg" class=" uk-overlay-scale" alt="La mejor versión de ti"><a class="uk-position-cover" href="https://www.elguillatun.cl/columnas/cinema-guillatun/lady-bird" title="La mejor versión de ti"></a></div></div>
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    <a class="uk-link-reset" href="https://www.elguillatun.cl/columnas/cinema-guillatun/lady-bird">La mejor versión de ti</a>
+                
+                
+            </h3>
+            
+                        <p class="uk-article-meta">Publicado el <time datetime="2018-03-02">2-Mar-2018</time></p>
+            
+            
+            
+            
+                        <p><a class="uk-button" href="https://www.elguillatun.cl/columnas/cinema-guillatun/lady-bird">Leer</a></p>
+            
+            
+        </div>
+    </div>
+
+
+</div>
+
+<script type="rocketlazyloadscript">
+(function($){
+
+    // get the images of the gallery and replace it by a canvas of the same size to fix the problem with overlapping images on load.
+    $('img[width][height]:not(.uk-overlay-panel)', $('#wk-grida91')).each(function() {
+
+        var $img = $(this);
+
+        if (this.width == 'auto' || this.height == 'auto' || !$img.is(':visible')) {
+            return;
+        }
+
+        var $canvas = $('<canvas class="uk-responsive-width"></canvas>').attr({width:$img.attr('width'), height:$img.attr('height')}),
+            img = new Image,
+            release = function() {
+                $canvas.remove();
+                $img.css('display', '');
+                release = function(){};
+            };
+
+        $img.css('display', 'none').after($canvas);
+
+        $(img).on('load', function(){ release(); });
+        setTimeout(function(){ release(); }, 1000);
+
+        img.src = this.src;
+
+    });
+
+})(jQuery);
+</script>
+</div></div>
+        </section>
+        
+                <section id="tm-bottom-d" class="tm-bottom-d uk-grid uk-grid-match" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+            
+<div class="uk-width-1-1"><div class="uk-panel uk-panel-box tm-panel-box-alternative uk-padding-remove widget_custom_html" ><div class="textwidget custom-html-widget"><div class="uk-panel-space uk-flex uk-flex-middle uk-flex-space-between">
+	<img class="fz-logo-footer" src="/wp-content/uploads/branding/logo_footer.svg" width="250" height="40" alt="El Guillatún">
+	<ul class="uk-subnav uk-margin-bottom-remove uk-hidden-small">
+		<li><a href="https://twitter.com/elguillatun" class="uk-icon-hover uk-icon-twitter uk-icon-small" target="_blank"></a></li>
+		<li><a href="https://www.facebook.com/ElGuillatun" class="uk-icon-hover uk-icon-facebook uk-icon-small" target="_blank"></a></li>
+		<li><a href="https://www.instagram.com/elguillatun" class="uk-icon-hover uk-icon-instagram uk-icon-small" target="_blank"></a></li>
+		<li><a href="https://www.youtube.com/c/ElGuillatun" class="uk-icon-hover uk-icon-youtube-play uk-icon-small" target="_blank"></a></li>
+	</ul>
+</div>
+
+<hr class="uk-margin-top-remove">
+
+<div class="uk-panel-space">
+
+<div id="wk-gridfa5" class="uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-large-1-4 uk-grid uk-grid-match uk-text-left " data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid-margin >
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Secciones                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><ul class="uk-nav uk-nav-side">
+    <li>
+        <a href="/seccion/entrevistas">Entrevistas</a>
+    </li>
+    <li>
+        <a href="/seccion/ojos-de-videotape">Ojos de Videotape</a>
+    </li>
+    <li>
+        <a href="/seccion/asistente-de-regisseur">Asistente de Regisseur</a>
+    </li>
+    <li>
+        <a href="/seccion/columnas/kapellmeister">Kapellmeister</a>
+    </li>
+</ul></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Información                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><ul class="uk-nav uk-nav-side">
+    <li>
+        <a href="/seccion/cartelera">Cartelera</a>
+    </li>
+    <li>
+        <a href="/seccion/editorial">Editorial</a>
+    </li>
+    <li>
+        <a href="/quienes-somos">Quiénes somos</a>
+    </li>
+    <li>
+        <a href="/contacto">Contacto</a>
+    </li>
+</ul></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Reconocimientos                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><ul class="uk-nav uk-nav-side">
+    <li>
+        <a>Fondart Nacional 2014</a>
+    </li>
+    <li>
+        <a>Fondart regional 2013</a>
+    </li>
+</ul></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Newsletter                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><form class="uk-form uk-margin-top" data-uk-margin>
+    <input class="uk-form-large" placeholder="deja tu e-mail" type="text"> <a class="uk-button uk-button-large tm-button-icon" href="https://elguillatun.us8.list-manage.com/subscribe?u=968b26aa799a188aaee4bb0db&id=98065e7479" target="_blank"></a>
+</form></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+</div>
+
+<script type="rocketlazyloadscript">
+(function($){
+
+    // get the images of the gallery and replace it by a canvas of the same size to fix the problem with overlapping images on load.
+    $('img[width][height]:not(.uk-overlay-panel)', $('#wk-gridfa5')).each(function() {
+
+        var $img = $(this);
+
+        if (this.width == 'auto' || this.height == 'auto' || !$img.is(':visible')) {
+            return;
+        }
+
+        var $canvas = $('<canvas class="uk-responsive-width"></canvas>').attr({width:$img.attr('width'), height:$img.attr('height')}),
+            img = new Image,
+            release = function() {
+                $canvas.remove();
+                $img.css('display', '');
+                release = function(){};
+            };
+
+        $img.css('display', 'none').after($canvas);
+
+        $(img).on('load', function(){ release(); });
+        setTimeout(function(){ release(); }, 1000);
+
+        img.src = this.src;
+
+    });
+
+})(jQuery);
+</script>
+</div></div></div></div>
+        </section>
+        
+                <footer id="tm-footer" class="tm-footer">
+            <div class="uk-panel uk-panel-space uk-text-center">
+                                <a class="tm-totop-scroller uk-link-reset" data-uk-smooth-scroll href="#"></a>
+                
+                <div class="uk-panel widget_text" ><p>2010-2022 El Guillatún.</p>
+</div>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/avion\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1730382414" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.elguillatun.cl\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1730382414" id="contact-form-7-js"></script>
+<script type="text/javascript" id="ppress-frontend-script-js-extra">
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/www.elguillatun.cl\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"183e7ea063","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.13.4" id="ppress-frontend-script-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/entrar|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.elguillatun.cl","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script data-minify="1" defer type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1730382877" id="akismet-frontend-js"></script>
+<script>window.lazyLoadOptions={elements_selector:"iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.elguillatun.cl/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360">',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-NNQ6XHPG0V"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NNQ6XHPG0V');
+</script>
+        <div id="offcanvas" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar"><div class="uk-panel widget_search" >
+<form class="uk-search" id="search-search-3-68ddc44a71813" action="https://www.elguillatun.cl/" method="get" >
+    <input class="uk-search-field" type="text" value="" name="s" placeholder="buscar...">
+</form>
+</div>
+<ul class="uk-nav uk-nav-offcanvas"><li class="uk-parent"><a href="#" class=" separator">Música</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-oido-medio" class="">El Oído Medio</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/cronicas-de-musica-latinoamericana" class="">Crónicas de Música Latinoamericana</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/improvisaciones-premeditadas" class="">Improvisaciones Premeditadas</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/kapellmeister" class="">Kapellmeister</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/taner" class="">Tañer</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">Literatura</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/todas-las-hojas-son-del-viento" class="">Todas las hojas son del viento</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">A. Escénicas</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/imaginario-teatral" class="">Imaginario Teatral</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/problematizando-la-danza" class="">Problematizando la Danza</a></li><li><a href="https://www.elguillatun.cl/seccion/asistente-de-regisseur" class="">Asistente de Regisseur</a></li><li><a href="https://www.elguillatun.cl/seccion/prima-ballerina" class="">Prima Ballerina</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">A. Visuales</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-diletante-ilustrado" class="">El Diletante Ilustrado</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">Cine</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/cinema-guillatun" class="">Cinema Guillatún</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">Cultura Pop</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/antena" class="">Antena</a></li><li><a href="https://www.elguillatun.cl/seccion/ojos-de-videotape" class="">Ojos de Videotape</a></li><li><a href="https://www.elguillatun.cl/seccion/el-rincon-de-arriba-a-la-derecha" class="">El rincón de arriba a la derecha</a></li></ul></li></ul></div>
+    </div>
+    
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1759364170 -->

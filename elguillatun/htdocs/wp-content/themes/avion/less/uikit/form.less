@@ -1,0 +1,171 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Form
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@form-height:                                   @global-height;
+@form-border:                                   rgba(0,0,0,0);
+@form-background:                               @global-muted-background;
+@form-color:                                    @global-color;
+
+@form-focus-border:                             rgba(0,0,0,0);
+@form-focus-background:                         rgba(0,0,0,0);
+@form-focus-color:                              @global-color;
+
+@form-disabled-border:                          rgba(0,0,0,0);
+@form-disabled-background:                      @global-muted-background;
+@form-disabled-color:                           @global-muted-color;
+
+@form-placeholder-color:                        @global-color;
+
+@form-gutter:                                   @global-margin;
+
+@form-legend-border:                            @global-border;
+@form-legend-font-size:                         round((@global-font-size * 1.28)); // 18px
+@form-legend-line-height:                       round((@form-legend-font-size * 1.68)); // 30px
+
+@form-small-height:                             @global-height-small;
+@form-large-height:                             @global-height-large;
+@form-small-font-size:                          round((@global-font-size * 0.857)); // 12px
+@form-large-font-size:                          @global-font-size;
+
+@form-danger-border:                            rgba(0,0,0,0);
+@form-danger-background:                        fade(@global-danger-background, 10%);
+@form-danger-color:                             @global-danger-color;
+
+@form-success-border:                           rgba(0,0,0,0);
+@form-success-background:                       fade(@global-success-background, 10%);
+@form-success-color:                            @global-success-color;
+
+@form-blank-border:                             @global-border;
+
+@form-icon-font-size:                           @global-font-size;
+@form-icon-color:                               @global-muted-color;
+
+//
+// New
+//
+
+@form-focus-padding:                            4px 12px 4px 0;
+@form-small-focus-padding:                      4px 6px 4px 0;
+@form-focus-border-bottom:                      rgba(0,0,0,0.3);
+@form-danger-focus-background:                  rgba(0,0,0,0);
+@form-danger-focus-border-bottom:               @global-danger-background;
+@form-success-focus-background:                 rgba(0,0,0,0);
+@form-success-focus-border-bottom:              @global-success-background;
+
+
+// Component
+// ========================================================================
+
+.hook-form() {}
+
+// Focus state
+.hook-form-focus() {}
+
+// Disabled state
+.hook-form-disabled() {}
+
+// Legend
+.hook-form-legend() {}
+
+
+// Validation states
+// ========================================================================
+
+//
+// Error state
+//
+
+.hook-form-danger() {
+
+    &:focus {
+        background-color: @form-danger-focus-background !important;
+        box-shadow: 0px 1px 0px 0px @global-danger-background !important;
+    }
+
+}
+
+//
+// Success state
+//
+
+.hook-form-success() {
+
+    &:focus {
+        background-color: @form-success-focus-background !important;
+        box-shadow: 0px 1px 0px 0px @global-success-background !important;
+    }
+
+}
+
+
+// Style modifiers
+// ========================================================================
+
+.hook-form-blank() {}
+
+.hook-form-blank-focus() {
+
+}
+
+
+// Sub-object: `uk-form-label`
+// ========================================================================
+
+.hook-form-stacked-label() {}
+
+.hook-form-horizontal-label() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-form-misc() {
+
+    .uk-form textarea,
+    .uk-form input:not([type]),
+    .uk-form input[type="text"],
+    .uk-form input[type="password"],
+    .uk-form input[type="email"],
+    .uk-form input[type="url"],
+    .uk-form input[type="search"],
+    .uk-form input[type="tel"] {
+
+        &:focus {
+
+            &:not(.uk-form-blank) {
+                padding: @form-focus-padding;
+                box-shadow: 0px 1px 0px 0px @form-focus-border-bottom;
+            }
+
+            &.uk-form-small:not(.uk-form-blank) { padding: @form-small-focus-padding; }
+
+        }
+
+    }
+
+    .uk-form select,
+    .uk-form input[type="datetime"],
+    .uk-form input[type="datetime-local"],
+    .uk-form input[type="date"],
+    .uk-form input[type="month"],
+    .uk-form input[type="time"],
+    .uk-form input[type="week"],
+    .uk-form input[type="number"],
+    .uk-form input[type="color"] {
+
+        &:focus { background: darken(@form-background, 5%); }
+
+    }
+
+    .uk-form-icon:not(.uk-form-icon-flip) > input { padding: 4px  6px 4px @form-icon-width !important; }
+    .uk-form-icon-flip > input { padding: 4px @form-icon-width 6px 4px !important; }
+
+}

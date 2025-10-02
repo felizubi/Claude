@@ -1,0 +1,4 @@
+2025-10-02T04:16:22+00:00 [INFO]: Schema update action is called. Handler: "GPLVault_Client::update_schema" Hooked: "gplvault_six_hours_cron"
+2025-10-02T04:16:22+00:00 [INFO]: Schema update is successfully completed. Handler: "GPLVault_Client::update_schema" Hooked: "gplvault_six_hours_cron"
+2025-10-02T06:14:05+00:00 [INFO]: Client schema fetch action is called. Handler: "GPLVault_Client::update_client_schema" Hooked: "gplvault_fetch_client_schema"
+2025-10-02T06:14:05+00:00 [INFO]: Client schema fetch is completed successfully. Handler: "GPLVault_Client::update_client_schema" Hooked: "gplvault_fetch_client_schema"

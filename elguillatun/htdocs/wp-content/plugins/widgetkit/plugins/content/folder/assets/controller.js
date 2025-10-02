@@ -1,0 +1,1 @@
+angular.module("widgetkit").controller("folderCtrl",["$scope",function(e){}]).run(["$rootScope","mediaInfo",function(e,t){e.$on("wk.preview.content",function(e,r){if("folder"==r.type&&r.data.prepared){var o,n=JSON.parse(r.data.prepared);0<n.length&&(o=n[0].media,e.preview=t(o).image)}})}]);

@@ -1,0 +1,58 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 versions,>0.2%,not dead,not op_mini all
+*/
+
+:root {
+    --gv-large-gap: 40px;
+    --gv-main-gap: 24px;
+    --gv-primary: #3e92cc;
+    --gv-primary-dark: #235a80;
+    --gv-accent: #a74482;
+    --gv-orange-light: #d8a520;
+    --gv-orange: #f56e28;
+    --gv-accent-light: #d23c9a;
+    --gv-green: #00a32a;
+    --gv-success: #00a32a;
+    --gv-success-bg: #d6ffea;
+    --gv-error: #d63638;
+    --gv-error-bg: #ffe6e6;
+}
+
+.gv-update-info__separator {
+    border: 1px solid var(--gv-orange-light);
+    margin: 15px -12px;
+}
+
+.gv-update-info {
+    margin-bottom: 5px;
+    max-width: 1000px;
+    display: flex;
+}
+
+.gv-update-info__icon {
+    color: var(--gv-orange);
+    font-size: 17px;
+    margin-right: 9px;
+    margin-left: 2px;
+}
+
+.gv-update-info__title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gv-wrapper .select2-container .select2-selection--multiple {
+    width: 100%;
+    display: inline-block;
+}
+
+.gv-wrapper .select2-container .select2-selection .select2-selection__rendered {
+    display: inline;
+}
+
+.gv-wrapper .select2-container .select2-selection .select2-selection__choice__remove {
+    position: relative;
+}

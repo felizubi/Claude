@@ -1,0 +1,176 @@
+*** GPLVault Update Manager changelog ***
+
+2023-06-10 - version 5.0.1
+ * fix: remove all custom plugins page's links
+ 
+2023-05-19 - version 5.0.0
+ * BREAKING CHANGE: removed GPLVault custom page for Plugins update. Now all updates will be done from WP Native plugins.php page.
+ * style fix: fixed code styling to abide by PHP CodeSniffer standard.
+ * refactor: removed unnecessary code from codebase.
+
+2023-05-07 - version 4.3.1
+ * fix: pluggable.php functions duplication conflict issue.
+ * feature: mock pluggable functions in the plugin helper functions
+ * fix: Select input box style issue.
+ * fix: admin page style issue to fix scrolling.
+
+2023-05-04 - version 4.3.0
+ * feature: add log system to log API communication and cron actions.
+ * feature: add plugin and theme demo delivery API request mechanism.
+ * feature: add log files cleanup system.
+
+2023-04-10 - version 4.2.4
+ * feature: add `http_request_args` filter hook to bypass invalid url for api endpoints
+ * tweak: ensure WordPress 6.2 compatibility
+
+2023-02-03 - version 4.2.3
+ * fix: remove api pause system and fix coding standards
+ * fix: make WordPress 6.1.1 compatible
+
+2022-05-31 - version 4.2.2
+* tweak: WordPress 6.0 compatibility
+
+2022-03-13 - version 4.2.1
+ * feature: Moved schema fetch hooks to main class.
+ * feature: Added new cron to fetch client schema at 8 hours of interval.
+ * feature: Added logging errors to db, client_schema returns error when server is down or api paused.
+ * feature: Added api error log helper method.
+
+2022-03-09 - version 4.2.0
+ * feature: Improved status notification
+ * feature: Improved API client to check all sorts of possible issues with main server
+ * feature: Stops requests if any requests has server down error
+ * feature: Background check for if main server is online again
+ * dropped: Dropped use of `init` hooks, now it only uses `admin_init` to initialize necessary functionalities
+ * fixed: Website blocking issue
+
+2022-03-01 - version 4.1.2
+ * fixed: added missing javascript dependency wp-i18n
+ * refactor: using 'wp_doing_ajax' to check an ajax request
+
+2021-08-26 - version 4.1.1
+ * refactor: replaced cdn delivered js plugins with local files based plugins
+ * fixed: JS and CSS files loading issue from CDNs
+
+2021-07-25 - version 4.1.0
+ * feature: added WP native upgrade integration for GPL Vault items
+ * feature: added installed version and latest version number in GPLVault > Plugins plugin row
+ * feature: added 'Help' tab on the GPLVault's admin pages
+ * feature: added major version update message notification
+ * fixed: Settings page status bug
+
+2021-07-09 - version 4.0.3
+ * fixed: client plugin self update issue
+
+2021-07-08 - version 4.0.2
+ * fixed: settings page status not showing issue
+
+2021-07-01 - version 4.0.1
+ * fixed: Menu position bug issue
+
+2021-06-28 - version 4.0.0
+ * fixed: License activation issues
+ * feature: Separate plugins upgrading system which doesn't depends on WP Native upgrade system
+ * feature: Themes and Plugins exclusion which won't be upgraded via client plugin
+ * design: New clean UI interface
+
+2021-03-10 - version 3.4.1
+ * enhanced: WP v5.7 compatibility ensured.
+
+2021-01-18 - version 3.4.0
+ * enhanced: PHPCS code style standards for WP ensured
+ * enhanced: PHP 8 compatibility added
+ * fixed: some miscellaneous minor fixing done
+
+2020-08-19 - version 3.3.3
+ * WP 5.5 compatibility added
+
+2020-07-08 - version 3.3.2
+ * fixed: assigning properties to filter callback argument ensuring it's an object, "Creating default object from empty value" issue fixed
+
+2020-05-10 - version 3.3.1
+ * fixed: typo in status notice template.
+ * fixed: trailing comma (,) issue on function invocation.
+
+2020-05-09 - version 3.3.0
+ * fixed: frequently plugin deactivation issue
+ * enhanced: check for API status less frequently and not to deactivate in case of failure status
+ * added: show report notification on any API Status failure.
+ * enhanced: made compatible the plugin for 5.4.1
+
+2020-04-04 - version 3.2.1
+ * tested: tested for the compatibility with WordPress 5.4
+ * fixed: random_int issue
+
+2020-01-23 - version 3.2.0
+ * added: overrides to fix license issue of some vendors
+ * added: index files to reduce the risk of File Indexing attack
+
+2020-01-21 - version 3.1.0
+ * added: new API request to `schema` endpoint to fetch plugins and themes schema information at single call and at a very reduced amount -- only for installed items
+ * fixed: Settings page "deactivation" and "API status check" feedback message fixed on error
+
+2020-01-17 - version 3.0.0
+ * enhanced: Ajax based API activation
+
+2019-11-26 - version 2.1.4
+ * fixed: count() error issue
+
+2019-11-18 - version 2.1.3
+ * fixed: debug log for download error response
+
+2019-11-15 - version 2.1.2
+ * fixed: Tested the plugin with WP 5.3
+
+2019-11-15 - version 2.1.1
+ * fixed: Envato Updater conflict
+ * fixed: Update of YITH plugins by adding filter `upgrader_pre_download`
+ * enhanced: decreased filter hooks priority to run hook handlers delayed.
+ * enhanced: changed admin menu icon to set Branding
+
+2019-09-27 - version 2.1.0
+ * added: Debug logging system
+ * added: settings option to control Logging System
+ * enhanced: `json_decode` on returning success response of the API
+
+2019-09-09 - version 2.0.2
+ * fixed: `array_key_exists` check issue with 2nd parameter not being an array
+
+2019-09-07 - version 2.0.1
+ * removed: plugin action links for themes and plugins
+
+2019-09-06 - version 2.0.0
+ * removed: plugins and themes installation system to protect server from mass download request
+
+2019-09-04 - version 1.1.4
+ * fixed: updating from gplvault server issue
+ * fixed: removed from update notice unless an item updated on gplvault server
+ * fixed: styling issue for GPLVault Updater's theme item installation error showing
+ * enhanced: GPLVault Updater's Plugins/Themes list item shows link where one should go if any update is available
+ * tweaked: deferred download link for themes and plugins install/update request initially to reduce server request
+
+2019-09-04 - version 1.1.3
+ * fixed: WordPress repository plugin update notification hiding issue
+ * enhanced: plugins.php page load time by deferred download link for plugins, implemented `upgrader_package_options` filter hooks
+
+2019-08-30 - version 1.1.2
+ * changelog.txt added
+ * fixed: typo fixed for api url
+ * enhanced: items on plugin and themes list page with latest version number of an item
+ * tweaked: tweak style for items on theme/plugins list page
+ * fixed: set higher value for required filters to win the race condition
+
+2019-08-30 - version 1.1.1
+ * Fixed: settings saving issue
+
+2019-08-28 - version 1.1.0
+ * fixed: wp_mail conflict
+ * removed previous checkbox based deactivation
+ * added license key status checking from the server
+ * added ajax based deactivation of license from the server
+ * added local settings cleaner in case of any conflict
+ * simplified api settings save and api activation process
+
+2019-07-28 - version 1.0.1
+ * initial release
+

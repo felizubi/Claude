@@ -1,0 +1,39 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+.woocommerce,
+.woocommerce-page {
+
+    input:not(.uk-search-field):focus {
+        padding: @form-focus-padding !important;
+        box-shadow: 0px 1px 0px 0px @form-focus-border-bottom;
+    }
+
+    input[type="number"]:focus,
+    textarea:focus {
+        padding: @form-padding !important;
+        background: darken(@form-background, 3%) !important;
+    }
+
+    div.product .woocommerce-tabs ul.tabs li a,
+    #content div.product .woocommerce-tabs ul.tabs li a {
+        border: @global-border-width solid transparent;
+    }
+
+    div.product .woocommerce-tabs ul.tabs li a,
+    #content div.product .woocommerce-tabs ul.tabs li a,
+    div.product .woocommerce-tabs ul.tabs li:not(.active) a:hover,
+    #content div.product .woocommerce-tabs ul.tabs li:not(.active) a:hover,
+    div.product .woocommerce-tabs ul.tabs li:not(.active) a:focus,
+    #content div.product .woocommerce-tabs ul.tabs li:not(.active) a:focus {
+        margin-bottom: 0;
+        border-color: transparent;
+    }
+
+    div.product .woocommerce-tabs ul.tabs li.active a,
+    #content div.product .woocommerce-tabs ul.tabs li.active a {
+        border-left-color: @global-border;
+        border-right-color: @global-border;
+        border-top-color: @global-border;
+    }
+
+}

@@ -1,0 +1,85 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Accordion
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@accordion-title-margin-bottom:                 0;
+@accordion-title-padding-vertical:              15px;
+@accordion-title-padding-horizontal:            40px;
+@accordion-title-font-size:                     round((@global-font-size * 1.28)); // 18px
+@accordion-title-line-height:                   round((@accordion-title-font-size * 1.333)); // 24px
+
+@accordion-title-background:                    rgba(0,0,0,0);
+
+//
+// New
+//
+
+@accordion-hover-background:                    @global-muted-background;
+@accordion-open-background:                     @global-muted-background;
+@accordion-border-width:                        @global-border-width;
+@accordion-border:                              @global-border;
+@accordion-toggle-icon:                         "\f067";
+@accordion-open-toggle-icon:                    "\f068";
+
+
+// Component
+// ========================================================================
+
+.hook-accordion() {}
+
+
+// Modifier: `uk-accordion-title`
+// ========================================================================
+
+.hook-accordion-title() {
+
+    position: relative;
+    padding-left: 40px;
+
+    &:not(:first-child) { border-top: @accordion-border-width solid @accordion-border; }
+
+    // Toggle Icon
+    &:before {
+        content: @accordion-toggle-icon;
+        position: absolute;
+        left: 10px;
+        padding-left: 5px;
+        font-family: 'FontAwesome';
+        font-size: 12px;
+        color: @global-primary-color;
+    }
+
+    // Hover
+    &:hover { background: @accordion-hover-background; }
+
+    // Open
+    &.uk-active {
+
+        background-color: @accordion-open-background;
+
+        &:before { content: @accordion-open-toggle-icon; }
+
+        + div > .uk-accordion-content { background-color: @accordion-open-background; }
+
+    }
+
+}
+
+
+// Modifier: `uk-accordion-content`
+// ========================================================================
+
+.hook-accordion-content() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-accordion-misc() {}

@@ -1,0 +1,1196 @@
+<!DOCTYPE HTML>
+<html lang="es-CL" dir="ltr"  data-config='{}'>
+
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniela Contreras Bocic: actriz y dramaturga</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat%7CLato&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%7CLato&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%7CLato&#038;display=swap" /></noscript>
+<link rel="shortcut icon" href="/wp-content/themes/avion/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/wp-content/themes/avion/apple_touch_icon.png">
+
+
+<meta name="wpsso-begin" content="wpsso meta tags and schema markup begin"/>
+<!-- generator:1 --><meta name="generator" content="WPSSO Core 18.3.0/L*"/>
+<!-- generator:2 --><meta name="generator" content="WPSSO UM 5.6.1/S"/>
+<link rel="shortlink" href="https://www.elguillatun.cl/?p=1836"/>
+<meta property="fb:app_id" content="1481366608747847"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic"/>
+<meta property="og:locale" content="es_LA"/>
+<meta property="og:site_name" content="El Guillat&uacute;n"/>
+<meta property="og:title" content="Daniela Contreras Bocic: actriz y dramaturga"/>
+<meta property="og:description" content="[Talento Emergente] &iquest;Por qu&eacute; lxs creadores chilenxs deciden irse fuera del pa&iacute;s para seguir form&aacute;ndose, inspirarse o ir tras algo que no encuentran ac&aacute;? Buenos Aires, Argentina, es el destino cercano que alberga a chilenxs que con poca plata, buscan acceder a una educaci&oacute;n..."/>
+<meta property="og:updated_time" content="2017-01-21T00:35:04+00:00"/>
+<!-- og:image:1 --><meta property="og:image" content="https://www.elguillatun.cl/wp-content/uploads/2014/06/daniela-contreras-bocic_foto-felipe-zubieta-640x336-cropped.jpg"/>
+<!-- og:image:1 --><meta property="og:image:width" content="640"/>
+<!-- og:image:1 --><meta property="og:image:height" content="336"/>
+<!-- og:image:1 --><meta property="og:image:alt" content="Daniela Contreras Bocic"/>
+<meta property="article:section" content="Teatro"/>
+<meta property="article:publisher" content="https://www.facebook.com/ElGuillatun"/>
+<!-- article:tag:1 --><meta property="article:tag" content="dramaturgia"/>
+<!-- article:tag:2 --><meta property="article:tag" content="teatro"/>
+<meta property="article:published_time" content="2014-06-11T04:00:00+00:00"/>
+<meta property="article:modified_time" content="2017-01-21T00:35:04+00:00"/>
+<meta name="twitter:domain" content="www.elguillatun.cl"/>
+<meta name="twitter:site" content="@elguillatun"/>
+<meta name="twitter:title" content="Daniela Contreras Bocic: actriz y dramaturga"/>
+<meta name="twitter:description" content="[Talento Emergente] &iquest;Por qu&eacute; lxs creadores chilenxs deciden irse fuera del pa&iacute;s para seguir form&aacute;ndose, inspirarse o ir tras algo que no encuentran ac&aacute;? Buenos Aires, Argentina, es el destino..."/>
+<meta name="twitter:creator" content="@franyevenes"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.elguillatun.cl/wp-content/uploads/2014/06/daniela-contreras-bocic_foto-felipe-zubieta-640x336-cropped.jpg?p=1836"/>
+<meta name="twitter:image:alt" content="Daniela Contreras Bocic"/>
+<meta name="twitter:label1" content="Written by"/>
+<meta name="twitter:data1" content="Francisca Y&eacute;venes"/>
+<meta name="twitter:label2" content="Est. reading time"/>
+<meta name="twitter:data2" content="19 minutes"/>
+<meta name="author" content="Francisca Y&eacute;venes"/>
+<meta name="thumbnail" content="https://www.elguillatun.cl/wp-content/uploads/2014/06/daniela-contreras-bocic_foto-felipe-zubieta-600x315-cropped.jpg"/>
+<script type="application/ld+json" id="wpsso-schema-graph">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@id": "/entrevistas/talento-emergente/daniela-contreras-bocic#sso/article/1836",
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": "https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic",
+            "url": "https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic",
+            "sameAs": [
+                "https://www.elguillatun.cl/?p=1836"
+            ],
+            "name": "Daniela Contreras Bocic: actriz y dramaturga",
+            "description": "Entrevista Talento Emergente a la actriz, dramaturga y fundadora de la compa&ntilde;&iacute;a teatral Teatrograf&iacute;a, Daniela Contreras Bocic.",
+            "publisher": [
+                {
+                    "@id": "/#sso/organization/site/org-banner-url"
+                }
+            ],
+            "headline": "Daniela Contreras Bocic: actriz y dramaturga",
+            "keywords": "dramaturgia, teatro",
+            "inLanguage": "es_CL",
+            "dateCreated": "2014-06-11T04:00:00+00:00",
+            "datePublished": "2014-06-11T04:00:00+00:00",
+            "dateModified": "2017-01-21T00:35:04+00:00",
+            "author": {
+                "@id": "/14eb8d43b59f934704e6e1420c79314d#sso/person"
+            },
+            "thumbnailUrl": "https://www.elguillatun.cl/wp-content/uploads/2014/06/daniela-contreras-bocic_foto-felipe-zubieta-600x315-cropped.jpg",
+            "commentCount": 2,
+            "comment": [
+                {
+                    "@id": "/entrevistas/talento-emergente/daniela-contreras-bocic#sso/comment/18"
+                },
+                {
+                    "@id": "/entrevistas/talento-emergente/daniela-contreras-bocic#sso/comment/17"
+                }
+            ],
+            "articleSection": "Teatro",
+            "timeRequired": "PT19M",
+            "speakable": {
+                "@context": "https://schema.org",
+                "@type": "SpeakableSpecification",
+                "cssSelector": [
+                    ".wp-block-post-title",
+                    ".speakable"
+                ]
+            }
+        },
+        {
+            "@id": "/#sso/organization/site/org-banner-url",
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.elguillatun.cl/",
+            "name": "El Guillat\u00fan",
+            "description": "Sitio web de arte y cultura",
+            "image": [
+                {
+                    "@id": "/wp-content/uploads/branding/logo-retina.png#sso/image-object"
+                }
+            ],
+            "logo": {
+                "@id": "/wp-content/uploads/branding/elguillatun_google.jpg#sso/image-object"
+            },
+            "sameAs": [
+                "https://www.facebook.com/ElGuillatun",
+                "https://www.instagram.com/elguillatun",
+                "https://www.linkedin.com/company/9397086/",
+                "https://twitter.com/elguillatun",
+                "https://www.youtube.com/c/ElGuillatun"
+            ]
+        },
+        {
+            "@id": "/wp-content/uploads/branding/logo-retina.png#sso/image-object",
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "https://www.elguillatun.cl/wp-content/uploads/branding/logo-retina.png",
+            "width": [
+                {
+                    "@id": "#sso/qv-width-px-476"
+                }
+            ],
+            "height": [
+                {
+                    "@id": "#sso/qv-height-px-136"
+                }
+            ]
+        },
+        {
+            "@id": "#sso/qv-width-px-476",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Width",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "476"
+        },
+        {
+            "@id": "#sso/qv-height-px-136",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Height",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "136"
+        },
+        {
+            "@id": "/wp-content/uploads/branding/elguillatun_google.jpg#sso/image-object",
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "https://www.elguillatun.cl/wp-content/uploads/branding/elguillatun_google.jpg",
+            "width": [
+                {
+                    "@id": "#sso/qv-width-px-600"
+                }
+            ],
+            "height": [
+                {
+                    "@id": "#sso/qv-height-px-60"
+                }
+            ]
+        },
+        {
+            "@id": "#sso/qv-width-px-600",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Width",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "600"
+        },
+        {
+            "@id": "#sso/qv-height-px-60",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Height",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "60"
+        },
+        {
+            "@id": "/14eb8d43b59f934704e6e1420c79314d#sso/person",
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Francisca Y\u00e9venes",
+            "givenName": "Francisca",
+            "familyName": "Y\u00e9venes",
+            "description": "Francisca Y&eacute;venes, Periodista U. de Chile. Postgrado en Periodismo Cultural, Cr&iacute;tica y Edici&oacute;n Literaria. Social Media Manager. #Cultura",
+            "image": [
+                {
+                    "@id": "https://secure.gravatar.com/avatar/9d2f92aa41932e6c4c9276ed15bc2404.jpg?d=mp&s=1200#sso/image-object"
+                }
+            ],
+            "sameAs": [
+                "https://twitter.com/franyevenes"
+            ]
+        },
+        {
+            "@id": "https://secure.gravatar.com/avatar/9d2f92aa41932e6c4c9276ed15bc2404.jpg?d=mp&s=1200#sso/image-object",
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/9d2f92aa41932e6c4c9276ed15bc2404.jpg?d=mp&s=1200",
+            "width": [
+                {
+                    "@id": "#sso/qv-width-px-1200"
+                }
+            ],
+            "height": [
+                {
+                    "@id": "#sso/qv-height-px-1200"
+                }
+            ]
+        },
+        {
+            "@id": "#sso/qv-width-px-1200",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Width",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "1200"
+        },
+        {
+            "@id": "#sso/qv-height-px-1200",
+            "@context": "https://schema.org",
+            "@type": "QuantitativeValue",
+            "name": "Height",
+            "unitText": "px",
+            "unitCode": "E37",
+            "value": "1200"
+        },
+        {
+            "@id": "/entrevistas/talento-emergente/daniela-contreras-bocic#sso/comment/18",
+            "@context": "https://schema.org",
+            "@type": "Comment",
+            "url": "https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic#comment-18",
+            "name": "Comment by Pedro OrtegaMu&ntilde;oz on ",
+            "description": "Para los que somos admiradores lejanos e incultos sobre Teatro, Daniela responde preguntas inteligentes, con una claridad, conocimiento y aportes&hellip;",
+            "text": "Para los que somos admiradores lejanos e incultos sobre Teatro, Daniela responde preguntas inteligentes, con una claridad, conocimiento y aportes personales que hacen de esta entrevista, una obra que ense&ntilde;a sobre este hermoso arte y, adem&aacute;s, del m&eacute;rito ejemplar de quien ama su arte y lo enriquece con aportes propios, sinceros y claros.",
+            "dateCreated": "-001-11-30T00:00:00-04:42",
+            "author": {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Pedro OrtegaMu\u00f1oz"
+            }
+        },
+        {
+            "@id": "/entrevistas/talento-emergente/daniela-contreras-bocic#sso/comment/17",
+            "@context": "https://schema.org",
+            "@type": "Comment",
+            "url": "https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic#comment-17",
+            "name": "Comment by Rodrigo Dom&iacute;nguez on ",
+            "description": "Estoy bastante de acuerdo con la entrevistada salvo por la fe que tiene en las organizaciones gubernamentales y los programas&hellip;",
+            "text": "Estoy bastante de acuerdo con la entrevistada salvo por la fe que tiene en las organizaciones gubernamentales y los programas de gobierno. Creo que los que queremos hacer arte en Chile nos organizamos y atrincheramos entre nosotros, creamos comunidades y talleres si, pero no podemos esperar que el estado participe o entienda el fen&oacute;meno. Hay una enorme lentitud en las instituciones que no da abasto para comprender o situarse en el centro del enorme flujo de creatividad subterr&aacute;nea que ronda las esquinas mas descuidads de este pa&iacute;s. Chile hace tiempo que dej&oacute; de ser lo que era, no se sabe para donde va, pero, no creo que este a la deriva. Me han comentado eso si, que en el tetro el chaqueteo y la mala onda da miedo a veces y los egos de proporciones monta&ntilde;osas son de temer. Sin perjuicio de esto, se que mas all&aacute; de la b&uacute;squeda de futuro hay ciertos presentes notables.",
+            "dateCreated": "-001-11-30T00:00:00-04:42",
+            "author": {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Rodrigo Dom\u00ednguez"
+            }
+        }
+    ]
+}</script>
+<meta name="wpsso-end" content="wpsso meta tags and schema markup end"/>
+<meta name="wpsso-cached" content="2025-09-24T18:50:32+00:00 for www.elguillatun.cl"/>
+<meta name="wpsso-added" content="2025-10-02T00:38:45+00:00 in 0.003886 secs"/>
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v21.3 (Yoast SEO v21.3) - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Entrevista Talento Emergente a la actriz, dramaturga y fundadora de la compañía teatral Teatrografía, Daniela Contreras Bocic." />
+	<link rel="canonical" href="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.elguillatun.cl/"},{"@type":"ListItem","position":2,"name":"«Si el arte no tiene un valor social desde el colegio y no se incide en las mallas curriculares, no esperemos una valoración de la creatividad y la cultura»"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="El Guillatún &raquo; «Si el arte no tiene un valor social desde el colegio y no se incide en las mallas curriculares, no esperemos una valoración de la creatividad y la cultura» Feed de comentarios" href="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic/feed" />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.elguillatun.cl/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1730382414' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='tabs-avion-css' href='https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/themes/avion/widgetkit/widgets/tabs-avion/styles/tabs.css?ver=1730382414' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='ppress-frontend-css' href='https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=1730382414' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.13.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.8.3' type='text/css' media='all' />
+
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.elguillatun.cl/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/widgetkit/cache/uikit2-4522806e.js?ver=1730382414" id="uikit2-js"></script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/widgetkit/cache/wk-scripts-0cc4d361.js?ver=1730382414" id="wk-scripts-js"></script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.13.4" id="ppress-flatpickr-js"></script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.13.4" id="ppress-select2-js"></script>
+<link rel="https://api.w.org/" href="https://www.elguillatun.cl/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.elguillatun.cl/wp-json/wp/v2/posts/1836" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.elguillatun.cl/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.3" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.elguillatun.cl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.elguillatun.cl%2Fentrevistas%2Ftalento-emergente%2Fdaniela-contreras-bocic" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.elguillatun.cl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.elguillatun.cl%2Fentrevistas%2Ftalento-emergente%2Fdaniela-contreras-bocic&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="amphtml" href="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic/amp"><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link rel="stylesheet" href="/wp-content/themes/avion/cache/gzip.php?theme-50335d46.css">
+<script src="/wp-content/themes/avion/cache/gzip.php?theme-da921b02.js"></script>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-1836 single-format-standard wp-theme-avion tm-sidebar-a-right tm-sidebars-1 tm-isblog wp-single tm-article-blog">
+
+    <div id="fb-root"></div>
+    <script type="rocketlazyloadscript" async defer crossorigin="anonymous" data-rocket-src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=1481366608747847"></script>
+
+
+    
+    
+        
+    
+    <div class="uk-container uk-container-center">
+
+        
+                        <div class="tm-header">
+
+        <div class="tm-toolbar uk-clearfix uk-hidden-small">
+
+                <div class="uk-float-left"><div class="uk-panel widget_nav_menu" ><ul class="uk-subnav uk-subnav-line"><li><a href="https://www.elguillatun.cl/seccion/editorial" class="">Editorial</a></li><li><a href="https://www.elguillatun.cl/contacto" class="">Contacto</a></li></ul></div></div>
+        
+                <div class="uk-float-right"><div class="uk-panel widget_custom_html" ><div class="textwidget custom-html-widget"><ul class="uk-subnav">
+	<li><a href="https://twitter.com/elguillatun" class="uk-icon-hover uk-icon-twitter uk-icon-small" target="_blank"></a></li>
+	<li><a href="https://www.facebook.com/ElGuillatun" class="uk-icon-hover uk-icon-facebook uk-icon-small" target="_blank"></a></li>
+	<li><a href="https://www.youtube.com/c/ElGuillatun" class="uk-icon-hover uk-icon-youtube-play uk-icon-small" target="_blank"></a></li>
+</ul></div></div></div>
+        
+    </div>
+    
+        <nav class="tm-navbar uk-navbar">
+
+                <a class="tm-logo uk-float-left uk-hidden-small" href="https://www.elguillatun.cl"><div class="textwidget custom-html-widget"><img src="/wp-content/uploads/branding/logo.svg" width="250" height="40" alt="El Guillatún"></div></a>
+        
+                <ul class="uk-navbar-nav uk-visible-large"><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Música</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 330px; max-width: 330px; width:330px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-oido-medio" class="">El Oído Medio</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/cronicas-de-musica-latinoamericana" class="">Crónicas de Música Latinoamericana</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/improvisaciones-premeditadas" class="">Improvisaciones Premeditadas</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/kapellmeister" class="">Kapellmeister</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/taner" class="">Tañer</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Literatura</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 280px; max-width: 280px; width:280px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/todas-las-hojas-son-del-viento" class="">Todas las hojas son del viento</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">A. Escénicas</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 260px; max-width: 260px; width:260px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/imaginario-teatral" class="">Imaginario Teatral</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/problematizando-la-danza" class="">Problematizando la Danza</a></li><li><a href="https://www.elguillatun.cl/seccion/asistente-de-regisseur" class="">Asistente de Regisseur</a></li><li><a href="https://www.elguillatun.cl/seccion/prima-ballerina" class="">Prima Ballerina</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">A. Visuales</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 230px; max-width: 230px; width:230px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-diletante-ilustrado" class="">El Diletante Ilustrado</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Cine</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 200px; max-width: 200px; width:200px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/cinema-guillatun" class="">Cinema Guillatún</a></li></ul></div></div></div></li><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#" class=" separator">Cultura Pop</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1" style="min-width: 290px; max-width: 290px; width:290px;"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="https://www.elguillatun.cl/seccion/columnas/antena" class="">Antena</a></li><li><a href="https://www.elguillatun.cl/seccion/ojos-de-videotape" class="">Ojos de Videotape</a></li><li><a href="https://www.elguillatun.cl/seccion/el-rincon-de-arriba-a-la-derecha" class="">El rincón de arriba a la derecha</a></li></ul></div></div></div></li></ul>        
+                <div class="uk-navbar-flip">
+                    <div class="uk-navbar-content uk-visible-large">
+<form class="uk-search" id="search-search-2-68ddc99514778" action="https://www.elguillatun.cl/" method="get" data-uk-search="{'source': 'https://www.elguillatun.cl/wp-admin/admin-ajax.php?action=warp_search', 'param': 's', 'msgResultsHeader': 'Resultados de la búsqueda', 'msgMoreResults': 'Más resultados', 'msgNoResults': 'No se encontraron resultados.', flipDropdown: 1}">
+    <input class="uk-search-field" type="text" value="" name="s" placeholder="buscar...">
+</form>
+</div>
+                        </div>
+        
+                <a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip uk-padding-remove uk-hidden-large" data-uk-offcanvas></a>
+        
+                <div class="uk-navbar-content uk-padding-remove uk-visible-small"><a class="tm-logo-small uk-float-left" href="https://www.elguillatun.cl"><div class="textwidget custom-html-widget"><img src="/wp-content/uploads/branding/logo.svg" width="210" height="40" alt="El Guillatún" class="uk-responsive-width" /></div></a></div>
+        
+    </nav>
+    
+</div>            
+        
+        
+        
+        
+        
+                <div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match data-uk-grid-margin>
+
+                        <div class="tm-main uk-width-medium-7-10">
+
+                
+                                <main id="tm-content" class="tm-content">
+
+                    
+                         
+    <article class="uk-article tm-article" data-permalink="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic">
+
+        <div class="tm-article-content uk-position-relative fz-category"><a href="https://www.elguillatun.cl/seccion/entrevistas/talento-emergente" rel="category tag">Talento Emergente</a></div>
+
+        <div class="tm-article-content uk-position-relative  tm-article-date-true">
+
+            <div class="tm-article-date uk-text-center">
+                <span class="tm-article-date-day">11</span><span class="tm-article-date-month">Jun</span><span class="tm-article-date-year">2014</span>            </div>
+
+            <h1 class="uk-article-title">«Si el arte no tiene un valor social desde el colegio y no se incide en las mallas curriculares, no esperemos una valoración de la creatividad y la cultura»</h1>
+
+                            <p class="fz-subtitle">Daniela Contreras Bocic, actriz, dramaturga y fundadora de la compañía teatral Teatrografía</p>
+            
+            <p class="uk-article-meta">
+                Por <a href="https://www.elguillatun.cl/colaboradores/francisca-yevenes" title="Francisca Yévenes">Francisca Yévenes</a>            </p>
+
+
+            
+
+            
+            <div class="tm-article-featured-image">
+                <figure><img width="640" height="427" src="https://www.elguillatun.cl/wp-content/uploads/2014/06/daniela-contreras-bocic_foto-felipe-zubieta.jpg" class=" wp-post-image" alt="Daniela Contreras Bocic" decoding="async" fetchpriority="high" data-wp-pid="14070" />                                            <figcaption>Daniela Contreras Bocic. <span class="credit">Foto: Felipe Zubieta</span></figcaption>
+                                    </figure>
+            </div>
+
+            <p>¿Por qué lxs creadores chilenxs deciden irse fuera del país para seguir formándose, inspirarse o ir tras algo que no encuentran acá? Buenos Aires, Argentina, es el destino cercano que alberga a chilenxs que con poca plata, buscan acceder a una educación artística abismalmente más consciente que la chilena, y con posibilidades de acceso que nutren el interés por las artes.</p>
+<p>Durante el año 2009, la segunda versión de la obra <em>Las mudas</em>, de la dramaturga chilena Daniela Contreras Bocic, fue destacada por la prensa y la crítica del público. De la obra, Leopoldo Pulgar, crítico de teatro del diario La Nación, señaló un 8 de diciembre: «Una obra es buena si de una situación típica extrae un punto de vista nuevo e interesante. Y eso ocurre con <em>Las mudas</em>. Ofrece una mirada llena de madurez, sensibilidad a flor de piel y un conocimiento del mundo de las mujeres, lo que se manifiesta en la justa elección de actrices con diversas trayectorias». A su vez, el psiquiatra y dramaturgo Marco Antonio de la Parra, dijo en ese entonces: «No puedo dejar de nombrar en el territorio emergente a <em>Las mudas</em> de Daniela Contreras, sobre todo ante otros textos sobredimensionados de la cartelera».</p>
+<p>Fundadora de Teatrografía, «una compañía de teatro que busca encontrar ese espacio/tiempo de la puesta en escena en función de la dramaturgia, de textos chilenos contemporáneos, para ser en el futuro un registro del quehacer actual», la actriz de la Escuela Teatro Imagen (Gustavo Meza), Daniela Contreras, la Dani, ha estrenado como dramaturga <em>Un golpe bajo</em> (2004), <em>Nada que celebrar</em> (2007), <em>Las mudas</em> (2003, 2009, 2010), y como directora <em>El deseo</em> (2013, 2014) y <em>La joven y sus problemas</em> (2013), ambas de la dramaturga Carla Zúñiga. Su última obra escrita y publicada es <em>Lo que se perdió (Superhéroes en tu jardín)</em> de Ediciones Cultura, escrita durante los talleres del Royal Court Theatre en Chile (2012-2013).</p>
+<p>Hoy, luego de ahorrar lo suficiente en labores alejadas del trabajo creativo, se encuentra asistiendo a talleres gratuitos y pagados de dramaturgia, dirección y actuación en Buenos Aires, una ciudad en donde la oferta de formación académica es mucho más amplia, accesible y por sobre todo, sensible.</p>
+<p>«Lo que he podido ver y escuchar, es que la validez de formarse con profesores en talleres semanales, está a la altura de la academia y con valores razonables. Pienso en la escuela de Ricardo Bartis, por ejemplo, un referente del teatro argentino. Yo quería estudiar en Chile y era una locura el arancel de un magíster o de un seminario, que además, en general, son bien teóricos. Ya estoy endeudada hasta el 2019 con mi educación de pregrado y me parece de mal gusto la situación. La gente quiere estudiar para nutrirse, y en Buenos Aires está lleno de talleres con personas de todas las edades y profesiones queriendo aprender, sensibilizarse. Me parece muy lindo eso. El interés también tiene que ver con el acceso», cuenta Daniela.</p>
+<p>Luego de realizar esta entrevista, Daniela se enteró que participará del Programa Intensivo de Artes Escénicas para dramaturgos de habla hispana, Panorama Sur, en su versión 2014 con sede en Buenos Aires, junto a otros 20 autores seleccionados.</p>
+<h3>«EL TEATRO, UN BIEN PÚBLICO»</h3>
+<p><strong>—¿Cuál es tu mirada del teatro chileno actual?</strong><br />
+—A mí me encanta el teatro chileno. Siempre lo defiendo cuando la gente dice que es mediocre. Yo he tenido la suerte de ver mucho teatro internacional (en Chile), y creo que el teatro chileno busca discursos, formatos para esos discursos, piensa, hace un esfuerzo enorme. Logra una eficacia en las propuestas que es muy consciente. No olvidemos que todo este rigor la mayoría del tiempo se hace sin recursos, sin sueldos. A pura rifa, fiesta o idéame.</p>
+<p>—Obviamente hay de todo, como en todos lados. Lo que pasa es que no somos tantos, los espacios son pocos y el público también es muy acotado, por ahí el teatro se ve como algo marginal, casi. En especial cuando no tiene espacios de difusión en medios masivos, porque la gente está muy atenta a eso. Si tú logras difundir en la tele o una súper nota en un diario, por ejemplo, se te llena la sala, porque además el teatro chileno no es caro, en relación a otros bienes, por eso son tan importantes esos espacios de información en los medios.</p>
+<p><strong>—¿Cómo ves el teatro chileno en relación al argentino? ¿Qué diferencias aprecias?</strong><br />
+—En el corto tiempo que llevo, puedo decirte que veo que allá y acá las motivaciones son las mismas. Podría decir que los artistas tienen la misma dinámica en el modo de hacer lo que hacen, de producir en un nivel teórico/práctico. Sin embargo, hay una oportunidad y un nivel de exposición al perfeccionamiento, al pensamiento y la investigación, dentro y fuera de la academia, que es importante de destacar, porque creo que marca una diferencia. Yo no sé qué es antes en este proceso, si el huevo o la gallina, pero en Argentina se percibe una identidad común mucho más fortalecida, un sentido del ser más gregario, un compartir/discutir la experiencia del proceso teatral abierta y colectivamente, eso se siente y me parece muy interesante. Percibo que eso se traduce en la escena. El interés y acceso constante a probar y profundizar ideas, genera mayor riesgo y diversidad.</p>
+<p>—Por una parte tenemos la diferencia en términos de formación y acceso, y por otra en términos de proporción. Buenos Aires es una ciudad enorme, hay mucha más gente, una variedad increíble de estilos, propuestas, espacios, formatos de presentación, talleres conviviendo, y ojo, que acá no todas las salas se encuentran exclusivamente en zonas centrales, ni en perfecto estado, ni tienen butacas tan cómodas, y se llenan igual. Acá el espectador no necesariamente es un cliente. Él decide venir a ver lo que se le propone y eso significa ir a disfrutar la experiencia. Creo que el artista teatral argentino recibe más estímulos desde el público, en ese sentido.</p>
+<p><strong>—¿Cómo se desarrollan los procesos creativos en torno a la dramaturgia en Argentina? ¿Cuán distintos o no, son, en relación al modo de hacer teatro en Chile?</strong><br />
+—No lo he investigado en profundidad, tendría que entrevistar a algunos autores, no logro dimensionarlo. Lo que sí te puedo decir, es que he observado que se da mucho el formato del monólogo en un espectáculo completo. Se dan seminarios especializados, hay muchos referentes. En Chile, el último monólogo que recuerdo, es <em>La Amante Fascista</em> de Alejandro Moreno o <em>Discurso</em> de Guillermo Calderón, ambos geniales. Pero en Argentina hay muchísimas salas llenas de público presentando monólogos. En Chile los respetamos bastante, porque un monólogo requiere de un virtuosismo bien especial (de todos los artistas involucrados). Santiago Loza (<em>La mujer puerca</em>, <em>Todo verde</em>) es uno de los autores de monólogos más reconocidos acá, me parece que va a Chile en Agosto. Mariano Tenconi también tiene un monólogo increíble que se llama <em>La Fiera</em>, estremecedor. Con él estoy tomando un curso que dicta junto a otro dramaturgo joven que se llama Ignacio Bartolone. Ambos con exitosos montajes en la cartelera.</p>
+<p>—Lo que ellos trabajan particularmente es el extrañamiento de la voz y la materialidad, a través de ejercicios, referentes y mucho feedback de tus avances. Es una metodología bien pensada. De hecho por eso los elegí, porque me llegó al mail un programa muy ordenado de contenidos y forma de trabajo. Como soy profesora sé que eso funciona. Lo recomiendo mucho.</p>
+<p>—Creo que sería muy fructífero ver a más teatristas chilenos compartiendo sus conocimientos fuera de la academia. Son tan pocos los que lo han hecho y eso influye mucho en los procesos creativos, te obliga a poner a prueba tus ideas y corregirlas. Juan Radrigán ha sido en mi opinión, el más constante. ¡Imagínate a cuántos ha formado en sus talleres! Esto podría pasar con otros autores, directores, actores, con o sin trayectoria, pero no existe en Chile, o no a un alcance económico posible.</p>
+<p>—El año antepasado por ejemplo, Carla Zúñiga hacía en su casa un taller de dramaturgia que se llamaba el «Royal Carli», cuyo nombre era una parodia buena onda del Royal Court. Surgieron varios trabajos que después leímos en espacios públicos o que se llevaron a escena, como <em>En búsqueda del Huemul Blanco</em> de Felipe Olivares (Contadores Auditores) o una lectura/semi-montaje que yo presenté en la segunda versión del Ciclo Lápiz de Mina, que se llamó <em>Natural</em>.</p>
+<p>—Ahora bien, sí me parece importante mencionar que en regiones la cosa está muy movida. Hay gente que está trabajando mucho, se organiza y postula a fondos concursables, llevan a artistas, trabajan en largos procesos creativos, generan encuentros, producen obras de teatro y generan registro. No en todas las regiones, pero está pasando y es valioso que ocurra, porque se van a empezar a producir cambios. Tengo una amiga actriz y profesora, que está montando textos de Los Contadores Auditores, de Luis Barrales y Carla Zúñiga en el Liceo de Cultura de Talca, que es un colegio público con jóvenes que eligieron teatro como su especialidad de enseñanza media. Esos jóvenes van a salir haciendo cosas, es obvio.</p>
+<p><strong>—¿Cuáles serían, según tú, las fortalezas del público argentino y del chileno?</strong><br />
+—En Argentina, como mencioné anteriormente, y en mi opinión, el público general da la impresión de tener muy claro que va al teatro a vivir una experiencia. No lo ven como un espectáculo netamente para divertirse, sino para experimentar una sensibilidad, a un otro, algo muy humano. Y esa disposición puede deberse a que pareciera que hay una valoración distinta de la cultura, un deseo innato de ser parte de eso que es público. El teatro se entiende como un bien público, como tradicionalmente se consideraba. También he visto que es más diverso el espectador, a mí me ha sorprendido ver a mucha gente de la tercera edad en los teatros. En Chile el espectador promedio durante el año es más joven, creo que esa puede ser la fortaleza en cierto sentido, la posibilidad de futuro que hay, junto con todo el trabajo y los esfuerzos que se están realizando de distintos grupos para convocar, la cantidad de instancias/festivales/ciclos tanto en verano como en distintos periodos del año, en diferentes regiones, la formación de audiencias, el acercamiento a la comunidad a través de distintas estrategias, los medios web, programas de radio que difunden el trabajo, la extensión de las funciones en algunas salas a otros días de la semana, como martes y miércoles, esas iniciativas que se están implementando con todo y que movilizan el interés.</p>
+<p>—Hace 10 años el Chile teatral no era así, no había tanto movimiento. Esa debería ser la tendencia, más y más interés del público, y más comprensión del fenómeno también. Del intercambio que se produce ahí. Todo esto en conjunto debiera ser capaz de generar un cambio a mediano plazo.</p>
+<p><strong>—Hace algunos años, Federico Irazábal, crítico e investigador teatral argentino, señaló a La Segunda que en ambos países hay tres lógicas que atraviesan las producciones teatrales: la familia (disfuncional), la dictadura y el teatro. ¿Estás de acuerdo con estas lógicas? ¿Se mantienen o han virado hacia algún nuevo lugar?</strong><br />
+—De lo que he visto en Chile de teatro argentino, más lo que he visto acá, sumado al teatro chileno, parece trabalenguas, podría confirmar que lo que dice Federico Irazábal es verdad. Obviamente que se van refrescando. Hablar de dictadura ahora no es lo mismo que hace diez años. Por ejemplo, vi una obra que abordaba cuán dividida podía estar Argentina por sus opiniones políticas producto de la dictadura, pero con personajes que viven en la actualidad. Se llama <em>1982, Obertura Solemne</em> de Lisandro Fiks. Muy buena. Lo mismo pasa en Chile, las obras que abordan la dictadura las hacen desde lugares más actuales, son las repercusiones. Estoy pensando en <em>Negra, la enfermera del general</em> de Bosco Cayo, <em>Villa</em> de Guillermo Calderón, o <em>El año en qué nací</em> (aunque fue dirigida por una argentina, Lola Arias) es una retrospectiva personal de testimonios reales que nos espeja como sociedad ahora, lo divididos y categorizados que estamos.</p>
+<div class="uk-align-medium-right"><img decoding="async" src="https://www.elguillatun.cl/wp-content/uploads/2014/06/la-joven-y-sus-problemas_afiche.jpg" alt="La joven y sus problemas" width="300" height="444" /></div>
+<p>—Las lógicas se cruzan también o se suman a otras nuevas. El tema/trama del cuerpo/territorio en el contexto del poder, es algo que pienso que está entrando fuerte. Creo que la identidad del individuo, en el marco de lo público, es la cuarta lógica que adquiere cada vez más importancia, posiblemente debido a la masificación de las redes sociales, que insisto, democratizó la información, fortaleciendo la idea y la posibilidad de opinión.</p>
+<p>—El concepto de normatividad, ¿qué es lo normal?, ¿qué es lo social y cómo influye en nuestras relaciones y paradigmas?, la identidad de comunidades a lo largo de Chile, el tratamiento de las historias como relatos hegemónicos, la identidad de género (en el ámbito privado y público), la identidad sexual y del cuerpo (el cuerpo como fenómeno social y cultural), la identidad etaria y generacional, el cuerpo visto fuera del campo de la mercancía, el lenguaje como relación de poder, el tratamiento de la información en los distintos medios, los derechos reproductivos, ¡toda esta actualidad que bulle en el Facebook y el Twitter!, en las manifestaciones sociales, en la calle, se está transformando en una nueva lógica de pensamiento y representación. La encuentro hermosa y necesaria, porque aborda el gran tema de ejercer ciudadanía desde todos los ámbitos.</p>
+<h3>«EXPERIMENTAR EL ARTE, LA MÚSICA, LA CREACIÓN EN GENERAL, NATURALMENTE HACE QUE LA GENTE ESTABLEZCA CONTACTO DESDE UNA DIMENSIÓN MÁS SENSIBLE CON TODAS LAS COSAS, QUE COMIENCE A SER SIGNIFICATIVO IR A VER UN ESPECTÁCULO, Y NO NECESARIAMENTE TENGA QUE ENTENDERLO PORQUE SE PARECE AL LENGUAJE TELEVISIVO Y LE DÉ RISA»</h3>
+<p><strong>—¿En qué etapa de su crecimiento dirías que está el teatro chileno?</strong><br />
+—Yo creo que en una etapa de una apertura cada vez mayor, e intercambio. Hay muchas ganas de que esto se mueva y funcione. Hay mucho entusiasmo, gente reuniéndose para crear instancias y está resultando. Se está visibilizando cada vez más el trabajo. Hay mucho teatro en la calle también, en comunas y en regiones. Están pasando muchas cosas. En eso han ayudado mucho las redes sociales, que siempre he pensado que son un instrumento de democratización de la información.</p>
+<p>—Ahora bien, sí creo que estas iniciativas debieran ser capaces de permanecer en el tiempo. Lamentablemente muchos hacemos gran parte de esto gratis y necesitamos protección del estado, financiamiento de entidades que se comprometan en el tiempo. Pienso en lo importante que fue el Festival Off Dramaturgia a principios de la década pasada, los dramaturgos que se la jugaron por ampliar la difusión del quehacer de ese momento, la representatividad, porque la muestra oficial no era suficiente para la cantidad de gente que estaba escribiendo. Habría sido excelente que hubiera seguido existiendo, pero movilizar todo sin un peso era muy difícil. Pero ganas siempre hay, para todo. Eso lo veo y siento.</p>
+<p><strong>—¿Qué debe ocurrir para que la asistencia al teatro se vuelva un gesto cotidiano en Chile? ¿Para llenar las salas, para hacer de la cartelera teatral un discurso en los espacios privados como públicos?</strong><br />
+—No soy experta, pero tengo la impresión de que es un trabajo a mediano y largo plazo. Creo que es importante la educación artística en los colegios como parte del currículum, o municipal, en el caso de adultos, que se incluya a la ciudadanía, que se la integre. Experimentar el arte, la música, la creación en general, naturalmente hace que la gente establezca contacto desde una dimensión más sensible con todas las cosas, que comience a ser significativo ir a ver un espectáculo, y no necesariamente tenga que entenderlo porque se parece al lenguaje televisivo y le dé risa, sino porque ha experimentado lo no social como posibilidad expresiva. Es importante que convivan las distintas posibilidades de representación y que el público las reconozca. Es importante experimentar. Por eso a mí me gusta la palabra público, más que espectador.</p>
+<p><strong>—El actual gobierno en Chile ha manifestado el deseo de trabajar desde la total integridad entre el arte, la educación y la cultura, en pos de personas y ciudadanos integrales. ¿Por qué tareas debemos comenzar, para aterrizar este deseo?</strong><br />
+—Me parece muy bien ese deseo, es la base de una sociedad sensible, creativa y participativa, que es lo que se necesita. Creo que lo primero es que todos estén muy alineados con esta tarea, me refiero al Ministerio de Educación y al Consejo de Cultura, eso es lo primerísimo. Deben resolverse las prioridades pendientes, los proyectos que se encuentran ya listos para ser aprobados en el congreso y otros tantos que hay que resolver. El fin al lucro, la garantía de calidad y acceso son las más urgentes. Respecto a tu pregunta, sería óptimo multiplicar los liceos de cultura en todo Chile y al mismo tiempo incorporarse en el currículum de todos los ciclos de los colegios científico-humanistas y técnicos, asignaturas de arte obligatorias, con énfasis en la creación. En la enseñanza media ya debería profundizarse sólo en una electiva (música, arte, artes escénicas, literatura). Y por último, es un imperativo elegir a gente idónea en la dirección de estos liceos y programas. Deben ser personas preparadas o con experiencia en gestión cultural. Sé que suena un poco utópico, pero he sabido que hay gente que dirige liceos de cultura y que censura lo que los profesores de arte eligen hacer, es una vergüenza. O que han respaldado que se extraiga documentos con información de la vida artística de Víctor Jara de un diario mural, por ejemplo. ¿Puedes creer algo así? O que no se facilitan salas de ensayo fuera del horario de clases, o que se pone en duda que en la escenografía pueda haber un inodoro, porque eso no es arte. Eso da cuenta de que no se entienden los procesos creativos, ni se valora la historia artística. Además eso del inodoro es un debate que ya se hizo y casi a principios del siglo pasado. ¡No puede ser!</p>
+<p>—Ya que vivimos en un país que es mucho más conservador de lo que podemos llegar a imaginar, hay que estar atentos a esas cosas. Es un tema delicado meterse con la autonomía de cada establecimiento educacional, pero si el arte no tiene un valor social desde el colegio y no se incide en las mallas curriculares, no esperemos una valoración de la creatividad y la cultura. Si la ciudadanía no está convencida de lo necesario que es ser creativo en el mundo personal y público, más allá de lo que luego decidas hacer o estudiar, va a ser difícil, porque ser artista es considerado como ser pobre, se reduce a eso como valor, y la gente tiene miedo que sus hijos elijan esos caminos. Creo que se necesitarían campañas, iniciativas para convocar. La gente adulta también debe ser parte de esto, los municipios son cruciales en propiciar y facilitar propuestas para adultos en los centros culturales de su comuna. Las actividades deportivas han mejorado mucho, porque hay campañas fuertes detrás. Lo mismo hay que hacer con la cultura y no suponer que los monólogos del pene son la única alternativa posible de mostrar. Por eso se necesita gente preparada en los cargos.</p>
+<p><strong>—¿Qué compañías chilenas y dramaturgxs jóvenes chilenxs destacarías?</strong><br />
+—Me gusta mucho La Resentida, me encanta su trabajo, me muero de la risa y al segundo me impacta con algo muy violento y cruel. Es como estar en un ring. Me encanta esa crueldad espectacular que tienen. Es un delirio lo que hacen, en especial en <em>Simulacro</em> y en <em>Tratando de hacer una obra que cambie el mundo</em>. También soy muy fan de Luis Barrales, me encanta lo que hace, su poética que es tan épica, como un vómito existencial, pero a la vez tan social. <em>Hans Pozo</em> la vi como 4 veces. También me conmueven mucho <em>Las niñas araña</em> y <em>La mala clase</em>.</p>
+<p>—Por supuesto que nombraré a Carla Zúñiga, me encantó la dupla que hicieron con Javier Casanga en <em>Sentimientos</em>. Lo que ella escribe a mí me vuela la cabeza. Creo que por eso dirigí dos textos de ella en años consecutivos, encuentro que tiene un imaginario de la contradicción entre lo verdadero y falso que nos espeja y nos da horror, tiene una dimensión de lo trágico muy contemporánea y a la vez muy graciosa, es una genia.</p>
+<p>—También me gusta el trabajo de Tryo Teatro Banda, de Paula González (<em>Galvarino</em>, <em>Bello Futuro</em>), de Guillermo Calderón (<em>Villa + Discurso</em>), de Bosco Cayo (<em>Limítrofe</em>), Nona Fernández (<em>El Taller</em>), Andrea Giadach (<em>Mi mundo Patria</em>), la dupla Gerardo Oettinger/Josefina Dagorret (<em>El otro baño</em>, <em>La pieza</em>), Los Contadores Auditores, La Mona Ilustre. De los consagrados me encantan Juan Radrigán y Marco Antonio de la Parra.<span class="dingbat">El Guillatún</span></p>
+<figure><img decoding="async" src="https://www.elguillatun.cl/wp-content/uploads/2014/06/daniela-contreras-bocic_fzubieta.jpg" alt="Daniela Contreras Bocic" width="640" height="427" /><br /><figcaption>Daniela Contreras Bocic. <span class="credit">Foto: Felipe Zubieta</span></figcaption></figure>
+
+            
+            <div class="fz-tags"><p>Temas: <a href="https://www.elguillatun.cl/etiqueta/dramaturgia" rel="tag">dramaturgia</a>, <a href="https://www.elguillatun.cl/etiqueta/teatro" rel="tag">teatro</a></p></div>
+
+            
+                    </div>
+        
+        <div class="clearfix"></div>
+
+                <div class="uk-panel">
+            <div class="fz-autor">
+
+                <div class="uk-align-medium-left">
+                    <img alt='' src='https://secure.gravatar.com/avatar/cdba9b45434058ca4f5b9da2f0c321e74fc65f956dd1df4233990d8270d02e26?s=128&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/cdba9b45434058ca4f5b9da2f0c321e74fc65f956dd1df4233990d8270d02e26?s=256&#038;d=mm&#038;r=g 2x' class='avatar avatar-128wp-user-avatar wp-user-avatar-128 photo' height='128' width='128' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h3 class="uk-h3 uk-margin-top-remove">Francisca Yévenes</h3>
+
+                <div class="uk-margin fz-autor-description">Francisca Yévenes, Periodista U. de Chile. Postgrado en Periodismo Cultural, Crítica y Edición Literaria. Social Media Manager. #Cultura</div>
+
+            </div>
+        </div>
+        
+        
+    <div id="comments" class="uk-margin">
+
+
+        
+            <h4 class="uk-h3">Comentarios (2)</h4>
+
+            
+            <ul class="uk-comment-list">
+                                <li>
+                        <article id="comment-17" class="uk-comment ">
+
+                            <header class="uk-comment-header">
+
+                                <div class="uk-comment-avatar">
+                                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/4e3e2ea0ccf4b669adc88aec3f6edfabb4e9baa55494f590e3fb8c17641fcbbf?s=50&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4e3e2ea0ccf4b669adc88aec3f6edfabb4e9baa55494f590e3fb8c17641fcbbf?s=100&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-50 photo' height='50' width='50' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                                </div>
+
+                                <h5 class="uk-comment-title">Rodrigo Domínguez</h5>
+
+                                <p class="uk-comment-meta">
+                                    <time datetime="2014-06-15">15-Jun-2014 a las 8:44 am</time>
+                                    | <a class="permalink" href="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic#comment-17">#</a>
+                                                                    </p>
+
+                            </header>
+
+                            <div class="uk-comment-body">
+
+                                <p>Estoy bastante de acuerdo con la entrevistada salvo por la fe que tiene en las organizaciones gubernamentales y los programas de gobierno. Creo que los que queremos hacer arte en Chile nos organizamos y atrincheramos entre nosotros, creamos comunidades y talleres si, pero no podemos esperar que el estado participe o entienda el fenómeno.</p>
+<p> Hay una enorme lentitud en las instituciones que no da abasto para comprender o situarse en el centro del enorme flujo de creatividad subterránea que ronda las esquinas mas descuidads de este país. </p>
+<p>Chile hace tiempo que dejó de ser lo que era, no se sabe para donde va, pero, no creo que este a la deriva. Me han comentado eso si, que en el tetro el chaqueteo y la mala onda da miedo a veces y los egos de proporciones montañosas son de temer. Sin perjuicio de esto, se que mas allá de la búsqueda de futuro hay ciertos presentes notables.</p>
+
+                                                                <p class="js-reply"><a href="#" rel="17">Responder</a></p>
+                                
+                                
+                            </div>
+
+                        </article>
+                    </li><!-- #comment-## -->
+                    <li>
+                        <article id="comment-18" class="uk-comment ">
+
+                            <header class="uk-comment-header">
+
+                                <div class="uk-comment-avatar">
+                                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/2ee24ccdcfb9bf042c87542f3b2ce48f2631349c8a5637d17ec9425862a562b6?s=50&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/2ee24ccdcfb9bf042c87542f3b2ce48f2631349c8a5637d17ec9425862a562b6?s=100&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-50 photo' height='50' width='50' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                                </div>
+
+                                <h5 class="uk-comment-title">Pedro OrtegaMuñoz</h5>
+
+                                <p class="uk-comment-meta">
+                                    <time datetime="2014-06-17">17-Jun-2014 a las 10:16 pm</time>
+                                    | <a class="permalink" href="https://www.elguillatun.cl/entrevistas/talento-emergente/daniela-contreras-bocic#comment-18">#</a>
+                                                                    </p>
+
+                            </header>
+
+                            <div class="uk-comment-body">
+
+                                <p>Para los que somos admiradores lejanos e incultos sobre Teatro, Daniela responde preguntas inteligentes, con una claridad, conocimiento y aportes personales que hacen de esta entrevista, una obra que enseña sobre este hermoso arte y, además, del mérito ejemplar de quien ama su arte y lo enriquece con aportes propios, sinceros y claros.</p>
+
+                                                                <p class="js-reply"><a href="#" rel="18">Responder</a></p>
+                                
+                                
+                            </div>
+
+                        </article>
+                    </li><!-- #comment-## -->
+            </ul>
+
+            
+        
+
+        <div id="respond">
+
+            <h4 class="uk-h3">Deja un comentario</h4>
+
+            
+                
+                    <form class="uk-form" action="https://www.elguillatun.cl/wp-comments-post.php" method="post">
+
+                        
+                            
+                            <div class="uk-form-row required">
+                                <input type="text" name="author" placeholder="Nombre *" value="" aria-required='true'>
+
+                                <input type="text" name="email" placeholder="E-mail *" value="" aria-required='true'>
+                            </div>
+
+                        
+                        <div class="uk-form-row">
+                            <textarea name="comment" id="comment" cols="80" rows="5" tabindex="4"></textarea>
+                        </div>
+
+                        <div class="uk-form-row actions">
+                            <button class="uk-button uk-button-primary" name="submit" type="submit" id="submit" tabindex="5">Enviar comentario</button>
+                            <input type='hidden' name='comment_post_ID' value='1836' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                        </div>
+                        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a97926845f" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="11"/><script type="rocketlazyloadscript">document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>
+                    </form>
+
+                
+            
+        </div>
+
+
+    </div>
+
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+
+        jQuery(function($) {
+
+            var respond = $("#respond");
+
+            $("p.js-reply > a").bind("click", function(){
+
+                var id = $(this).attr('rel');
+
+                respond.find(".comment-cancelReply:first").remove();
+
+                $('<a>Cancelar</a>').addClass('comment-cancelReply uk-margin-left').attr('href', "#respond").bind("click", function(){
+                    respond.find(".comment-cancelReply:first").remove();
+                    respond.appendTo($('#comments')).find("[name=comment_parent]").val(0);
+
+                    return false;
+                }).appendTo(respond.find(".actions:first"));
+
+                respond.find("[name=comment_parent]").val(id);
+                respond.appendTo($("#comment-"+id));
+
+                return false;
+
+            });
+        });
+
+    </script>
+
+
+    </article>
+
+     
+                </main>
+                
+                
+            </div>
+            
+                                                            <aside class="tm-sidebar-a uk-width-medium-3-10"><div class="uk-panel uk-panel-box uk-panel-box-secondary uk-hidden-medium fz-tweets widget_custom_html" ><h3 class="uk-panel-title">Tweets</h3><div class="textwidget custom-html-widget"><a class="twitter-timeline" data-theme="dark" href="https://twitter.com/elguillatun?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter noborders transparent" data-tweet-limit="1">Tuits por @elguillatun</a> <script data-minify="1" async src="https://www.elguillatun.cl/wp-content/cache/min/1/widgets.js?ver=1730382414" charset="utf-8"></script></div></div>
+<div class="uk-panel uk-panel-box uk-panel-box-primary uk-hidden-medium widget_nav_menu" ><h3 class="uk-panel-title">Otras secciones</h3><ul class="uk-nav uk-nav-parent-icon uk-nav-side" data-uk-nav="{}"><li><a href="https://www.elguillatun.cl/seccion/entrevistas" class="">Entrevistas</a></li><li><a href="https://www.elguillatun.cl/seccion/cartelera" class="">Cartelera</a></li><li><a href="https://www.elguillatun.cl/seccion/in-situ" class="">In Situ</a></li><li><a href="https://www.elguillatun.cl/seccion/playlist" class="">Playlist</a></li><li><a href="https://www.elguillatun.cl/seccion/reportajes" class="">Reportajes</a></li><li><a href="https://www.elguillatun.cl/seccion/noticias" class="">Noticias</a></li><li><a href="https://www.elguillatun.cl/seccion/convocatorias" class="">Convocatorias</a></li></ul></div>
+<div class="uk-panel uk-panel-box uk-hidden-medium widget_tag_cloud" ><h3 class="uk-panel-title">Temas</h3><a href="https://www.elguillatun.cl/etiqueta/animacion" class="tag-cloud-link tag-link-120 tag-link-position-1" style="font-size: 9.0909090909091pt;" aria-label="animación (3 ítems)">animación</a>
+<a href="https://www.elguillatun.cl/etiqueta/arte-contemporaneo" class="tag-cloud-link tag-link-32 tag-link-position-2" style="font-size: 11.818181818182pt;" aria-label="arte contemporáneo (7 ítems)">arte contemporáneo</a>
+<a href="https://www.elguillatun.cl/etiqueta/artesania" class="tag-cloud-link tag-link-38 tag-link-position-3" style="font-size: 10pt;" aria-label="artesanía (4 ítems)">artesanía</a>
+<a href="https://www.elguillatun.cl/etiqueta/ballet" class="tag-cloud-link tag-link-39 tag-link-position-4" style="font-size: 12.272727272727pt;" aria-label="ballet (8 ítems)">ballet</a>
+<a href="https://www.elguillatun.cl/etiqueta/cine" class="tag-cloud-link tag-link-43 tag-link-position-5" style="font-size: 22pt;" aria-label="cine (103 ítems)">cine</a>
+<a href="https://www.elguillatun.cl/etiqueta/composicion" class="tag-cloud-link tag-link-46 tag-link-position-6" style="font-size: 9.0909090909091pt;" aria-label="composición (3 ítems)">composición</a>
+<a href="https://www.elguillatun.cl/etiqueta/cortometraje" class="tag-cloud-link tag-link-47 tag-link-position-7" style="font-size: 11.818181818182pt;" aria-label="cortometraje (7 ítems)">cortometraje</a>
+<a href="https://www.elguillatun.cl/etiqueta/cuento" class="tag-cloud-link tag-link-48 tag-link-position-8" style="font-size: 13.727272727273pt;" aria-label="cuento (12 ítems)">cuento</a>
+<a href="https://www.elguillatun.cl/etiqueta/danza" class="tag-cloud-link tag-link-49 tag-link-position-9" style="font-size: 11.818181818182pt;" aria-label="danza (7 ítems)">danza</a>
+<a href="https://www.elguillatun.cl/etiqueta/danza-contemporanea" class="tag-cloud-link tag-link-50 tag-link-position-10" style="font-size: 20.272727272727pt;" aria-label="danza contemporánea (67 ítems)">danza contemporánea</a>
+<a href="https://www.elguillatun.cl/etiqueta/desvariacion" class="tag-cloud-link tag-link-56 tag-link-position-11" style="font-size: 14.363636363636pt;" aria-label="desvariación (14 ítems)">desvariación</a>
+<a href="https://www.elguillatun.cl/etiqueta/dibujo" class="tag-cloud-link tag-link-57 tag-link-position-12" style="font-size: 12.727272727273pt;" aria-label="dibujo (9 ítems)">dibujo</a>
+<a href="https://www.elguillatun.cl/etiqueta/diseno" class="tag-cloud-link tag-link-125 tag-link-position-13" style="font-size: 9.0909090909091pt;" aria-label="diseño (3 ítems)">diseño</a>
+<a href="https://www.elguillatun.cl/etiqueta/documental" class="tag-cloud-link tag-link-58 tag-link-position-14" style="font-size: 18.636363636364pt;" aria-label="documental (44 ítems)">documental</a>
+<a href="https://www.elguillatun.cl/etiqueta/dramaturgia" class="tag-cloud-link tag-link-59 tag-link-position-15" style="font-size: 13.090909090909pt;" aria-label="dramaturgia (10 ítems)">dramaturgia</a>
+<a href="https://www.elguillatun.cl/etiqueta/escultura" class="tag-cloud-link tag-link-60 tag-link-position-16" style="font-size: 11.363636363636pt;" aria-label="escultura (6 ítems)">escultura</a>
+<a href="https://www.elguillatun.cl/etiqueta/flamenco" class="tag-cloud-link tag-link-61 tag-link-position-17" style="font-size: 11.818181818182pt;" aria-label="flamenco (7 ítems)">flamenco</a>
+<a href="https://www.elguillatun.cl/etiqueta/folclor" class="tag-cloud-link tag-link-62 tag-link-position-18" style="font-size: 11.363636363636pt;" aria-label="folclor (6 ítems)">folclor</a>
+<a href="https://www.elguillatun.cl/etiqueta/folk" class="tag-cloud-link tag-link-114 tag-link-position-19" style="font-size: 10pt;" aria-label="folk (4 ítems)">folk</a>
+<a href="https://www.elguillatun.cl/etiqueta/fotografia" class="tag-cloud-link tag-link-63 tag-link-position-20" style="font-size: 14.818181818182pt;" aria-label="fotografía (16 ítems)">fotografía</a>
+<a href="https://www.elguillatun.cl/etiqueta/gestion-cultural" class="tag-cloud-link tag-link-65 tag-link-position-21" style="font-size: 13.727272727273pt;" aria-label="gestión cultural (12 ítems)">gestión cultural</a>
+<a href="https://www.elguillatun.cl/etiqueta/grabado" class="tag-cloud-link tag-link-66 tag-link-position-22" style="font-size: 11.363636363636pt;" aria-label="grabado (6 ítems)">grabado</a>
+<a href="https://www.elguillatun.cl/etiqueta/guitarra" class="tag-cloud-link tag-link-67 tag-link-position-23" style="font-size: 17.090909090909pt;" aria-label="guitarra (29 ítems)">guitarra</a>
+<a href="https://www.elguillatun.cl/etiqueta/hiperrealidad" class="tag-cloud-link tag-link-68 tag-link-position-24" style="font-size: 14.090909090909pt;" aria-label="hiperrealidad (13 ítems)">hiperrealidad</a>
+<a href="https://www.elguillatun.cl/etiqueta/ilustracion" class="tag-cloud-link tag-link-69 tag-link-position-25" style="font-size: 15.818181818182pt;" aria-label="ilustración (21 ítems)">ilustración</a>
+<a href="https://www.elguillatun.cl/etiqueta/instalacion" class="tag-cloud-link tag-link-70 tag-link-position-26" style="font-size: 14.090909090909pt;" aria-label="instalación (13 ítems)">instalación</a>
+<a href="https://www.elguillatun.cl/etiqueta/jazz" class="tag-cloud-link tag-link-71 tag-link-position-27" style="font-size: 17.363636363636pt;" aria-label="jazz (31 ítems)">jazz</a>
+<a href="https://www.elguillatun.cl/etiqueta/literatura" class="tag-cloud-link tag-link-73 tag-link-position-28" style="font-size: 16.454545454545pt;" aria-label="literatura (25 ítems)">literatura</a>
+<a href="https://www.elguillatun.cl/etiqueta/musica-clasica" class="tag-cloud-link tag-link-76 tag-link-position-29" style="font-size: 18.454545454545pt;" aria-label="música clásica (42 ítems)">música clásica</a>
+<a href="https://www.elguillatun.cl/etiqueta/musica-contemporanea" class="tag-cloud-link tag-link-77 tag-link-position-30" style="font-size: 10pt;" aria-label="música contemporánea (4 ítems)">música contemporánea</a>
+<a href="https://www.elguillatun.cl/etiqueta/musica-de-camara" class="tag-cloud-link tag-link-78 tag-link-position-31" style="font-size: 10.727272727273pt;" aria-label="música de cámara (5 ítems)">música de cámara</a>
+<a href="https://www.elguillatun.cl/etiqueta/novela" class="tag-cloud-link tag-link-79 tag-link-position-32" style="font-size: 16.909090909091pt;" aria-label="novela (28 ítems)">novela</a>
+<a href="https://www.elguillatun.cl/etiqueta/novela-grafica" class="tag-cloud-link tag-link-80 tag-link-position-33" style="font-size: 9.0909090909091pt;" aria-label="novela gráfica (3 ítems)">novela gráfica</a>
+<a href="https://www.elguillatun.cl/etiqueta/patrimonio" class="tag-cloud-link tag-link-82 tag-link-position-34" style="font-size: 8pt;" aria-label="patrimonio (2 ítems)">patrimonio</a>
+<a href="https://www.elguillatun.cl/etiqueta/pintura" class="tag-cloud-link tag-link-85 tag-link-position-35" style="font-size: 15.454545454545pt;" aria-label="pintura (19 ítems)">pintura</a>
+<a href="https://www.elguillatun.cl/etiqueta/poesia" class="tag-cloud-link tag-link-86 tag-link-position-36" style="font-size: 10.727272727273pt;" aria-label="poesía (5 ítems)">poesía</a>
+<a href="https://www.elguillatun.cl/etiqueta/pop" class="tag-cloud-link tag-link-87 tag-link-position-37" style="font-size: 16.909090909091pt;" aria-label="pop (28 ítems)">pop</a>
+<a href="https://www.elguillatun.cl/etiqueta/proceso-creativo" class="tag-cloud-link tag-link-88 tag-link-position-38" style="font-size: 14.363636363636pt;" aria-label="proceso creativo (14 ítems)">proceso creativo</a>
+<a href="https://www.elguillatun.cl/etiqueta/raiz-latinoamericana" class="tag-cloud-link tag-link-89 tag-link-position-39" style="font-size: 13.727272727273pt;" aria-label="raíz latinoamericana (12 ítems)">raíz latinoamericana</a>
+<a href="https://www.elguillatun.cl/etiqueta/rock" class="tag-cloud-link tag-link-91 tag-link-position-40" style="font-size: 14.545454545455pt;" aria-label="rock (15 ítems)">rock</a>
+<a href="https://www.elguillatun.cl/etiqueta/serie-de-television" class="tag-cloud-link tag-link-133 tag-link-position-41" style="font-size: 11.363636363636pt;" aria-label="serie de televisión (6 ítems)">serie de televisión</a>
+<a href="https://www.elguillatun.cl/etiqueta/stop-motion" class="tag-cloud-link tag-link-94 tag-link-position-42" style="font-size: 10pt;" aria-label="stop motion (4 ítems)">stop motion</a>
+<a href="https://www.elguillatun.cl/etiqueta/teatro" class="tag-cloud-link tag-link-95 tag-link-position-43" style="font-size: 21.909090909091pt;" aria-label="teatro (101 ítems)">teatro</a>
+<a href="https://www.elguillatun.cl/etiqueta/world-music" class="tag-cloud-link tag-link-98 tag-link-position-44" style="font-size: 11.363636363636pt;" aria-label="world music (6 ítems)">world music</a>
+<a href="https://www.elguillatun.cl/etiqueta/opera" class="tag-cloud-link tag-link-81 tag-link-position-45" style="font-size: 18.545454545455pt;" aria-label="ópera (43 ítems)">ópera</a></div>
+<div class="uk-panel uk-hidden-medium uk-text-center widget_custom_html" ><div class="textwidget custom-html-widget"><div class="fb-page" data-href="https://www.facebook.com/ElGuillatun" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ElGuillatun" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ElGuillatun">El Guillatún</a></blockquote></div></div></div>
+<div class="uk-panel uk-panel-box uk-panel-box-secondary uk-hidden-medium widget_recent_comments" ><h3 class="uk-panel-title">Comentarios</h3><ul class="uk-comment-list">
+
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/10b9dcc40aab8aa5a0a653ba7f2cd6babf04949587b00b8c0de4c77a9f7d6aaf?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/10b9dcc40aab8aa5a0a653ba7f2cd6babf04949587b00b8c0de4c77a9f7d6aaf?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Victoria                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-10-23">23-Oct-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/problematizando-la-danza/la-noche-que-me-gane-el-oscar#comment-15473">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Lo que expresa el señor Rodrigo Hidalgo falta a la verdad. Las interpretes usaban malla color carne pero no estaban&hellip;            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/e0599d8bb8eca82bef2e9c077587ab9d9f62a32b2e282f017a8aaf6b7988e3fe?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e0599d8bb8eca82bef2e9c077587ab9d9f62a32b2e282f017a8aaf6b7988e3fe?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Luciano Gonzalez                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-10-03">3-Oct-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/cronicas-de-musica-latinoamericana/entrama#comment-15375">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Nunca mencionastes que Entrama toco en Hamilton, Canada. Un grupo muy pequenio de amigos se lo puso como objetivo, y&hellip;            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/facc8936c8201d07c5ce1c95820cff21e3f9438c8bb150e64ebe153b351f94b9?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/facc8936c8201d07c5ce1c95820cff21e3f9438c8bb150e64ebe153b351f94b9?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Yomaira Isabel Herrera Echeverri                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-08-17">17-Ago-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/problematizando-la-danza/escena1-un-festival-que-crece-y-suma#comment-15081">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Me parece fascinante todo lo que se ha logrado            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/61c03eeaafc9b74c39c03906cedb3d9a243261863326a21f3cdc0c235129758a?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/61c03eeaafc9b74c39c03906cedb3d9a243261863326a21f3cdc0c235129758a?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    America                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2024-08-15">15-Ago-2024</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/kapellmeister/estudiar-musica-satisfaccion-plenitud-costos-y-renuncias#comment-15052">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Mi hijo quiere estudiar musica , se encuentra molesto ya que no estamos de acuerdo , pienso que ha sido&hellip;            </div>
+
+        </article>
+
+    </li>
+        <li>
+
+        <article class="uk-comment">
+
+            <header class="fz-recent-comments-header">
+
+                <div class="fz-recent-comments-avatar">
+                    <img alt='Avatar' src='https://secure.gravatar.com/avatar/6abae272ee687acd634b00c678321e5b1a37dacb91f764d27ccad4f0e621480c?s=35&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6abae272ee687acd634b00c678321e5b1a37dacb91f764d27ccad4f0e621480c?s=70&#038;d=mm&#038;r=g 2x' class='uk-comment-avatar avatar-35 photo' height='35' width='35' loading='lazy' decoding='async' data-pin-nopin="nopin"/>                </div>
+
+                <h4 class="fz-recent-comments-title">
+                    Teresa Alcaino                </h4>
+
+                <p class="uk-comment-meta">
+                    <time datetime="2023-08-11">11-Ago-2023</time>
+                    | <a class="permalink" href="https://www.elguillatun.cl/columnas/problematizando-la-danza/danza-y-espacio-social/experimentacion-el-espacio-donde-el-error-no-es-error-y-el-conocer-se-enfrenta-con-todo-el-cuerpo#comment-12717">#</a>
+                </p>
+
+            </header>
+
+            <div class="uk-comment-body">
+                Muy bueno el artículo, una invitación a revisar constantemente nuestro quehacer como pedagoga en Danza.Gracias            </div>
+
+        </article>
+
+    </li>
+    
+</ul>
+</div></aside>
+                        
+        </div>
+        
+        
+        
+                <section id="tm-bottom-c" class="tm-bottom-c uk-grid uk-grid-match" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+            
+<div class="uk-width-1-1"><div class="uk-panel widget_text" >
+
+<div id="wk-gridf68" class="uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-grid-width-large-1-3 uk-grid uk-grid-match uk-text-left fz-latest" data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid-margin  data-uk-scrollspy="{cls:'uk-animation-fade uk-invisible', target:'> div > .uk-panel', delay:300}">
+
+
+    <div>
+        <div class="uk-panel uk-panel-box uk-invisible">
+
+            
+                        <div class="uk-panel-badge uk-badge">Cinema Guillatún</div>
+            
+                        <div class="uk-text-center uk-margin uk-margin-top-remove"><div class="uk-overlay uk-overlay-hover "><img src="https://elguillatun.s3.amazonaws.com/wp-content/uploads/grid/isle-of-dogs.jpg" class=" uk-overlay-scale" alt="Los perros también sueñan"><a class="uk-position-cover" href="https://www.elguillatun.cl/columnas/cinema-guillatun/isla-de-perros" title="Los perros también sueñan"></a></div></div>
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    <a class="uk-link-reset" href="https://www.elguillatun.cl/columnas/cinema-guillatun/isla-de-perros">Los perros también sueñan</a>
+                
+                
+            </h3>
+            
+                        <p class="uk-article-meta">Publicado el <time datetime="2018-05-10">10-May-2018</time></p>
+            
+            
+            
+            
+                        <p><a class="uk-button" href="https://www.elguillatun.cl/columnas/cinema-guillatun/isla-de-perros">Leer</a></p>
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel uk-panel-box uk-invisible">
+
+            
+                        <div class="uk-panel-badge uk-badge">Cinema Guillatún</div>
+            
+                        <div class="uk-text-center uk-margin uk-margin-top-remove"><div class="uk-overlay uk-overlay-hover "><img src="https://elguillatun.s3.amazonaws.com/wp-content/uploads/grid/ready-player-one.jpg" class=" uk-overlay-scale" alt="La realidad no es suficiente"><a class="uk-position-cover" href="https://www.elguillatun.cl/columnas/cinema-guillatun/ready-player-one" title="La realidad no es suficiente"></a></div></div>
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    <a class="uk-link-reset" href="https://www.elguillatun.cl/columnas/cinema-guillatun/ready-player-one">La realidad no es suficiente</a>
+                
+                
+            </h3>
+            
+                        <p class="uk-article-meta">Publicado el <time datetime="2018-04-03">3-Abr-2018</time></p>
+            
+            
+            
+            
+                        <p><a class="uk-button" href="https://www.elguillatun.cl/columnas/cinema-guillatun/ready-player-one">Leer</a></p>
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel uk-panel-box uk-invisible">
+
+            
+                        <div class="uk-panel-badge uk-badge">Cinema Guillatún</div>
+            
+                        <div class="uk-text-center uk-margin uk-margin-top-remove"><div class="uk-overlay uk-overlay-hover "><img src="https://elguillatun.s3.amazonaws.com/wp-content/uploads/grid/lady-bird.jpg" class=" uk-overlay-scale" alt="La mejor versión de ti"><a class="uk-position-cover" href="https://www.elguillatun.cl/columnas/cinema-guillatun/lady-bird" title="La mejor versión de ti"></a></div></div>
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    <a class="uk-link-reset" href="https://www.elguillatun.cl/columnas/cinema-guillatun/lady-bird">La mejor versión de ti</a>
+                
+                
+            </h3>
+            
+                        <p class="uk-article-meta">Publicado el <time datetime="2018-03-02">2-Mar-2018</time></p>
+            
+            
+            
+            
+                        <p><a class="uk-button" href="https://www.elguillatun.cl/columnas/cinema-guillatun/lady-bird">Leer</a></p>
+            
+            
+        </div>
+    </div>
+
+
+</div>
+
+<script type="rocketlazyloadscript">
+(function($){
+
+    // get the images of the gallery and replace it by a canvas of the same size to fix the problem with overlapping images on load.
+    $('img[width][height]:not(.uk-overlay-panel)', $('#wk-gridf68')).each(function() {
+
+        var $img = $(this);
+
+        if (this.width == 'auto' || this.height == 'auto' || !$img.is(':visible')) {
+            return;
+        }
+
+        var $canvas = $('<canvas class="uk-responsive-width"></canvas>').attr({width:$img.attr('width'), height:$img.attr('height')}),
+            img = new Image,
+            release = function() {
+                $canvas.remove();
+                $img.css('display', '');
+                release = function(){};
+            };
+
+        $img.css('display', 'none').after($canvas);
+
+        $(img).on('load', function(){ release(); });
+        setTimeout(function(){ release(); }, 1000);
+
+        img.src = this.src;
+
+    });
+
+})(jQuery);
+</script>
+</div></div>
+        </section>
+        
+                <section id="tm-bottom-d" class="tm-bottom-d uk-grid uk-grid-match" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+            
+<div class="uk-width-1-1"><div class="uk-panel uk-panel-box tm-panel-box-alternative uk-padding-remove widget_custom_html" ><div class="textwidget custom-html-widget"><div class="uk-panel-space uk-flex uk-flex-middle uk-flex-space-between">
+	<img class="fz-logo-footer" src="/wp-content/uploads/branding/logo_footer.svg" width="250" height="40" alt="El Guillatún">
+	<ul class="uk-subnav uk-margin-bottom-remove uk-hidden-small">
+		<li><a href="https://twitter.com/elguillatun" class="uk-icon-hover uk-icon-twitter uk-icon-small" target="_blank"></a></li>
+		<li><a href="https://www.facebook.com/ElGuillatun" class="uk-icon-hover uk-icon-facebook uk-icon-small" target="_blank"></a></li>
+		<li><a href="https://www.instagram.com/elguillatun" class="uk-icon-hover uk-icon-instagram uk-icon-small" target="_blank"></a></li>
+		<li><a href="https://www.youtube.com/c/ElGuillatun" class="uk-icon-hover uk-icon-youtube-play uk-icon-small" target="_blank"></a></li>
+	</ul>
+</div>
+
+<hr class="uk-margin-top-remove">
+
+<div class="uk-panel-space">
+
+<div id="wk-grid384" class="uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-large-1-4 uk-grid uk-grid-match uk-text-left " data-uk-grid-match="{target:'> div > .uk-panel', row:true}" data-uk-grid-margin >
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Secciones                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><ul class="uk-nav uk-nav-side">
+    <li>
+        <a href="/seccion/entrevistas">Entrevistas</a>
+    </li>
+    <li>
+        <a href="/seccion/ojos-de-videotape">Ojos de Videotape</a>
+    </li>
+    <li>
+        <a href="/seccion/asistente-de-regisseur">Asistente de Regisseur</a>
+    </li>
+    <li>
+        <a href="/seccion/columnas/kapellmeister">Kapellmeister</a>
+    </li>
+</ul></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Información                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><ul class="uk-nav uk-nav-side">
+    <li>
+        <a href="/seccion/cartelera">Cartelera</a>
+    </li>
+    <li>
+        <a href="/seccion/editorial">Editorial</a>
+    </li>
+    <li>
+        <a href="/quienes-somos">Quiénes somos</a>
+    </li>
+    <li>
+        <a href="/contacto">Contacto</a>
+    </li>
+</ul></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Reconocimientos                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><ul class="uk-nav uk-nav-side">
+    <li>
+        <a>Fondart Nacional 2014</a>
+    </li>
+    <li>
+        <a>Fondart regional 2013</a>
+    </li>
+</ul></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+    <div>
+        <div class="uk-panel">
+
+            
+            
+            
+            
+                        <h3 class="uk-panel-title">
+
+                                    Newsletter                
+                
+            </h3>
+            
+            
+            
+                        <div class="uk-margin"><form class="uk-form uk-margin-top" data-uk-margin>
+    <input class="uk-form-large" placeholder="deja tu e-mail" type="text"> <a class="uk-button uk-button-large tm-button-icon" href="https://elguillatun.us8.list-manage.com/subscribe?u=968b26aa799a188aaee4bb0db&id=98065e7479" target="_blank"></a>
+</form></div>
+            
+            
+            
+            
+        </div>
+    </div>
+
+
+</div>
+
+<script type="rocketlazyloadscript">
+(function($){
+
+    // get the images of the gallery and replace it by a canvas of the same size to fix the problem with overlapping images on load.
+    $('img[width][height]:not(.uk-overlay-panel)', $('#wk-grid384')).each(function() {
+
+        var $img = $(this);
+
+        if (this.width == 'auto' || this.height == 'auto' || !$img.is(':visible')) {
+            return;
+        }
+
+        var $canvas = $('<canvas class="uk-responsive-width"></canvas>').attr({width:$img.attr('width'), height:$img.attr('height')}),
+            img = new Image,
+            release = function() {
+                $canvas.remove();
+                $img.css('display', '');
+                release = function(){};
+            };
+
+        $img.css('display', 'none').after($canvas);
+
+        $(img).on('load', function(){ release(); });
+        setTimeout(function(){ release(); }, 1000);
+
+        img.src = this.src;
+
+    });
+
+})(jQuery);
+</script>
+</div></div></div></div>
+        </section>
+        
+                <footer id="tm-footer" class="tm-footer">
+            <div class="uk-panel uk-panel-space uk-text-center">
+                                <a class="tm-totop-scroller uk-link-reset" data-uk-smooth-scroll href="#"></a>
+                
+                <div class="uk-panel widget_text" ><p>2010-2022 El Guillatún.</p>
+</div>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/avion\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1730382414" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.elguillatun.cl\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1730382414" id="contact-form-7-js"></script>
+<script type="text/javascript" id="ppress-frontend-script-js-extra">
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/www.elguillatun.cl\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"183e7ea063","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.elguillatun.cl/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.13.4" id="ppress-frontend-script-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/entrar|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.elguillatun.cl","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script data-minify="1" defer type="text/javascript" src="https://www.elguillatun.cl/wp-content/cache/min/1/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1730382877" id="akismet-frontend-js"></script>
+<script>window.lazyLoadOptions={elements_selector:"iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.elguillatun.cl/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360">',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-NNQ6XHPG0V"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NNQ6XHPG0V');
+</script>
+        <div id="offcanvas" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar"><div class="uk-panel widget_search" >
+<form class="uk-search" id="search-search-3-68ddc9951d050" action="https://www.elguillatun.cl/" method="get" >
+    <input class="uk-search-field" type="text" value="" name="s" placeholder="buscar...">
+</form>
+</div>
+<ul class="uk-nav uk-nav-offcanvas"><li class="uk-parent"><a href="#" class=" separator">Música</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-oido-medio" class="">El Oído Medio</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/cronicas-de-musica-latinoamericana" class="">Crónicas de Música Latinoamericana</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/improvisaciones-premeditadas" class="">Improvisaciones Premeditadas</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/kapellmeister" class="">Kapellmeister</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/taner" class="">Tañer</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">Literatura</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/todas-las-hojas-son-del-viento" class="">Todas las hojas son del viento</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">A. Escénicas</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/imaginario-teatral" class="">Imaginario Teatral</a></li><li><a href="https://www.elguillatun.cl/seccion/columnas/problematizando-la-danza" class="">Problematizando la Danza</a></li><li><a href="https://www.elguillatun.cl/seccion/asistente-de-regisseur" class="">Asistente de Regisseur</a></li><li><a href="https://www.elguillatun.cl/seccion/prima-ballerina" class="">Prima Ballerina</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">A. Visuales</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/el-diletante-ilustrado" class="">El Diletante Ilustrado</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">Cine</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/cinema-guillatun" class="">Cinema Guillatún</a></li></ul></li><li class="uk-parent"><a href="#" class=" separator">Cultura Pop</a><ul class="uk-nav-sub"><li><a href="https://www.elguillatun.cl/seccion/columnas/antena" class="">Antena</a></li><li><a href="https://www.elguillatun.cl/seccion/ojos-de-videotape" class="">Ojos de Videotape</a></li><li><a href="https://www.elguillatun.cl/seccion/el-rincon-de-arriba-a-la-derecha" class="">El rincón de arriba a la derecha</a></li></ul></li></ul></div>
+    </div>
+    
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1759365525 -->
