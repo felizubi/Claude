@@ -22,11 +22,6 @@ $this['config']->set('body_classes', implode(' ', get_body_class($this['config']
 $styles  = $this['asset']->get('css');
 $scripts = $this['asset']->get('js');
 
-// load woocommerce style overrides
-if ( class_exists('WooCommerce') && $file = $this['path']->url('css:woocommerce.css')) {
-    $styles->prepend($this['asset']->createFile($file));
-}
-
 // customizer mode
 if ($this['config']['customizer']) {
     foreach ($this['config']['less']['files'] as $file => $less) {

@@ -111,10 +111,6 @@ class SystemHelper extends AbstractHelper
         // set theme support
         add_theme_support('post-thumbnails');
         add_theme_support('widgetkit');
-        add_theme_support('woocommerce');
-        add_theme_support('wc-product-gallery-slider');
-        add_theme_support('wc-product-gallery-zoom');
-        add_theme_support('wc-product-gallery-lightbox');
 
         // set translations
         load_theme_textdomain('warp', $this['path']->path('theme:languages'));
@@ -204,21 +200,6 @@ class SystemHelper extends AbstractHelper
         // disable the admin bar for mobiles
         if ($this['config']->get('mobile') && $this['browser']->isMobile()) {
             add_theme_support('admin-bar', array('callback' => '__return_false'));
-        }
-
-        // disable woocommerce general style
-        if ( class_exists('WooCommerce') ) {
-            add_filter( 'woocommerce_enqueue_styles', function($enqueue_styles) {
-                unset( $enqueue_styles['woocommerce-general'] );
-                return $enqueue_styles;
-            });
-
-            // number of products per page
-            if ($this['config']->get('woo_posts_per_page') !== 'default') {
-                add_filter( 'loop_shop_per_page', function() {
-                    return $this['config']->get('woo_posts_per_page');
-                }, 20 );
-            }
         }
 
         // Set number of posts on frontpage
@@ -352,30 +333,6 @@ class SystemHelper extends AbstractHelper
                 $query[] = 'cat-'.$obj->term_id;
             }
 
-            // WooCommerce
-            if (class_exists('WooCommerce')) {
-
-                if (is_shop() && !is_search()) {
-                    $query[] = 'page';
-                    $query[] = 'page-'.wc_get_page_id('shop');
-                }
-
-                if (is_product()) {
-                    foreach ($wc_cats = wc_get_product_cat_ids($obj->ID) as $cat) {
-                        $query[] = 'cat-'.$cat;
-                    }
-
-                    foreach ($wc_terms = wc_get_product_terms($obj->ID, 'product_tag') as $term) {
-                        $query[] = 'cat-'.$term->term_id;
-                    }
-                }
-
-                if (is_product_category() || is_product_tag()) {
-                    $query[] = 'cat-'.$obj->term_id;
-                }
-
-            }
-
             $this->query = $query;
         }
 
@@ -425,10 +382,6 @@ class SystemHelper extends AbstractHelper
      */
     public function isBlog()
     {
-        if (class_exists('WooCommerce') && is_woocommerce()) {
-            return false;
-        }
-
         return true;
     }
 

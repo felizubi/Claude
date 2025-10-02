@@ -91,12 +91,6 @@ class Warp_Breadcrumbs extends \WP_Widget
                 $taxonomy = get_taxonomy (get_query_var('taxonomy'));
                 $term = get_query_var('term');
                 $output .= '<li class="uk-active"><span>'.$taxonomy->label .': '.$term.'</span></li>';
-            } elseif (is_archive()) {
-                // woocommerce shop page
-                if (class_exists('WooCommerce') && is_shop()) {
-                    $title = wc_get_page_id( 'shop' ) ? get_the_title( wc_get_page_id( 'shop' ) ) : '';
-                    $output .= '<li class="uk-active"><span>'.$title.'</span></li>';
-                }
             } else {
                 $ancestors = get_ancestors(get_the_ID(), 'page');
                 for($i = count($ancestors)-1; $i >= 0; $i--) {
