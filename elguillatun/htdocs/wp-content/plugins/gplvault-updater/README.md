@@ -1,1 +1,0 @@
-# GPL Vault Plugin Manager
